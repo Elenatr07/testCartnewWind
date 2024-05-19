@@ -68,7 +68,7 @@ function two_trip(){
 
 
 
-
+/*
 //выбор даты
 document.getElementById("one_way_calendar_from").addEventListener("change", function() {
     var input = this.value;
@@ -91,6 +91,7 @@ document.getElementById("two_ways_calendar_from").addEventListener("change", fun
 //    console.log(dateEntered); //e.g. Fri Nov 13 2015 00:00:00 GMT+0000 (GMT Standard Time)
 });
 //---------------
+*/
 
 
 

@@ -140,7 +140,7 @@ var check_return
 }
 
     date_return = date2.value
-console.log(date_return)
+//console.log(date_return)
 
 //console.log(passengers)
         if ((jj==='1') && (passengers.length > 0) && 

@@ -20,7 +20,7 @@ document.getElementById("pass_ending").innerHTML = result;
 
 var num1, result1;
 num1 = Number(document.getElementById("pass_ending1").getAttribute('data-value'));
-console.log(num1)
+
 
 var string1 = num1.toString();
 var lastChar1 = string1.charAt(string1.length-1);
