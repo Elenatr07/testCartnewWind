@@ -1,11 +1,46 @@
+ //get full date
+let fullDateOneTtip
+document.getElementById("one_way_calendar_from").addEventListener("change", function() {
+  var input = this.value;
+  let months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+ 
+  let date = new Date(input).getDate();
+  let month = new Date(input).getMonth();
+  let year = new Date(input).getFullYear();
+  let month1 = months[month]
+  fullDateOneTtip = `${date} ${month1} ${year}`
+
+});
+
+let fullDateTwoTtip
+document.getElementById("two_ways_calendar_from").addEventListener("change", function() {
+  var input = this.value;
+  let months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+ 
+  let date = new Date(input).getDate();
+  let month = new Date(input).getMonth();
+  let year = new Date(input).getFullYear();
+  let month1 = months[month]
+  fullDateTwoTtip = `${date} ${month1} ${year}`
+
+});
+  //end of get full date
+
+
 $(".sum").on("change", function (event) {
-  //console.log('Hello')
+ // console.log(fullDateOneTtip)
   $(event.target).closest(".sum").find("select").change(sum);
   $(event.target).closest(".sum").find("input").change(sum);
   $(event.target).closest(".sum").find("select").change(changeDetected);
   $(event.target).closest(".sum").find("input").change(changeDetected);
 
   function sum() {
+
+   
+   
+
+
+
     
     let result = 0;
     //data
@@ -13,8 +48,10 @@ $(".sum").on("change", function (event) {
     let val = document.querySelector('input[name="rate"]:checked').value;
     let from = $(event.target).closest(".sum").find("#from").find(":selected").data("from");
     let to = $(event.target).closest(".sum").find("#to").find(":selected").data("to");
-    let date_one_way = document.getElementById("one_way_calendar_from").value;
-    let date_return_way = document.getElementById("two_ways_calendar_from").value;
+    let date_one_way = fullDateOneTtip;
+   // let date_one_way = document.getElementById("one_way_calendar_from").value;
+   //let date_return_way = document.getElementById("two_ways_calendar_from").value;
+   let date_return_way = fullDateTwoTtip
    // console.log(from, to)
     
     $(event.target) .closest(".sum").find("select").each(function () {

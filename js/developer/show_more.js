@@ -72,9 +72,16 @@ function two_trip(){
 //выбор даты
 document.getElementById("one_way_calendar_from").addEventListener("change", function() {
     var input = this.value;
-    var dateEntered = new Date(input);
-//    console.log(input); //e.g. 2015-11-13
- //   console.log(dateEntered); //e.g. Fri Nov 13 2015 00:00:00 GMT+0000 (GMT Standard Time)
+    let months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+   
+    let date = new Date(input).getDate();
+    let month = new Date(input).getMonth();
+    let year = new Date(input).getFullYear();
+    let month1 = months[month]
+    let fullDate = `${date} ${month1} ${year}`
+  
+  //console.log(date, month, year); //e.g. Fri Nov 13 2015 00:00:00 GMT+0000 (GMT Standard Time)
+  //console.log(fullDate)
 });
 
 document.getElementById("two_ways_calendar_from").addEventListener("change", function() {
