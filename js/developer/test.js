@@ -1,5 +1,11 @@
 
-    
+$(document).on('click', '.someclass', function() {
+    doStuff();
+  });
+
+
+
+  
 var passengers;
 var from;
 var to;
@@ -20,28 +26,45 @@ var check_return
      passengers = $('#passengers').find(":selected").val();   
         from = $("#from").find(":selected").val();
         to = $('#to').find(":selected").val();
-    /*passengers = document.getElementById('#passengers').value
-    from = document.getElementById('#from').value
-    to = document.getElementById('#to').value*/
+
         
-    let date = document.getElementById("one_way_calendar_from");
-            date.oninput = () => {
-                   new Date(date.value)
+    let date1 = document.getElementById("one_way_calendar_from");
+            date1.oninput = () => {
+                   new Date(date1.value)
         }
 
-    let date_one_way = date.value
+    let date_one_way = date1.value
+
+    let date2 = document.getElementById("two_ways_calendar_from");
+    date2.oninput = () => {
+           new Date(date2.value)
+}
+
+let date_return = date2.value
+
+
 //console.log(passengers)
         if ((jj==='1') && (passengers.length > 0) && 
             (from.length > 0) && 
             (to.length > 0) &&
-            (date_one_way.length > 0)  ){ 
+            (date_one_way.length > 0)   ) 
+                        { 
         $('#open').removeAttr('disabled');
-        } 
+        }  else if ((jj==='2') && (passengers.length > 0) && 
+            (from.length > 0) && 
+            (to.length > 0) &&
+            (date_one_way.length > 0) &&
+            (date_return.length > 0))
+                        { 
+        $('#open').removeAttr('disabled');
+        }
+
+        }
 
 
 
         
-}
+
 
         
 

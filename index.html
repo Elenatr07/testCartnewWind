@@ -59,7 +59,7 @@
     <div class="trip_direction">
          <p class="trip_text" id="trip_text">Round trip</p>
          
-        <div class="switch" id="rates"value=''> 
+        <div class="switch" id="rates"value='' > 
         
             <input name="rate" id="one_trip" type="radio" checked  onclick="one_way_trip()" value="1" data-check="1"/>
             <label for="one_trip" class="switch__label"></label>
@@ -75,7 +75,7 @@
         
     <div class="select_wrapper">
          <label for="passengers">Number of Passengers</label>
-    <select class="item"  name="trip_select" id="passengers" onclick="changeDetected()" >
+    <select class="item"  name="trip_select" id="passengers"  >
       <option value="" disabled selected  data-pass="0" >Select Number of Passengers</option>
       <option value="0" data-pass="1"  data-info="1 person" >1 person</option>
       <option value="0" data-pass="2"  data-info="2 persons">2 persons</option>
@@ -83,15 +83,15 @@
     </select>
     <div class="one_way">
          <label for="from">From</label>
-         <select class="item"  name="trip_select" id="from" onclick="changeDetected()" >
+         <select class="item"  name="trip_select" id="from"  >
             <option value="" disabled selected >From</option>
             <option value="1000" data-from="Москва" data-id="201">Москва</option>
             <option value="1200" data-from="Хабаровск" data-id="202">Хабаровск</option>
             <option value="1400" data-from="Владивосток" data-id="203">Владивосток</option>
         </select>
-        <input type="date" name="trip_select" id="one_way_calendar_from" >
+        <input type="date" name="trip_select" id="one_way_calendar_from"  >
          <label for="to">To</label>
-        <select class="item" name="trip_select" id="to" onclick="changeDetected()" >
+        <select class="item" name="trip_select" id="to"  >
             <option value="" disabled selected  >To</option>
             <option value="0" data-to="Москва" >Москва</option>
             <option value="0" data-to="Хабаровск" >Хабаровск</option>
@@ -142,7 +142,7 @@
 </script>
 
 <script src="js/developer/show_more.js"></script>
-<script src="js/developer/test.js"></script>
+
 <script src="js/developer/order.js"></script>
 
 
