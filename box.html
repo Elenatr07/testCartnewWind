@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/jqcart.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+   
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">Header
+            <a href="index.html">на главную</a>
+            <a href="layout.html"> на верстку</a>
+        </div>
+        <div class="order">
+
+        </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="js/developer/jqcart.js"></script>
+    <script>
+        $(function () {
+            'use strict';
+            // инициализация плагина
+            $.jqCart({
+                buttons: '.add_item',
+                handler: './php/handler.php',
+                cartLabel: '.label-place',
+                visibleLabel: true,
+                openByAdding: false,
+                currency: '&euro;',
+                promoHandler: './php/promo.php'
+            });
+            // Пример с дополнительными методами
+            $('#open').click(function () {
+                $.jqCart('openCart'); // открыть корзину
+            });
+            $('#clear').click(function () {
+                $.jqCart('clearCart'); // очистить корзину
+            });
+        });
+    </script>
+    <script>
+$(document).ready(function(){   
+    $.jqCart('openCart');
+ });</script>
+ <script src="js/developer/ending.js"></script>
+</body>
+</html>

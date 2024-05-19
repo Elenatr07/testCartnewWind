@@ -1,0 +1,230 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+	font-weight: inherit;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+/*
+input, textarea, button, select {
+	font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}*/
+
+.select_wrapper{
+display: flex;
+    flex-direction: column;
+    width: 500px;	
+}
+
+select{
+	margin-top: 10px;
+}
+form{
+	background-color: aqua;
+	width: 800px;
+	margin: auto;
+}
+.two_ways{
+	display: none;
+}
+#round_trip{
+	width:150px;
+	background-color: blue;
+	border: 2px solid red;
+	border-radius: 30px;
+	text-align: center;
+}
+
+/*style radio*/
+.switch {
+	position: relative;
+	padding: 0.1rem;
+	font-family: verdana;
+	
+  }
+  .switch:before {
+	content: "  ";
+	position: absolute;
+	left: 0;
+	z-index: 0;
+	background: rgba(216, 216, 216, 1);
+	border-radius: 30px;
+	width: 103px;
+	height: 40px;
+
+
+
+
+
+
+  }
+  .switch__label {
+	display: inline-block;
+	width: 48px;
+    height: 37px;
+    padding: 14px;
+	text-align: center;
+	cursor: pointer;
+	transition: color 200ms ease-out;
+	z-index: 1;
+    position: relative;
+	
+  }
+ 
+  .switch__indicator {
+
+	position: absolute;
+    top: 0.4rem;
+    left: -11px;
+	background: rgba(17, 24, 85, 1);
+	border-radius: 50%;
+	transition: transform 600ms cubic-bezier(0.02, 0.94, 0.09, 0.97), background 300ms cubic-bezier(0.17, 0.67, 0.14, 1.03);
+	transform: translate3d(1rem, 0, 0);
+	width: 32px;
+	height: 32px;
+
+
+  }
+  .switch input#one_trip:checked ~ .switch__indicator {
+	background: rgba(17, 24, 85, 1);
+	
+	transform: translate3d(1rem, 0rem, 0);
+  }
+  .switch > input#one_trip:checked ~ .switch:before{
+	background: white;
+  }
+  .switch input#round_trip:checked ~ .switch__indicator {
+	background: linear-gradient(180deg, #FEEDC4 0%, #E3BC78 100%);
+
+	transform: translate3d(4.9rem, 0rem, 0);
+  }
+  
+  .switch input[type=radio]:not(:checked), .switch input[type=radio]:checked {
+	display: none;
+  }
+  
+/*end style radio*/
+.trip_direction{
+	display: flex;
+	
+	justify-content:right;
+	margin: auto 0;
+}
+
+/*style order*/
+.trip_order{
+	background: rgba(56, 62, 94, 1);
+	box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.15);
+	width: 100%;
+	max-width: 884px;
+	height: 219px;
+	border-radius: 30px;
+	padding: 52px 100px;
+	
+}
+.trip_order_info{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.way_info {
+	color: rgba(255, 255, 255, 1);
+	font-size: 18px;
+
+}
+.way{
+	color:rgba(246, 215, 136, 1)
+}
+.verticalLine{
+	width: 0px; /* Use only border style */
+	height: 100px;
+	float: left; 
+	border: 1px inset; /* This is default border style for <hr> tag */
+	color: red;
+}
+.edit {
+	float: right;
+    position: relative;
+    top: -30px;
+    right: -57px;
+	color: wheat;
+}
+

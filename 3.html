@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Untitled</title>
+    <meta charset="utf-8">
+    <script>
+window.addEventListener("DOMContentLoaded", function() {
+    var radio = document.querySelectorAll('[name="shipping_rate_id"]'),
+        visible = true,
+        div = document.querySelector("#vm_myadres_input"),
+        myadres = document.querySelector("#vm_myadres_field"),
+        form = document.querySelector("form"),
+        myname = document.querySelector("#vm_myname_field"),
+        err = document.querySelector("#err_userfields");
+    [].forEach.call(radio, function(item, i) {
+        item.addEventListener("click", function() {
+            visible = this.value == 2;
+            div.style.display = visible ? "" : "none"
+        })
+    });
+    form.addEventListener("submit", function(event) {
+        var text = "",
+            val = myname.value.replace(/\s+/g, "");
+        if (!val) text += " Заполните поле Имя <br>";
+        val = myadres.value.replace(/\s+/g, "");
+        if (!val && visible) text += " Заполните поле Адрес ";
+        text && event.preventDefault();
+        err.innerHTML = text;
+        return !text
+    }, false)
+});
+    </script>
+</head>
+
+<body>
+    <div id="err_userfields" class="err_valid" style="color:red; font-weight:bold;"></div>
+    <form action="index.php" method="post" >
+        <input name="shipping_rate_id" id="zzz1" value="1" type="radio"> Самовывоз <em>(поле Адрес будет скрыто)</em>
+        <br>
+        <input name="shipping_rate_id" id="zzz2" value="2" type="radio"> Доставка по Москве <em>(поле Адрес будет показано)</em>
+        <br>
+        <br>
+
+        <div class="formField" id="vm_myname_input">
+            <input id="vm_myname_field" name="vm_myname" value="" class="inputbox" type="text"> Имя
+        </div>
+        <br>
+        <div class="formField" id="vm_myadres_input">
+            <input id="vm_myadres_field" name="vm_myadres" value="" class="inputbox" type="text"> Адрес
+        </div>
+        <br>
+        <input id="submit-form" type="submit" value="Оформить заказ" />
+    </form>
+
+
+</body>
+
+</html>

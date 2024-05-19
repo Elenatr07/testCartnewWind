@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="trip_order">
+        <button type="button" class="edit" id="edit_prip">Edit</button>
+        <div class="trip_order_info">
+            <div class="one_way_part">
+            <div class="way"> Surabaya   <span>  - Denpasar</span> </div>
+            <div class="way_info"> 18 may 2024     </div>
+            <div class="way_info pass_ending" data-value="2" id="pass_ending"> </div>
+            <div class="way_info">from 4 pm</div>
+        </div>
+        <hr class="verticalLine"  />
+        <div class="two_way_part" id="two_way_part">
+            <div class="way"> Denpasar   <span>  - Surabaya</span> </div>
+            <div class="way_info"> 22 may 2024     </div>
+            <div class="way_info pass_ending" data-value="2" id="pass_ending1"> </div>
+            <div class="way_info">from 4 pm</div>
+
+        </div>
+        </div>
+        <div class="hide_return_trip" hidden data-return="" id="hide_return_trip"></div>
+        
+    </div>
+
+    <script src="js/developer/ending.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Документ без названия</title>
+    <link href="css/jqcart.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+
+    
+ 
+    <style type="text/css">
+        /* Стили для демо (таблица товаров) */
+        #wrapper {
+            width: 50%;
+            margin: 10px;
+        }
+
+        #label-place {
+            margin: 10px 0;
+        }
+
+        .item_box {
+            border: 1px solid #999;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .item_box::after {
+            content: '';
+            display: table;
+            clear: left;
+        }
+
+        .item_box > img {
+            float: left;
+        }
+
+        .shopping_list {
+            width: 100%;
+            margin-top: 10px;
+            border-collapse: collapse;
+        }
+
+        .shopping_list td, .shopping_list th {
+            padding: 10px;
+            border: 1px solid #AAAAAA;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="sum" class="sum">
+<form class="form" autocomplete="off">
+    <h4>Book a Trip</h4>
+    <p >Price total</p>
+    
+    <input type="text" name="itog" id="itog" value="" class="itog" data-price=""/>
+    <div class="trip_direction">
+         <p class="trip_text" id="trip_text">Round trip</p>
+         
+        <div class="switch" id="rates"value=''> 
+        
+            <input name="rate" id="one_trip" type="radio" checked  onclick="one_way_trip()" value="1" data-check="1"/>
+            <label for="one_trip" class="switch__label"></label>
+            <input  type='radio' name='rate' value="2" id="round_trip" onclick="two_trip()" data-check="1"> 
+            <label for="round_trip" class="switch__label"></label>
+            <input type="hidden" name="sum" value="1" id="hidfield"  />
+            <div class="switch__indicator" ></div>
+        </div>
+    
+    </div>
+    
+    
+        
+    <div class="select_wrapper">
+         <label for="passengers">Number of Passengers</label>
+    <select class="item"  name="trip_select" id="passengers" onclick="changeDetected()" >
+      <option value="" disabled selected  data-pass="0" >Select Number of Passengers</option>
+      <option value="0" data-pass="1"  data-info="1 person" >1 person</option>
+      <option value="0" data-pass="2"  data-info="2 persons">2 persons</option>
+      <option value="0" data-pass="3"  data-info="3 persons" >3 persons</option>
+    </select>
+    <div class="one_way">
+         <label for="from">From</label>
+         <select class="item"  name="trip_select" id="from" onclick="changeDetected()" >
+            <option value="" disabled selected >From</option>
+            <option value="1000" data-from="Москва" data-id="201">Москва</option>
+            <option value="1200" data-from="Хабаровск" data-id="202">Хабаровск</option>
+            <option value="1400" data-from="Владивосток" data-id="203">Владивосток</option>
+        </select>
+        <input type="date" name="trip_select" id="one_way_calendar_from" >
+         <label for="to">To</label>
+        <select class="item" name="trip_select" id="to" onclick="changeDetected()" >
+            <option value="" disabled selected  >To</option>
+            <option value="0" data-to="Москва" >Москва</option>
+            <option value="0" data-to="Хабаровск" >Хабаровск</option>
+            <option value="0" data-to="Владивосток" >Владивосток</option>
+        </select>
+    </div>
+    <div class="two_ways" id="two_ways">
+        <label for="">Return Date</label>
+        <input  type="date" name="trip_select" id="two_ways_calendar_from" data-trip="Round Trip" value="" data-check="">
+    </div>
+   
+    </div>
+   
+                  
+      <br>
+      <button disabled   type="button" class="add_item" id="open" data-id="trip" data-title="book a trip" data-price="" data-date-one-way="" data-date-return-way="" data-to="" data-from ="" data-to=""  data-pass="" data-return=""> Search</button>
+ </form>
+ <button id="clear">Очистить корзину (вызов метода clearCart)</button>
+
+ </button>
+ </div>
+ 
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="js/developer/jqcart.js"></script>
+<script>
+    $(function () {
+        'use strict';
+        // инициализация плагина
+        $.jqCart({
+            buttons: '.add_item',
+            handler: './php/handler.php',
+            cartLabel: '.label-place',
+            visibleLabel: true,
+            openByAdding: false,
+            currency: '&euro;',
+            promoHandler: './php/promo.php'
+        });
+        // Пример с дополнительными методами
+        $('#open').click(function () {
+          //  $.jqCart('openCart'); // открыть корзину
+          $.jqCart('openCart1');
+        });
+        $('#clear').click(function () {
+            $.jqCart('clearCart'); // очистить корзину
+        });
+    });
+</script>
+
+<script src="js/developer/show_more.js"></script>
+<script src="js/developer/test.js"></script>
+<script src="js/developer/order.js"></script>
+
+
+</body>
+</html>
