@@ -197,6 +197,7 @@ form{
 	height: 219px;
 	border-radius: 30px;
 	padding: 52px 100px;
+	margin: auto;
 	
 }
 .trip_order_info{
@@ -227,4 +228,93 @@ form{
     right: -57px;
 	color: wheat;
 }
+.trip_order_select{
+	max-width: 1698px;
+	height: 191px;
+	border-radius: 30px;
+	background: rgba(17, 24, 86, 1);
+	box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.15);
+	padding: 30px 50px;
+	margin: auto;
 
+
+
+}
+.time_trip{
+	font-family: 'Montserrat', sans-serif;
+font-size: 18px;
+font-weight: 300;
+line-height: 21.94px;
+letter-spacing: 0.05em;
+text-align: center;
+color: rgba(255, 255, 255, 1);
+
+
+}
+.block_from_to p,
+.cost_from_to p{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 35px;
+	font-weight: 600;
+	line-height: 42.67px;
+	letter-spacing: 0.05em;
+	text-align: center;
+	color: rgba(255, 255, 255, 1);
+	
+}
+.block_from_to p span,
+.cost_from_to span {
+	background: linear-gradient(91.52deg, #F7D788 46.79%, #E3BC78 99.46%);
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.wrapper_from_to{
+	display: flex;
+	justify-content: space-between;
+}
+.line_from_to{
+	display: flex;
+}
+.cost_from_to span {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 35px;
+	font-weight: 600;
+	line-height: 42.67px;
+	letter-spacing: 0.05em;
+	text-align: left;
+
+}
+.cost_from_to{
+	
+font-family: 'Montserrat', sans-serif;
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 26.82px;
+	letter-spacing: 0.05em;
+	text-align: left;
+}
+.line_from_to div{
+	width: 275px;
+	display: flex;
+	margin: auto;
+	
+}
+.line_from_to div:nth-child(1) {
+	display: flex;
+	justify-content: left;
+}
+.line_from_to div:nth-child(2) {
+	display: flex;
+	justify-content: center;
+}
+.line_from_to div:nth-child(3) {
+	margin: auto;
+	display: flex;
+	justify-content: right;
+}
+.line1{
+	position: relative;
+    top: -23px;
+	left: 373px;
+}
+	
