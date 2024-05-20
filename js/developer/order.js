@@ -1,10 +1,9 @@
  //get full date
-let fullDateOneTtip
+let fullDateOneTtip;
+let months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
 document.getElementById("one_way_calendar_from").addEventListener("change", function() {
   var input = this.value;
-  let months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
- 
-  let date = new Date(input).getDate();
+    let date = new Date(input).getDate();
   let month = new Date(input).getMonth();
   let year = new Date(input).getFullYear();
   let month1 = months[month]
@@ -15,8 +14,6 @@ document.getElementById("one_way_calendar_from").addEventListener("change", func
 let fullDateTwoTtip
 document.getElementById("two_ways_calendar_from").addEventListener("change", function() {
   var input = this.value;
-  let months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
- 
   let date = new Date(input).getDate();
   let month = new Date(input).getMonth();
   let year = new Date(input).getFullYear();
