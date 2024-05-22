@@ -11,10 +11,12 @@
     var cartData,
         itemData,
         orderPreview = '',
+        openTripview ='',
         totalCnt = 0,
         visibleLabel = false,
         label = $('<div class="jqcart-cart-label"><span class="jqcart-title">Оформить заказ</span><span class="jqcart-total-cnt">0</span></div>'),
         modal = '<div class="jqcart-layout"><div class="jqcart-checkout">123</div></div>',
+        blockTrip = ' <div class="order_distance" id="order_distance"></div>',
         orderform = '<p class="jqcart-cart-title">Контактная информация:</p><form class="jqcart-orderform"><p><label>ФИО:</label><input type="text" name="user_name"></p><p><label>Телефон:</label><input type="text" name="user_phone"></p><p><label>Email:</label><input type="text" name="user_mail"></p><p><label>Адрес:</label><input type="text" name="user_address"></p><p><label>Промо-код:</label><input type="text" name="promo_code"></p><p><label>Коментарий:</label><textarea name="user_comment"></textarea></p><p><input type="submit" value="Отправить заказ"></p></form>';
     var opts = {
         buttons: '.add_item',
@@ -149,10 +151,11 @@
         },
         openCart: function () {
             var subtotal = 0,
-                cartHtml = '';
+            cartHtml = '';
+            var openTrip ='';
             cartData = actions.getStorage();
            // orderPreview = '<p class="jqcart-cart-title">Корзина <span class="jqcart-print-order"></span></p><div class="jqcart-table-wrapper"><div class="jqcart-manage-order"><div class="jqcart-thead"><div>ID</div><div></div><div>Наименование</div><div>Цена</div><div>Кол-во</div><div>Сумма</div><div></div></div>';
-           orderPreview = '<div class="trip_order"> <button type="button" class="edit" id="edit_prip">Edit</button>   '
+           orderPreview = '<div class="trip_order" id="trip_order"> <button type="button" class="edit" id="edit_prip"><img src="img/pen.svg" alt=""></button>   '
             
             var key, sum = 0;
             for (key in cartData) {
@@ -176,7 +179,7 @@
                     orderPreview += '<div class="way_info pass_ending" data-value="'+ cartData[key].pass +'" id="pass_ending">  </div>';
                     orderPreview += ' <div class="way_info">from 4 pm</div>';
                     orderPreview += '</div>';
-                    orderPreview += ' <hr class="verticalLine"  />';
+                    orderPreview += ' <hr class="verticalLine" id="verticalLine" />';
                     orderPreview += '<div class="two_way_part" id="two_way_part">';
                     orderPreview += '<div class="way"> '+ cartData[key].to + ' <span>  - '+ cartData[key].from + '</span> </div>';
                     orderPreview += ' <div class="way_info"> '+ cartData[key].dateReturnWay + ' </div>';
@@ -187,16 +190,79 @@
                 }
             }
            // orderPreview += '</div></div>';
-           orderPreview += '</div>';
+                 orderPreview += '</div>';
+                 openTripview += '<div class="trip_order_select">';
+                openTripview += ' <div>';
+                openTripview += ' <p class="time_trip">9h*</p>';
+                openTripview += '<div class="wrapper_from_to">';
+                openTripview += '<div class="block_from_to">';
+                openTripview += '<p>Travel <span>Regular</span> </p>';
+                openTripview += '</div>';
+                openTripview += ' <div class="line_from_to">';
+                openTripview += ' <div><img src="img/Ellipse1.svg" alt=""></div>';
+                openTripview += '<div><img src="img/Ellipse2.svg" alt=""></div>';
+                openTripview += '<div><img src="img/Ellipse3.svg" alt=""></div>';
+                openTripview += ' </div>';
+                openTripview += ' <div class="cost_from_to">';
+           for (key in cartData){
+            if (cartData.hasOwnProperty(key)){
+
+                openTripview += ' <p> <span>RP '+ cartData[key].cost +'</span> / Seat</p>';
+                openTripview += ' </div>';
+                openTripview += '</div>';
+                openTripview += ' <div class="line1"><img src="img/line1.svg" alt=""></div>';
+                openTripview += '</div>';
+                openTripview += ' <div class="trip_order_distance_block">';
+                openTripview += '<div class="trip_order_distance_from">Your Location at '+ cartData[key].from + '</div>';
+                openTripview += '<div class="trip_order_distance_to">Your Location in '+ cartData[key].to + '</div>';
+
+            }}
+           
+            openTripview += ' </div>';
+            openTripview += '<div class="about_time_in_trip">* The stated hours are approximate, as the actual duration will depend on your specific location </div>';
+            openTripview += '</div>';
+            openTripview += '<hr class="horizontalline" id="horizontalline">';
+            openTripview += ' <div class="return_trip_order_select" id="return_trip_order_select">';
+            openTripview += '<div>';
+            openTripview += '<p class="time_trip">9h*</p>';
+            openTripview += '<div class="wrapper_from_to">';
+            openTripview += '<div class="block_from_to">';
+            openTripview += '<p>Travel <span>Regular</span> </p>';
+            openTripview += '</div>';
+            openTripview += '<div class="line_from_to">';
+            openTripview += '<div><img src="img/Ellipse1.svg" alt=""></div>';
+            openTripview += '<div><img src="img/Ellipse2.svg" alt=""></div>';
+            openTripview += ' <div><img src="img/Ellipse3.svg" alt=""></div>';
+            openTripview += '</div>';
+            openTripview += '<div class="cost_from_to">';
+
+            for (key in cartData){
+                if (cartData.hasOwnProperty(key)){
+                    openTripview +='<p> <span>RP '+ cartData[key].cost +'</span> / Seat</p>' ;
+                    openTripview += '</div>';
+                    openTripview += '</div>';
+                    openTripview += '<div class="line1"><img src="img/line1.svg" alt=""></div>';
+                    openTripview += '</div>';
+                    openTripview += ' <div class="trip_order_distance_block">';
+                    openTripview += '<div class="trip_order_distance_from">Your Location at '+ cartData[key].to + '</div>';
+                    openTripview += '<div class="trip_order_distance_to">Your Location in '+ cartData[key].from + '</div>';
+                    
+
+                }}
+            openTripview += '</div>';
+            openTripview += ' <div class="about_time_in_trip">* The stated hours are approximate, as the actual duration will depend on your specific location </div>';
+            openTripview += '</div>';
+           
 
             var discountSum = actions.calcDiscount(subtotal),
                 savedPromo = sessionStorage.getItem('promocode');
             orderPreview += '<div class="jqcart-discount" style="display:' + (discountSum > 0 ? 'block' : 'none') + ';">Скидка <span>' + opts.discount + '</span>%: <strong>' + discountSum + '</strong> ' + opts.currency + '</div>';
             orderPreview += '<div class="jqcart-subtotal">Итого: <strong>' + (subtotal - discountSum) + '</strong> ' + opts.currency + '</div>';
 
-
+            openTrip = openTripview;
             cartHtml = subtotal ? (orderPreview + orderform) : '<h2 class="jqcart-empty-cart">Корзина пуста</h2>';
             $(modal).appendTo('.order').find('.jqcart-checkout').html(cartHtml).find('[name="promo_code"]').val(savedPromo);
+           $(blockTrip).appendTo('#order_distance').html(openTrip)
         },
         openCart1: function(){
             $(location).attr('href','/box.html')

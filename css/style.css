@@ -93,12 +93,8 @@ display: flex;
     width: 500px;	
 }
 
-select{
-	margin-top: 10px;
-}
+
 form{
-	background-color: aqua;
-	width: 800px;
 	margin: auto;
 }
 .two_ways{
@@ -209,6 +205,7 @@ form{
 .way_info {
 	color: rgba(255, 255, 255, 1);
 	font-size: 18px;
+	text-align: left;
 
 }
 .way{
@@ -226,20 +223,21 @@ form{
     position: relative;
     top: -30px;
     right: -57px;
-	color: wheat;
+	background: transparent;
+
 }
-.trip_order_select{
+.trip_order_select,
+.return_trip_order_select{
 	max-width: 1698px;
+	width: 100%;
 	height: 191px;
 	border-radius: 30px;
-	background: rgba(17, 24, 86, 1);
-	box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.15);
+	
 	padding: 30px 50px;
 	margin: auto;
-
-
-
 }
+
+
 .time_trip{
 	font-family: 'Montserrat', sans-serif;
 font-size: 18px;
@@ -314,7 +312,186 @@ font-family: 'Montserrat', sans-serif;
 }
 .line1{
 	position: relative;
-    top: -23px;
-	left: 373px;
+	top: -22px;
+    left: 405px;
+	max-width: 786px;
+	width: 100%;
 }
+.trip_order_distance_from,
+.trip_order_distance_to{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 21.94px;
+	letter-spacing: 0.05em;
+	text-align: center;
+	color: rgba(255, 255, 255, 1);
+}
+.trip_order_distance_block{
+	display: flex;
+	justify-content: space-between;
+	padding: 0 23% 13px 19%;
+    top: -14px;
+    position: relative;
+}
+.about_time_in_trip{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 18.29px;
+	letter-spacing: 0.05em;
+	text-align: left;
+	color: rgba(192, 191, 191, 1);
+	margin: 0;
+}
+
+
+.order_distance{
+
+	max-width: 1698px;
+	width: 100%;
+	height: 444px;
+	background: rgba(17, 24, 86, 1);
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	border-radius: 30px;
+	border: 1px solid rgba(255, 255, 255, 1)
+}
+.horizontalline {
+	width: 150px;
+	height: 2px;
+	background: linear-gradient(90deg, #FEEDC4 0%, #F7D788 100%);
+	border: none;
+	margin: auto;
+
+}
+.search_container{
+	max-width: 1460px;
+	border-radius: 30px;
+	margin: 100px auto;
+	display: flex;
+}
+.service_items {
+	width: 220px;
+	border-radius: 30px 0px 0px 30px;
+	background: rgba(56, 62, 94, 1);
+
+
+}
+.service_item{
+	color: rgba(192, 191, 191, 1);
+	border-bottom: 1px solid rgba(216, 216, 216, 1);
+	padding-bottom: 21px;
+	padding-top: 15px;
+	display: flex;
+	justify-content: space-between;
+}
+.service_item p{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 26.82px;
+	letter-spacing: 0.05em;
+	text-align: center;
+	width: 98%;
+	margin: auto;
+	
+	
+
+}
+
+.checked_line{
+	width: 3px;
+	height: 51px;
+	background: linear-gradient(90deg, #F7D788 0%, #E3BC78 100%);
+	display: block;
+	position: relative;
+	top: 21px;
+}
+.service_items_options{
+	max-width: 1240px;
+	width: 100%;
+	border-radius: 0px 30px 30px 0px;
+	background: rgba(26, 34, 68, 1);
+	padding: 41px 29px 24px 25px;
+}
+.select_passangers{
+	display: flex;
+	flex-direction: column;
+}
+.one_way{
+	display: flex;
+	flex-direction: row;
+
+}
+.service_item_options_block{
+	display: flex;
+}
+.label_pass,
+.trip_text {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 18.29px;
+	letter-spacing: 0.05em;
+	text-align: left;
+	color: rgba(192, 191, 191, 1);
+
+
+}
+.option_for_select{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 21.94px;
+	letter-spacing: 0.05em;
+	text-align: left;
+	color: rgba(255, 255, 255, 1);
+
+}
+.item{
+	font-family: "Montserrat", sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 21.94px;
+	letter-spacing: 0.05em;
+	text-align: left;
+
+}
+.one_way_date,
+.one_way_time,
+.return_way_date,
+.return_way_time{
+	display: flex;
+	flex-direction: column;
+}
+.date_time{
+	display: flex;
+	flex-direction: column;
+}
+.one_way_block{
+	display: flex;
+}
+#open{
+	width: 228px;
+	height: 66px;
+	border-radius: 30px;
+	background: linear-gradient(90deg, #F7D788 0%, #E3BC78 100%);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 26.82px;
+	letter-spacing: 0.05em;
+	text-align: center;
+	color: rgba(17, 23, 84, 1);
+	opacity: 0.7;
+	cursor: pointer;
+
+
+
+
+}
+
+
 	

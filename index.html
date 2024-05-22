@@ -54,69 +54,131 @@
 
 <body>
 
-<div id="sum" class="sum">
-<form class="form" autocomplete="off">
-    <h4>Book a Trip</h4>
-    <p >Price total</p>
-    
-    <input type="text" name="itog" id="itog" value="" class="itog" data-price=""/>
-    <div class="trip_direction">
-         <p class="trip_text" id="trip_text">Round trip</p>
-         
-        <div class="switch" id="rates"value='' > 
-        
-            <input name="rate" id="one_trip" type="radio" checked  onclick="one_way_trip()" value="1" data-check="1"/>
-            <label for="one_trip" class="switch__label"></label>
-            <input  type='radio' name='rate' value="2" id="round_trip" onclick="two_trip()" data-check="1"> 
-            <label for="round_trip" class="switch__label"></label>
-            <input type="hidden" name="sum" value="1" id="hidfield"  />
-            <div class="switch__indicator" ></div>
+    <div class="search_container">
+        <div class="service_items">
+            <div class="service_item">
+                <p>Book a Trip</p> 
+                <span class="checked_line"></span>
+            </div>
+            <div class="service_item">
+                <p>Book a Car</p>
+                <span class="checked_line"></span>
+            </div>
+            <div class="service_item">
+                <p>Send a Parcel</p><span class="checked_line"></span>
+            </div>
         </div>
-    
-    </div>
-    
-    
-        
-    <div class="select_wrapper">
-         <label for="passengers">Number of Passengers</label>
-    <select class="item"  name="trip_select" id="passengers"  >
-      <option value="" disabled selected  data-pass="0" >Select Number of Passengers</option>
-      <option value="0" data-pass="1"  data-info="1 person" >1 person</option>
-      <option value="0" data-pass="2"  data-info="2 persons">2 persons</option>
-      <option value="0" data-pass="3"  data-info="3 persons" >3 persons</option>
-    </select>
-    <div class="one_way">
-         <label for="from">From</label>
-         <select class="item"  name="trip_select" id="from"  >
-            <option value="" disabled selected >From</option>
-            <option value="1000" data-from="Москва" data-id="201">Москва</option>
-            <option value="1200" data-from="Хабаровск" data-id="202">Хабаровск</option>
-            <option value="1400" data-from="Владивосток" data-id="203">Владивосток</option>
-        </select>
-        <input type="date" name="trip_select" id="one_way_calendar_from"  >
-         <label for="to">To</label>
-        <select class="item" name="trip_select" id="to"  >
-            <option value="" disabled selected  >To</option>
-            <option value="0" data-to="Москва" >Москва</option>
-            <option value="0" data-to="Хабаровск" >Хабаровск</option>
-            <option value="0" data-to="Владивосток" >Владивосток</option>
-        </select>
-    </div>
-    <div class="two_ways" id="two_ways">
-        <label for="">Return Date</label>
-        <input  type="date" name="trip_select" id="two_ways_calendar_from" data-trip="Round Trip" value="" data-check="">
-    </div>
-   
-    </div>
-   
-                  
-      <br>
-      <button disabled   type="button" class="add_item" id="open" data-id="trip" data-title="book a trip" data-price="" data-date-one-way="" data-date-return-way="" data-to="" data-from ="" data-to=""  data-pass="" data-return=""> Search</button>
- </form>
- <button id="clear">Очистить корзину (вызов метода clearCart)</button>
+        <div class="service_items_options">
+            <div id="sum" class="sum">
+                 <form class="form" autocomplete="off">
+                    <div class="service_item_options_block">
+                        <div class="select_passangers">    
+                            <label class="label_pass" for="passengers">Number of Passengers*</label>
+                            <select class="item"  name="trip_select" id="passengers"  >
+                                <option class="option_for_select" value="" disabled selected  data-pass="0" >Select Number of Passengers</option>
+                                <option class="option_for_select" value="0" data-pass="1"  data-info="1 person" >1 person</option>
+                                <option class="option_for_select" value="0" data-pass="2"  data-info="2 persons">2 persons</option>
+                                <option class="option_for_select" value="0" data-pass="3"  data-info="3 persons" >3 persons</option>
+                            </select>
+                            <div class="one_way">
+                                <div class="one-way_from">
+                                    <label for="from"></label>
+                                    <select class="item"  name="trip_select" id="from"  >
+                                        <option value="" disabled selected >From</option>
+                                        <option value="1000" data-from="Москва" data-id="201" data-cost="1000">Москва</option>
+                                        <option value="1200" data-from="Хабаровск" data-id="202" data-cost="1200">Хабаровск</option>
+                                        <option value="1400" data-from="Владивосток" data-id="203" data-cost="1400">Владивосток</option>
+                                    </select>
+                                </div>
+                                <div class="one-way_to">
+                                    <label for="to"></label>
+                                    <select class="item" name="trip_select" id="to"  >
+                                        <option value="" disabled selected  >To</option>
+                                        <option value="0" data-to="Москва" >Москва</option>
+                                        <option value="0" data-to="Хабаровск" >Хабаровск</option>
+                                        <option value="0" data-to="Владивосток" >Владивосток</option>
+                                    </select>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        <div class="date_time">
+                            <div class="one_way_block">
+                                <div class="one_way_date">
+                                    <label class="label_pass" for="one_way_calendar_from">Departure Date</label>
+                                    <input class="item" type="date" name="trip_select" id="one_way_calendar_from"  >
+                                </div>
+                                <div class="one_way_time">
+                                     <label class="label_pass" for="time_departure">Time</label>
+                                     <select class="item" name="time_departure" id="time_departure"  >
+                                        <option value="" disabled selected  >Anytime</option>
+                                        <option value="0" data-timeDeparture="from 4pm" >from 4pm</option>
+                                    
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="two_ways" id="two_ways">
+                                <div class="return_way_date" >
+                                    <label class="label_pass" for="two_ways_calendar_from">Return Date</label>
+                                    <input class="item"  type="date" name="trip_select" id="two_ways_calendar_from" data-trip="Round Trip" value="" data-check="">
+                                </div>
+                                <div class="return_way_time">
+                                    <label class="label_pass" for="time_return">Time</label>
+                                    <select class="item" name="time_return" id="time_return"  >
+                                        <option value="" disabled selected  >Anytime</option>
+                                        <option value="0" data-timeReturn="from 4pm" >from 4pm</option>
+                                    </select>
+                                </div>
+                               
+                            
+                            </div>
+                        </div>
+                            
+                            
+                    
+                        <div>
+                            <div class="trip_direction">
+                                <p class="trip_text" id="trip_text">Round trip</p>
+                                <div class="switch" id="rates"value='' > 
+                                    <input name="rate" id="one_trip" type="radio" checked  onclick="one_way_trip()" value="1" data-check="1"/>
+                                    <label for="one_trip" class="switch__label"></label>
+                                    <input  type='radio' name='rate' value="2" id="round_trip" onclick="two_trip()" data-check="1"> 
+                                    <label for="round_trip" class="switch__label"></label>
+                                    <input type="hidden" name="sum" value="1" id="hidfield"  />
+                                    <div class="switch__indicator" ></div>
+                                </div>
+                                
+                            </div> 
+                            <button disabled   type="button" class="add_item" id="open" data-id="trip" data-title="book a trip" data-price="" data-date-one-way="" data-date-return-way="" data-to="" data-from ="" data-to=""  data-pass="" data-return="" data-cost=""> Search</button>
+                        </div>
+                        
+                    </div></div>
+                        <div></div>
+                    </div>
+                    
+                    
+                    <div class="select_wrapper">
+                    
+                        
+                            
+                            
+                            
+                        </div>
+                        
+                    <br>
+                   
+                </form>
+                
 
- </button>
- </div>
+ 
+            </div>
+        </div>
+
+    </div>
+<button id="clear">Очистить корзину (вызов метода clearCart)</button>
+
  
 
 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
