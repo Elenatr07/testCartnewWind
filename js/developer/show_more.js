@@ -22,7 +22,7 @@ function two_trip(){
     
     for (var i = 0, el; el = els[i]; i++){
       if (getComputedStyle(el).display == 'none') {
-        el.style.display = 'block';
+        el.style.display = 'flex';
         
         
         
@@ -57,7 +57,7 @@ function two_trip(){
       
      
      for (var i = 0, el; el = els[i]; i++){
-       if (getComputedStyle(el).display == 'block') {
+       if (getComputedStyle(el).display == 'flex') {
          el.style.display = 'none';
          
          

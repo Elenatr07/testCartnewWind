@@ -40,7 +40,9 @@ $(".sum").on("change", function (event) {
 
     
     let result = 0;
-    //data
+   
+    //data 
+    let cost= $(event.target).closest(".sum").find("#from").find(":selected").data("cost");
     let pass = $(event.target).closest(".sum").find("#passengers").find(":selected").data("pass");
     let val = document.querySelector('input[name="rate"]:checked').value;
     let from = $(event.target).closest(".sum").find("#from").find(":selected").data("from");
@@ -62,9 +64,11 @@ $(".sum").on("change", function (event) {
         }
         result += value * 1;
         result1 = result * pass * val;
+        
+        
       });
     // console.log(result1)
-    $(event.target).closest(".sum").find(".itog").val("£" + result1);
+    //$(event.target).closest(".sum").find(".itog").val("£" + result1);
 
     
    
@@ -80,6 +84,7 @@ $(".sum").on("change", function (event) {
     $(event.target).closest(".sum").find(".add_item").attr("data-date-one-way", date_one_way);
     $(event.target).closest(".sum").find(".add_item").attr("data-date-return-way", date_return_way);
     $(event.target).closest(".sum").find(".add_item").attr("data-return", val);
+    $(event.target).closest(".sum").find(".add_item").attr("data-cost", cost);
   
 
 
@@ -146,9 +151,11 @@ var check_return
             (date_one_way.length > 0)   ) 
                         { 
         $('#open').removeAttr('disabled');
+        $('#open').css({"opacity" : '1'});
         } else if ((jj==='2') && (date_return === '') ){
           console.log ('скрыть')
           $('#open').attr('disabled', 'disabled');
+          $('#open').css({"opacity" : '0.7'})
 
         } else if ((jj==='2') && (passengers.length > 0) && 
             (from.length > 0) && 
@@ -157,11 +164,20 @@ var check_return
             (date_return.length > 0))
                         { 
         $('#open').removeAttr('disabled');
+        $('#open').css({"opacity" : '1'})
         }
 
         }
         
 
 });
+/*
+$(".sum").on("click", function (event){
 
+  $(event.target).closest(".trip_order").find("#edit_trip").on(edit);
 
+  function edit(){
+
+  }
+
+})*/
