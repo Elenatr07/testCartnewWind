@@ -1,4 +1,5 @@
 function two_trip(){
+
   let check1 = document.getElementById('one_trip')
   let check2= document.getElementById('round_trip')
     let els = document.getElementsByClassName("two_ways");
@@ -10,12 +11,18 @@ function two_trip(){
 
    var styleElem = document.head.appendChild(document.createElement("style"));
    var rt1 = document.getElementById('round_trip');
+
    
    if (rt1.checked) {
      
      styleElem.innerHTML = ".switch:before {background: rgba(56, 62, 94, 1);}";
-    $(check1).attr('data-check', ('1'))
-    $(check2).attr('data-check', ('2'))
+    $(check1).attr('data-check', ('1'));
+    $(check2).attr('data-check', ('2'));
+    $('#open').css({marginTop: '124px'});
+    $('#from').css({width: '500px', marginRight: '50px'});
+    $('#to').css({width: '500px', marginRight: '50px'});
+    $('#one_way').css({flexDirection: 'column'})
+   
      
          }
   
@@ -23,8 +30,7 @@ function two_trip(){
     for (var i = 0, el; el = els[i]; i++){
       if (getComputedStyle(el).display == 'none') {
         el.style.display = 'flex';
-        
-        
+           
         
       } /*else {
        el.style.display = "none";
@@ -50,8 +56,12 @@ function two_trip(){
     if (rt1.checked) {
       
       styleElem.innerHTML = ".switch:before {background: rgba(216, 216, 216, 1);}"
-      $(check1).attr('data-check', ('1'))
-      $(check2).attr('data-check', ('1'))
+      $(check1).attr('data-check', ('1'));
+      $(check2).attr('data-check', ('1'));
+      $('#open').css({marginTop: '42px'});
+      $('#from').css({width: '223px', marginRight: '25px'});
+      $('#to').css({width: '223px', marginRight: '25px'});
+      $('#one_way').css({flexDirection: 'row'})
       
           }
       
