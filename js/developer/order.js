@@ -153,7 +153,7 @@ var check_return
         $('#open').removeAttr('disabled');
         $('#open').css({"opacity" : '1'});
         } else if ((jj==='2') && (date_return === '') ){
-          console.log ('скрыть')
+ //         console.log ('скрыть')
           $('#open').attr('disabled', 'disabled');
           $('#open').css({"opacity" : '0.7'})
 
