@@ -32,71 +32,127 @@
         
     </div>
     <div class="order_distance" id="order_distance">
-                <div class="trip_order_select" id="trip_order_select">
-                        <div>
-                            <p class="time_trip">9h*</p>
-                            <div class="wrapper_from_to">
-                                <div class="block_from_to">
-                                    <p>Travel <span>Regular</span> </p>
-                                </div>
-                                <div class="line_from_to">
-                                    <div><img src="img/Ellipse1.svg" alt=""></div>
-                                    <div><img src="img/Ellipse2.svg" alt=""></div>
-                                    <div><img src="img/Ellipse3.svg" alt=""></div>
+        <div class="trip_order_select" id="trip_order_select">
+            <div>
+                <p class="time_trip">9h*</p>
+                <div class="wrapper_from_to">
+                    <div class="block_from_to">
+                        <p>Travel <span>Regular</span> </p>
+                    </div>
+                    <div class="line_from_to">
+                        <div><img src="img/Ellipse1.svg" alt=""></div>
+                        <div><img src="img/Ellipse2.svg" alt=""></div>
+                        <div><img src="img/Ellipse3.svg" alt=""></div>
                                     
-                                </div>
-                                <div class="cost_from_to">
-                                    <p> <span>RP 300,000</span> / Seat</p>
-                                </div>
-                            </div>
-                            <div class="line1"><img src="img/line1.svg" alt=""></div>
-                        </div>
-                        <div class="trip_order_distance_block">
-                            <div class="trip_order_distance_from">Your Location at Surabaya</div>
-                            <div class="trip_order_distance_to">Your Location in Denpasar</div>
-                        </div>
-                        <div class="about_time_in_trip">* The stated hours are approximate, as the actual duration will depend on your specific location </div>
+                    </div>
+                    <div class="cost_from_to">
+                        <p> <span>RP 300,000</span> / Seat</p>
+                    </div>
+                </div>
+                        <div class="line1"><img src="img/line1.svg" alt=""></div>
+            </div>
+            <div class="trip_order_distance_block">
+                <div class="trip_order_distance_from">Your Location at Surabaya</div>
+                <div class="trip_order_distance_to">Your Location in Denpasar</div>
+            </div>
+            <div class="about_time_in_trip">* The stated hours are approximate, as the actual duration will depend on your specific location </div>
                         
 
-                    </div>
-                    <hr class="horizontalline" id="horizontalline">
-                    <div class="return_trip_order_select" id="return_trip_order_select">
-                        <div>
-                            <p class="time_trip">9h*</p>
-                            <div class="wrapper_from_to">
-                                <div class="block_from_to">
-                                    <p>Travel <span>Regular</span> </p>
-                                </div>
-                                <div class="line_from_to">
-                                    <div><img src="img/Ellipse1.svg" alt=""></div>
-                                    <div><img src="img/Ellipse2.svg" alt=""></div>
-                                    <div><img src="img/Ellipse3.svg" alt=""></div>
+        </div>
+        <hr class="horizontalline" id="horizontalline">
+        <div class="return_trip_order_select" id="return_trip_order_select">
+            <div>
+                <p class="time_trip">9h*</p>
+                <div class="wrapper_from_to">
+                <div class="block_from_to">
+                    <p>Travel <span>Regular</span> </p>
+                </div>
+                <div class="line_from_to">
+                    <div><img src="img/Ellipse1.svg" alt=""></div>
+                    <div><img src="img/Ellipse2.svg" alt=""></div>
+                    <div><img src="img/Ellipse3.svg" alt=""></div>
                                     
-                                </div>
-                                <div class="cost_from_to">
-                                    <p> <span>RP 300,000</span> / Seat</p>
-                                </div>
-                            </div>
-                            <div class="line1"><img src="img/line1.svg" alt=""></div>
-                        </div>
-                        <div class="trip_order_distance_block">
-                            <div class="trip_order_distance_from">Your Location at Surabaya</div>
-                            <div class="trip_order_distance_to">Your Location in Denpasar</div>
-                        </div>
-                        <div class="about_time_in_trip">* The stated hours are approximate, as the actual duration will depend on your specific location </div>
+                </div>
+                <div class="cost_from_to">
+                    <p> <span>RP 300,000</span> / Seat</p>
+                </div>
+            </div>
+            <div class="line1"><img src="img/line1.svg" alt=""></div>
+        </div>
+        <div class="trip_order_distance_block">
+            <div class="trip_order_distance_from">Your Location at Surabaya</div>
+            <div class="trip_order_distance_to">Your Location in Denpasar</div>
+        </div>
+        <div class="about_time_in_trip">* The stated hours are approximate, as the actual duration will depend on your specific location </div>
                         
-
-                    </div>
-
-
-
 
     </div>
+    <div class="orderPreview">
+        <form class="jqcart-orderform">
+            <div class="form_order_wrapper">
+                 <div class="location_details_wrapper" id="location_details_wrapper">
+                    <h2>Location <span>Details</span> </h2>
+                    <label for="pick_up_location_one_way">Your pick-up location </label>
+                    <input type="text" name="pick_up_location_one_way" id="pick_up_location_one_way" placeholder="Enter your address">
+                    <label for="drop_off_location_one_way">Your drop-off location </label>
+                    <input type="text" name="drop_off_location_one_way" id="drop_off_location_one_way" placeholder="Enter your address">
+                    <label for="seats_preference">Your seat(s) preference </label>
+                    <input type="text" name="seats_preference" id="seats_preference" placeholder="Your seat(s) preference ">
+                </div>
+                <hr class="verticalLine_in_form" id="verticalLine_in_form"  />
+                <div class="passenger_details_wrapper" id="passenger_details_wrapper">
+                     <h2>Passenger <span>Details</span> </h2>
+                     <label for="full_name_client">Your full name  </label>
+                    <input type="text" name="full_name_client" id="full_name_client" placeholder="Enter your name">
+                    <label for="phone_client">Your phone number </label>
+                    <input type="text" name="phone_client" id="phone_client" placeholder="Enter your phone number">
+                    <label for="email_client">Your email address </label>
+                    <input type="text" name="email_client" id="email_client" placeholder="Enter your email address">
+                </div>
+            </div>
+            <div hidden id="total_sum"></div>
+            <div hidden name="order_form"></div>
+           
+           <div class="button_order_wrapper">
+                <input class="button_order" type="submit" value="Send Request">
+           </div>
+        </form>
+
+    </div>
+
+
+
+
     <div class="edit_block_wrapper">
         
     </div>
     
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/developer/ending.js"></script>
+    
+<script src="js/developer/jqcart.js"></script>
+<script>
+    $(function () {
+        'use strict';
+        // инициализация плагина
+        $.jqCart({
+            buttons: '.add_item',
+            handler: './php/handler.php',
+            cartLabel: '.label-place',
+            visibleLabel: true,
+            openByAdding: false,
+            currency: '&euro;',
+            promoHandler: './php/promo.php'
+        });
+        // Пример с дополнительными методами
+        $('#open').click(function () {
+          //  $.jqCart('openCart'); // открыть корзину
+          $.jqCart('openCart');
+        });
+        $('#clear').click(function () {
+            $.jqCart('clearCart'); // очистить корзину
+        });
+    });
+</script>
 </body>
 </html>
