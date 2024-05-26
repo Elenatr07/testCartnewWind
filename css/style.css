@@ -213,11 +213,13 @@ form{
 	color:rgba(246, 215, 136, 1)
 }
 .verticalLine{
-	width: 0px; /* Use only border style */
+	width: 2px; /* Use only border style */
 	height: 100px;
 	float: left; 
-	border: 1px inset; /* This is default border style for <hr> tag */
-	color: red;
+	border: none;
+	background: linear-gradient(90deg, #FEEDC4 0%, #F7D788 100%);
+
+
 }
 .edit {
 	float: right;
@@ -251,7 +253,9 @@ color: rgba(255, 255, 255, 1);
 
 }
 .block_from_to p,
-.cost_from_to p{
+.cost_from_to p,
+.location_details_wrapper h2,
+.passenger_details_wrapper h2{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 35px;
 	font-weight: 600;
@@ -262,7 +266,9 @@ color: rgba(255, 255, 255, 1);
 	
 }
 .block_from_to p span,
-.cost_from_to span {
+.cost_from_to span,
+.location_details_wrapper span,
+.passenger_details_wrapper span {
 	background: linear-gradient(91.52deg, #F7D788 46.79%, #E3BC78 99.46%);
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -319,15 +325,26 @@ color: rgba(255, 255, 255, 1);
 	width: 100%;
 }
 .trip_order_distance_from,
-.trip_order_distance_to{
+.trip_order_distance_to,
+.location_details_wrapper label,
+.passenger_details_wrapper label
+{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 18px;
 	font-weight: 500;
 	line-height: 21.94px;
 	letter-spacing: 0.05em;
-	text-align: center;
 	color: rgba(255, 255, 255, 1);
 }
+.trip_order_distance_from,
+.trip_order_distance_to{
+	text-align: center;
+}
+.location_details_wrapper label,
+.passenger_details_wrapper label{
+	text-align: left;
+}
+
 .trip_order_distance_block{
 	display: flex;
 	justify-content: space-between;
@@ -367,12 +384,22 @@ color: rgba(255, 255, 255, 1);
 	margin: auto;
 
 }
-.search_container{
+.search_container,
+#edit_container{
 	max-width: 1460px;
 	width: 100%;
 	border-radius: 30px;
 	margin: 100px auto;
+	
+}
+.search_container{
 	display: flex;
+}
+#edit_container{
+	display: flex;
+}
+.hidden{
+	display: none;
 }
 .service_items {
 	width: 220px;
@@ -601,10 +628,117 @@ input[type='date']::-webkit-calendar-picker-indicator {
 
 
 }
+.orderPreview{
+	margin: 100px auto;
+	max-width: 1698px;
+	width: 100%;
+	background: rgba(17, 24, 86, 1);
+	padding: 50px;
+}
 
 
+.form_order_wrapper{
+	display: flex;
+	justify-content: space-between;
+}
+.location_details_wrapper,
+.passenger_details_wrapper{
+	display: flex;
+	flex-direction: column;
+	max-width: 690px;
+	width: 100%;
+}
+.location_details_wrapper input,
+.passenger_details_wrapper input{
+	width: 690px;
+	height: 62px;
+	border-radius: 15px;
+	background: rgba(56, 62, 94, 1);
+	padding: 23px 20px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 33px;
+	letter-spacing: 0.05em;
+	text-align: left;
+	color: rgba(255, 255, 255, 1);
+
+}
+.location_details_wrapper input[type=text]::placeholder{
+	color: rgba(128, 128, 128, 1);
+
+}
+.passenger_details_wrapper input[type=text]::placeholder{
+	color: rgba(128, 128, 128, 1);
+
+}
+.passenger_details_wrapper input[type=text]::-webkit-input-placeholder{
+	color: rgba(128, 128, 128, 1);
+}
+.location_details_wrapper input[type=text]::-webkit-input-placeholder{
+	color: rgba(128, 128, 128, 1);
+}
+
+.location_details_wrapper input[type=text]::-moz-placeholder {
+	color: rgba(128, 128, 128, 1);
+}
+.passenger_details_wrapper input[type=text]::-moz-placeholder {
+	color: rgba(128, 128, 128, 1);
+}
+.passenger_details_wrapper input[type=text]:-ms-input-placeholder{
+	color: rgba(128, 128, 128, 1);
+}
+.location_details_wrapper input[type=text]:-ms-input-placeholder{
+	color: rgba(128, 128, 128, 1);
+}
+
+.location_details_wrapper label,
+.passenger_details_wrapper label{
+	margin-bottom: 18px;
+	margin-top: 30px;
+}
+.verticalLine_in_form {
+	width: 2px; /* Use only border style */
+	height: 171px;
+	float: left; 
+	border: none;
+	background: linear-gradient(90deg, #FEEDC4 0%, #F7D788 100%);
+	margin: 165px auto 0 auto;
+}
 
 
+.jqcart-error{
+	color: cyan;
+	font-size: 24px;
+}
+.button_order{
+	width: 311px;
+	height: 66px;
+	border-radius: 30px;
+	background: linear-gradient(92.96deg, #F7D788 8.1%, #E3BC78 95.87%);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 26.82px;
+	letter-spacing: 0.05em;
+	text-align: center;
+	color: rgba(16, 23, 84, 1);
+	margin: auto;
+}
+.button_order_wrapper{
+	display: flex;
+	margin-top: 75px;
+}
+
+/*кнопка закрытия начало*/
+.close{
+	position: absolute;
+    top: 68px;
+    right: 267px;
+}
+
+
+/*кнопка закрытия конец*/
 
 
 

@@ -124,7 +124,7 @@
                                      <img class="img_pass" src="img/clock.svg" alt="">
                                      <select class="item" name="time_departure" id="time_departure"  >
                                         <option class="option_for_select" value="" disabled selected  >Anytime</option>
-                                        <option class="option_for_select" value="0" data-timeDeparture="from 4pm" >from 4pm</option>
+                                        <option class="option_for_select" value="0" data-timefrom="from 4pm" >from 4pm</option>
                                     
                                     </select>
                                 </div>
@@ -134,14 +134,14 @@
                                 <div class="return_way_date" >
                                     <label class="label_pass" for="two_ways_calendar_from">Return Date</label>
                                     <img class="img_pass" src="img/date.svg" alt="">
-                                    <input class="item"  type="date" name="trip_select" id="two_ways_calendar_from" data-trip="Round Trip" value="" data-check="">
+                                    <input class="item"  type="date" name="trip_select" id="two_ways_calendar_from" data-trip="Round Trip" value="" data-check="" >
                                 </div>
                                 <div class="return_way_time">
                                     <label class="label_pass" for="time_return">Time</label>
                                     <img class="img_pass" src="img/clock.svg" alt="">
                                     <select class="item" name="time_return" id="time_return"  >
                                         <option class="option_for_select" value="" disabled selected  >Anytime</option>
-                                        <option class="option_for_select" value="0" data-timeReturn="from 4pm" >from 4pm</option>
+                                        <option class="option_for_select" value="0" data-timereturn="from 4pm" >from 4pm</option>
                                     </select>
                                 </div>
                                
@@ -164,26 +164,19 @@
                                 </div>
                                 
                             </div> 
-                            <button disabled   type="button" class="add_item" id="open" data-id="trip" data-title="book a trip" data-price="" data-date-one-way="" data-date-return-way="" data-to="" data-from ="" data-to=""  data-pass="" data-return="" data-cost=""> Search</button>
+                            <button disabled   type="button" class="add_item" id="open" data-id="trip" data-title="book a trip" data-price="" data-date-one-way="" data-date-return-way="" data-to="" data-from ="" data-to=""  data-pass="" data-return="" data-cost="" data-timeDeparture="" data-timeReturn=""> Search</button>
                         </div>
                      
                     </div>
                       <p class="note">*Children over 4 years old require a ticket</p>  
-                    </div>
-                    
-                    
-                                       
-                                 
-                </form>
                 
-
- 
-            </div>
+                </form>
+             </div>
         </div>
 
     </div>
 <button id="clear">Очистить корзину (вызов метода clearCart)</button>
-<div id="myDropdown"></div>
+
 
  
 

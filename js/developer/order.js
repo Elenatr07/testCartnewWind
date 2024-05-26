@@ -33,13 +33,7 @@ $(".sum").on("change", function (event) {
 
   function sum() {
 
-   
-   
-
-
-
-    
-    let result = 0;
+   let result = 0;
    
     //data 
     let cost= $(event.target).closest(".sum").find("#from").find(":selected").data("cost");
@@ -48,9 +42,9 @@ $(".sum").on("change", function (event) {
     let from = $(event.target).closest(".sum").find("#from").find(":selected").data("from");
     let to = $(event.target).closest(".sum").find("#to").find(":selected").data("to");
     let date_one_way = fullDateOneTtip;
-   // let date_one_way = document.getElementById("one_way_calendar_from").value;
-   //let date_return_way = document.getElementById("two_ways_calendar_from").value;
-   let date_return_way = fullDateTwoTtip
+    let date_return_way = fullDateTwoTtip
+    let time_from = $(event.target).closest(".sum").find('#time_departure').find(":selected").data("timefrom");
+    let time_return = $(event.target).closest(".sum").find('#time_return').find(":selected").data("timereturn");
    // console.log(from, to)
     
     $(event.target) .closest(".sum").find("select").each(function () {
@@ -67,15 +61,11 @@ $(".sum").on("change", function (event) {
         
         
       });
-    // console.log(result1)
+     
     //$(event.target).closest(".sum").find(".itog").val("£" + result1);
 
     
-   
-
-    
-
-    //атрибуты
+       //атрибуты
 
     $(event.target).closest(".sum").find(".add_item").attr("data-price", result1); //setter
     $(event.target).closest(".sum").find(".add_item").attr("data-pass", pass);
@@ -85,6 +75,8 @@ $(".sum").on("change", function (event) {
     $(event.target).closest(".sum").find(".add_item").attr("data-date-return-way", date_return_way);
     $(event.target).closest(".sum").find(".add_item").attr("data-return", val);
     $(event.target).closest(".sum").find(".add_item").attr("data-cost", cost);
+    $(event.target).closest(".sum").find(".add_item").attr("data-timeDeparture", time_from);
+    $(event.target).closest(".sum").find(".add_item").attr("data-timeReturn", time_return);
   
 
 
@@ -113,6 +105,8 @@ var to;
 var date_one_way
 var date_return
 var check_return
+var time_from
+var time_return
     function changeDetected(){
 
    check_return = document.getElementById('round_trip');
@@ -127,7 +121,8 @@ var check_return
      passengers = $('#passengers').find(":selected").val();   
         from = $("#from").find(":selected").val();
         to = $('#to').find(":selected").val();
-
+        time_from = $('#time_departure').find(":selected").val();
+        time_return = $('#time_return').find(":selected").val();
         
     let date1 = document.getElementById("one_way_calendar_from");
             date1.oninput = () => {
@@ -148,7 +143,8 @@ var check_return
         if ((jj==='1') && (passengers.length > 0) && 
             (from.length > 0) && 
             (to.length > 0) &&
-            (date_one_way.length > 0)   ) 
+            (date_one_way.length > 0) &&
+          (time_from.length > 0)  ) 
                         { 
         $('#open').removeAttr('disabled');
         $('#open').css({"opacity" : '1'});
@@ -161,7 +157,9 @@ var check_return
             (from.length > 0) && 
             (to.length > 0) &&
             (date_one_way.length > 0) &&
-            (date_return.length > 0))
+            (date_return.length > 0) &&
+          (time_from.length >0) &&
+        (time_return.length > 0))
                         { 
         $('#open').removeAttr('disabled');
         $('#open').css({"opacity" : '1'})
@@ -181,3 +179,19 @@ $(".sum").on("click", function (event){
   }
 
 })*/
+$(function(){
+  var dtToday = new Date();
+
+  var month = dtToday.getMonth() + 1;
+  var day = dtToday.getDate();
+  var year = dtToday.getFullYear();
+  if(month < 10)
+      month = '0' + month.toString();
+  if(day < 10)
+      day = '0' + day.toString();
+
+  var minDate= year + '-' + month + '-' + day;
+
+  $('#one_way_calendar_from').attr('min', minDate);
+  $('#two_ways_calendar_from').attr('min', minDate);
+});
