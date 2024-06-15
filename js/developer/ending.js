@@ -37,6 +37,28 @@ else {
     result1 = num1 + " seats";
 }
 document.getElementById("pass_ending1").innerHTML = result1; 
+console.log(num1)
+
+var result2;
+var result3;
+var string1 = num1.toString();
+var lastChar1 = string1.charAt(string1.length-1);
+
+if (isNaN(num1)) {
+    result = "Ввод не состоит из цифр.";
+}
+else if (lastChar1 == "1" && !(num1 == 11)) {
+    result2 = num1 + " seat";
+    result3 = num1 + " seat";
+}  
+
+else {
+    result2 = num1 + " Seats";
+    result3 = num1 + " Seats";
+}
+document.getElementById("sumViewOneWayspan").innerHTML = result2; 
+document.getElementById("sumViewReternWayspan").innerHTML = result3; 
+
 
 let trip_order = document.getElementById('trip_order')
 let line_vert = document.getElementById('verticalLine');
