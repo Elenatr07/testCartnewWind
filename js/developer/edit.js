@@ -1,5 +1,8 @@
 $(document).ready(function() {
-  $('#edit_container').css('display', 'none')
+  $('#edit_container').css('display', 'none');
+  $('#sumViewOneWay').css('display', 'none');
+  $('#sumViewReternWay').css('display', 'none')
+  $('#orderPreview').css('display', 'none')
         $('#edit_trip').click(function(){ 
          
             $('#order').toggle(); //включает/выключает элемент id="text"
@@ -21,5 +24,16 @@ $(document).ready(function() {
         $('#order').toggle(); //включает/выключает элемент id="text"
        $('#order_distance').toggle();
        location.reload();
+    });
+    $('#order_distance').one("click", function(){
+      $('#orderPreview').toggle();
+      $('#costViewOneWay').toggle();
+      $('#sumViewOneWay').toggle();
+      $('#costViewReternWay').toggle();
+      $('#sumViewReternWay').toggle();
+      $('#order_distance').css('cursor', 'default')
+      
+
+
     })
     });

@@ -12,10 +12,11 @@
         itemData,
         orderPreview = '',
         openTripview ='',
-        
+      
+               
         totalCnt = 0,
         visibleLabel = false,
-        contactForm = '<div class="orderPreview"></div>',
+        contactForm = '<div class="orderPreview" id="orderPreview"></div>',
         label = $('<div class="jqcart-cart-label"><span class="jqcart-title">Оформить заказ</span><span class="jqcart-total-cnt">0</span></div>'),
         modal = '<div class="jqcart-layout"><div class="jqcart-checkout">123</div></div>',
         blockTrip = ' <div class="blockTrip" id="blockTrip"></div>',
@@ -203,18 +204,20 @@
                 openTripview += '<p>Travel <span>Regular</span> </p>';
                 openTripview += '</div>';
                 openTripview += ' <div class="line_from_to">';
-                openTripview += ' <div><img src="img/Ellipse1.svg" alt=""></div>';
-                openTripview += '<div><img src="img/Ellipse2.svg" alt=""></div>';
-                openTripview += '<div><img src="img/Ellipse3.svg" alt=""></div>';
+                openTripview += ' <div class="ellips"><img src="img/Ellipse1.svg" alt=""></div>';
+                openTripview += '<div class="ellips"><img src="img/Ellipse2.svg" alt=""></div>';
+                openTripview += '<div class="ellips"><img src="img/Ellipse3.svg" alt=""></div>';
+                openTripview += ' <div class="line1"><img src="img/line1.svg" alt=""></div>';
                 openTripview += ' </div>';
                 openTripview += ' <div class="cost_from_to">';
            for (key in cartData){
             if (cartData.hasOwnProperty(key)){
 
-                openTripview += ' <p> <span>RP '+ cartData[key].cost +'</span> / Seat</p>';
+                openTripview += ' <p id="costViewOneWay"> <span>RP '+ cartData[key].cost +'</span> / Seat</p>';
+                openTripview += ' <p id="sumViewOneWay"> <span>RP '+ cartData[key].cost * cartData[key].pass  +'</span> / <span id="sumViewOneWayspan"> </span> </p>';
                 openTripview += ' </div>';
                 openTripview += '</div>';
-                openTripview += ' <div class="line1"><img src="img/line1.svg" alt=""></div>';
+               
                 openTripview += '</div>';
                 openTripview += ' <div class="trip_order_distance_block">';
                 openTripview += '<div class="trip_order_distance_from">Your Location at '+ cartData[key].from + '</div>';
@@ -234,18 +237,20 @@
             openTripview += '<p>Travel <span>Regular</span> </p>';
             openTripview += '</div>';
             openTripview += '<div class="line_from_to">';
-            openTripview += '<div><img src="img/Ellipse1.svg" alt=""></div>';
-            openTripview += '<div><img src="img/Ellipse2.svg" alt=""></div>';
-            openTripview += ' <div><img src="img/Ellipse3.svg" alt=""></div>';
+            openTripview += '<div class="ellips"><img src="img/Ellipse1.svg" alt=""></div>';
+            openTripview += '<div class="ellips"><img src="img/Ellipse2.svg" alt=""></div>';
+            openTripview += ' <div class="ellips"><img src="img/Ellipse3.svg" alt=""></div>';
+            openTripview += '<div class="line1"><img src="img/line1.svg" alt=""></div>';
             openTripview += '</div>';
             openTripview += '<div class="cost_from_to">';
 
             for (key in cartData){
                 if (cartData.hasOwnProperty(key)){
-                    openTripview +='<p> <span>RP '+ cartData[key].cost +'</span> / Seat</p>' ;
+                    openTripview +='<p id="costViewReternWay"> <span>RP '+ cartData[key].cost +'</span> / Seat</p>' ;
+                    openTripview +='<p id="sumViewReternWay"> <span>RP  '+ cartData[key].cost * cartData[key].pass  +'</span> / <span id="sumViewReternWayspan">  </span> </p>' ;
                     openTripview += '</div>';
                     openTripview += '</div>';
-                    openTripview += '<div class="line1"><img src="img/line1.svg" alt=""></div>';
+                    
                     openTripview += '</div>';
                     openTripview += ' <div class="trip_order_distance_block">';
                     openTripview += '<div class="trip_order_distance_from">Your Location at '+ cartData[key].to + '</div>';

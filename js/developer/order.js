@@ -11,16 +11,6 @@ document.getElementById("one_way_calendar_from").addEventListener("change", func
 
 });
 
-let fullDateTwoTtip
-document.getElementById("two_ways_calendar_from").addEventListener("change", function() {
-  var input = this.value;
-  let date = new Date(input).getDate();
-  let month = new Date(input).getMonth();
-  let year = new Date(input).getFullYear();
-  let month1 = months[month]
-  fullDateTwoTtip = `${date} ${month1} ${year}`
-
-});
   //end of get full date
 
 
