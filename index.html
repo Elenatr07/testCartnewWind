@@ -57,17 +57,11 @@
 
     <div class="search_container">
         <div class="service_items">
-            <div class="service_item">
-                <p>Book a Trip</p> 
-                <span class="checked_line"></span>
-            </div>
-            <div class="service_item">
+             <div class="service_item">
                 <p>Book a Car</p>
                 <span class="checked_line"></span>
             </div>
-            <div class="service_item">
-                <p>Send a Parcel</p><span class="checked_line"></span>
-            </div>
+      
           
         </div>
         <div class="service_items_options">
@@ -75,13 +69,13 @@
                  <form class="form" autocomplete="off">
                     <div class="service_item_options_block">
                         <div  class="select_passangers">    
-                            <label class="label_pass" for="passengers">Number of Passengers*</label>
-                            <img class="img_pass" src="img/pass.svg" alt="">
+                            <label class="label_pass" for="passengers">Vehicles</label>
+                            <img class="img_pass" src="img/car.svg" alt="">
                             <select class="item"  name="trip_select" id="passengers"  >
-                                <option class="option_for_select"  value="" disabled selected  data-pass="0" > Select Number of Passengers</option>
-                                <option class="option_for_select" value="0" data-pass="1"  data-info="1 person" >1 person</option>
-                                <option class="option_for_select" value="0" data-pass="2"  data-info="2 persons">2 persons</option>
-                                <option class="option_for_select" value="0" data-pass="3"  data-info="3 persons" >3 persons</option>
+                                <option class="option_for_select"  value="" disabled selected  data-pass="0" >Any Vehicle</option>
+                                <option class="option_for_select" value="0" data-pass="1"  data-info="1 person" >Toyota Commuter</option>
+                                <option class="option_for_select" value="0" data-pass="2"  data-info="2 persons">Toyota HiAce</option>
+                                <option class="option_for_select" value="0" data-pass="3"  data-info="3 persons" >Toyota Innova</option>
                             </select>
                             
                             <div class="one_way" id="one_way"> 
@@ -98,14 +92,14 @@
                                     </select>
                                 </div>
                                 
-                                <div class="one-way_to">
-                                    <label for="to"></label>
-                                    <img class="img_arrow" src="img/Arrow2.svg" alt="">
-                                    <select class="item" name="trip_select" id="to"  >
-                                        <option class="option_for_select" value="" disabled selected  >To</option>
-                                        <option class="option_for_select" value="0" data-to="Москва" >Москва</option>
-                                        <option class="option_for_select" value="0" data-to="Хабаровск" >Хабаровск</option>
-                                        <option class="option_for_select" value="0" data-to="Владивосток" >Владивосток</option>
+                                <div class="hours_rent">
+                                    <label class="label_hours" for="hours">Number of Hours</label>
+                                    <img class="hourglass" src="img/hourglass.svg" alt="">
+                                    <select class="item" name="trip_select" id="hours"  >
+                                        <option class="option_for_select" value="" disabled selected  >Select</option>
+                                        <option class="option_for_select" value="0" data-to="Москва" >2 hours</option>
+                                        <option class="option_for_select" value="0" data-to="Хабаровск" >3 hours</option>
+                                        <option class="option_for_select" value="0" data-to="Владивосток" >4 hours</option>
                                     </select>
                                 </div>
                                 
@@ -115,13 +109,13 @@
                         <div class="date_time">
                             <div class="one_way_block">
                                 <div class="one_way_date">
-                                    <label class="label_pass" for="one_way_calendar_from">Departure Date</label>
-                                    <img class="img_pass" src="img/date.svg" alt="">
+                                    <label class="label_pass" for="one_way_calendar_from">Date</label>
+                                    <img class="img_date" src="img/date.svg" alt="">
                                     <input class="item" type="date" name="trip_select" id="one_way_calendar_from"   >
                                 </div>
                                 <div class="one_way_time">
                                      <label class="label_pass" for="time_departure">Time</label>
-                                     <img class="img_pass" src="img/clock.svg" alt="">
+                                     <img class="img_date" src="img/clock.svg" alt="">
                                      <select class="item" name="time_departure" id="time_departure"  >
                                         <option class="option_for_select" value="" disabled selected  >Anytime</option>
                                         <option class="option_for_select" value="0" data-timefrom="from 4pm" >from 4pm</option>
@@ -129,47 +123,20 @@
                                     </select>
                                 </div>
                             </div>
-                            
-                            <div class="two_ways" id="two_ways">
-                                <div class="return_way_date" >
-                                    <label class="label_pass" for="two_ways_calendar_from">Return Date</label>
-                                    <img class="img_pass" src="img/date.svg" alt="">
-                                    <input class="item"  type="date" name="trip_select" id="two_ways_calendar_from" data-trip="Round Trip" value="" data-check="" >
-                                </div>
-                                <div class="return_way_time">
-                                    <label class="label_pass" for="time_return">Time</label>
-                                    <img class="img_pass" src="img/clock.svg" alt="">
-                                    <select class="item" name="time_return" id="time_return"  >
-                                        <option class="option_for_select" value="" disabled selected  >Anytime</option>
-                                        <option class="option_for_select" value="0" data-timereturn="from 4pm" >from 4pm</option>
-                                    </select>
-                                </div>
+
+                           
                                
                             
                             </div>
-                        </div>
-                            
-                            
-                    
-                        <div>
-                            <div class="trip_direction">
-                                <p class="trip_text" id="trip_text">Round trip</p>
-                                <div class="switch" id="rates"value='' > 
-                                    <input name="rate" id="one_trip" type="radio" checked  onclick="one_way_trip()" value="1" data-check="1"/>
-                                    <label for="one_trip" class="switch__label"></label>
-                                    <input  type='radio' name='rate' value="2" id="round_trip" onclick="two_trip()" data-check="1"> 
-                                    <label for="round_trip" class="switch__label"></label>
-                                    <input type="hidden" name="sum" value="1" id="hidfield"  />
-                                    <div class="switch__indicator" ></div>
-                                </div>
-                                
-                            </div> 
                             <button disabled   type="button" class="add_item" id="open" data-id="trip" data-title="book a trip" data-price="" data-date-one-way="" data-date-return-way="" data-to="" data-from ="" data-to=""  data-pass="" data-return="" data-cost="" data-timeDeparture="" data-timeReturn=""> Search</button>
                         </div>
+                            
+                            
+                        
+                       
                      
                     </div>
-                      <p class="note">*Children over 4 years old require a ticket</p>  
-                
+                                 
                 </form>
              </div>
         </div>
