@@ -319,7 +319,7 @@ if (cartData.hasOwnProperty(key)){
            $(contactForm).appendTo('#order_distance').html(orderBlock)
         },
         openCart1: function(){
-            $(location).attr('href','/box.html')
+            $(location).attr('href','./box.html')
         },
         hideCart: function () {
             $('.jqcart-layout').fadeOut('fast', function () {
