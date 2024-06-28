@@ -166,42 +166,39 @@
                 if (cartData.hasOwnProperty(key)) {
                     sum = Math.ceil((cartData[key].count * cartData[key].price) * 100) / 100;
                     subtotal = Math.ceil((subtotal + sum) * 100) / 100;
-                    /*
-                    orderPreview += '<div class="jqcart-tr" data-id="' + cartData[key].id + '">';
-                    orderPreview += '<div class="jqcart-small-td">' + cartData[key].id + '</div>';
-                    orderPreview += '<div class="jqcart-small-td jqcart-item-img"><img src="' + cartData[key].img + '" alt=""></div>';
-                    orderPreview += '<div>' + cartData[key].title + '</div>';
-                    orderPreview += '<div class="jqcart-price">' + cartData[key].price + '</div>';
-                    orderPreview += '<div><span class="jqcart-incr" data-incr="-1">&#8211;</span><input type="text" class="jqcart-amount" value="' + cartData[key].count + '"><span class="jqcart-incr" data-incr="1">+</span></div>';
-                    orderPreview += '<div class="jqcart-sum">' + sum + ' ' + opts.currency + '</div>';
-                    orderPreview += '<div class="jqcart-small-td"><span class="jqcart-del-item"></span></div>';
-                    orderPreview += '</div>';*/
+                
 
-                    orderPreview += '<div class="trip_order_info">  <div class="way">';
-                    orderPreview += '<div class="one_way_part"> '+ cartData[key].from + ' <span>  - '+ cartData[key].to + '</span> </div>';
-                    orderPreview += '<div class="way_info"> '+ cartData[key].dateOneWay + ' </div>';
-                    orderPreview += '<div class="way_info pass_ending" data-value="'+ cartData[key].pass +'" id="pass_ending">  </div>';
-                    orderPreview += ' <div class="way_info">'+cartData[key].timedeparture+'</div>';
-                    orderPreview += '</div>';
-                    orderPreview += ' <hr class="verticalLine" id="verticalLine" />';
-                    orderPreview += '<div class="two_way_part" id="two_way_part">';
-                    orderPreview += '<div class="way"> '+ cartData[key].to + ' <span>  - '+ cartData[key].from + '</span> </div>';
-                    orderPreview += ' <div class="way_info"> '+ cartData[key].dateReturnWay + ' </div>';
-                    orderPreview += ' <div class="way_info pass_ending" data-value="'+ cartData[key].pass + '" id="pass_ending1"> </div>';    
-                    orderPreview += ' <div class="way_info">'+cartData[key].timereturn+'</div>';
-                    orderPreview += '</div>';
-                    orderPreview += '<div class="hide_return_trip" hidden data-return="'+ cartData[key].return +'" id="hide_return_trip"></div>'
+                    orderPreview += '<div class="trip_order_info">';
+                    orderPreview += '<div class="one_way_part">'
+                    orderPreview += '<div class="way"> '+ cartData[key].from + '</div>';
+                    orderPreview += '<div class="way_info"> '+ cartData[key].date + ' </div>';
+                    orderPreview += '<div class="way_info" data-value="'+ cartData[key].hours +'" id="trip_hours">'+ cartData[key].hours +'h</div>';
+                    orderPreview += ' <div class="way_info"> at '+ cartData[key].timedeparture +'</div>';
+                    orderPreview += '<div class="typecar" data-value="'+ cartData[key].type +'"></div>';
+                    
+                    
                 }
             }
-           // orderPreview += '</div></div>';
+         
+                orderPreview += '</div>';
                  orderPreview += '</div>';
-        //openTripview
-                 openTripview += '<div class="trip_order_select">';
-                openTripview += ' <div>';
-                openTripview += ' <p class="time_trip">9h*</p>';
+                 orderPreview += '</div>';
+                 
+                 
+        //openTripview ToyotaCommuter start
+                openTripview += '<div class="order_list" id="toyotaCommuter">';
+                openTripview += ' <div class="trip_order_select" id="trip_order_select">';
+                openTripview += '<div>';
+                for (key in cartData) {
+                    if (cartData.hasOwnProperty(key)) {
+
+                        openTripview += '<p class="time_trip">'+ cartData[key].hours + 'h </p>'
+                    }
+                }
+                openTripview += '  <div class="wrapper_from_to">';
                 openTripview += '<div class="wrapper_from_to">';
                 openTripview += '<div class="block_from_to">';
-                openTripview += '<p>Travel <span>Regular</span> </p>';
+                openTripview += '<p>Toyota <span>Commuter</span> </p>';
                 openTripview += '</div>';
                 openTripview += ' <div class="line_from_to">';
                 openTripview += ' <div class="ellips"><img src="img/Ellipse1.svg" alt=""></div>';
@@ -213,60 +210,106 @@
            for (key in cartData){
             if (cartData.hasOwnProperty(key)){
 
-                openTripview += ' <p id="costViewOneWay"> <span>RP '+ cartData[key].cost +'</span> / Seat</p>';
-                openTripview += ' <p id="sumViewOneWay"> <span>RP '+ cartData[key].cost * cartData[key].pass  +'</span> / <span id="sumViewOneWayspan"> </span> </p>';
+                openTripview += ' <p >RP <span id="costViewCommuter"> '+ cartData[key].pricecommuter * cartData[key].hours +'</span> </p>';
+             }} 
                 openTripview += ' </div>';
                 openTripview += '</div>';
                
                 openTripview += '</div>';
                 openTripview += ' <div class="trip_order_distance_block">';
-                openTripview += '<div class="trip_order_distance_from">Your Location at '+ cartData[key].from + '</div>';
-                openTripview += '<div class="trip_order_distance_to">Your Location in '+ cartData[key].to + '</div>';
+                openTripview += '<div class="trip_order_distance_from">Your Location in '+ cartData[key].from + '</div>';
+                openTripview += '<div class="trip_order_distance_to">Your Desired Location</div>';
+                openTripview += ' </div>';
+                openTripview += '</div>';
+                openTripview += '</div>';
+                openTripview += '</div>';
+         //openTripview ToyotaCommuter end  
 
-            }}
+           //openTripview ToyotaHiAce start
+           openTripview += '<div class="order_list" id="toyotaHiAce">';
+           openTripview += ' <div class="trip_order_select" id="trip_order_select">';
+           openTripview += '<div>';
+           for (key in cartData) {
+               if (cartData.hasOwnProperty(key)) {
+
+                   openTripview += '<p class="time_trip">'+ cartData[key].hours + 'h </p>'
+               }
+           }
+           openTripview += '  <div class="wrapper_from_to">';
+           openTripview += '<div class="wrapper_from_to">';
+           openTripview += '<div class="block_from_to">';
+           openTripview += '<p>Toyota <span>HiAce</span> </p>';
+           openTripview += '</div>';
+           openTripview += ' <div class="line_from_to">';
+           openTripview += ' <div class="ellips"><img src="img/Ellipse1.svg" alt=""></div>';
+           openTripview += '<div class="ellips"><img src="img/Ellipse2.svg" alt=""></div>';
+           openTripview += '<div class="ellips"><img src="img/Ellipse3.svg" alt=""></div>';
+           openTripview += ' <div class="line1"><img src="img/line1.svg" alt=""></div>';
+           openTripview += ' </div>';
+           openTripview += ' <div class="cost_from_to">';
+      for (key in cartData){
+       if (cartData.hasOwnProperty(key)){
+
+           openTripview += ' <p >RP <span id="costViewHiAce"> '+ cartData[key].pricehiace * cartData[key].hours +'</span></p>';
+        }} 
+           openTripview += ' </div>';
+           openTripview += '</div>';
+          
+           openTripview += '</div>';
+           openTripview += ' <div class="trip_order_distance_block">';
+           openTripview += '<div class="trip_order_distance_from">Your Location in '+ cartData[key].from + '</div>';
+           openTripview += '<div class="trip_order_distance_to">Your Desired Location</div>';
+           openTripview += ' </div>';
+           openTripview += '</div>';
+           openTripview += '</div>';
+           openTripview += '</div>';
+    //openTripview ToyotaHiAce end 
+
+    //openTripview ToyotaInnova start
+    openTripview += '<div class="order_list" id="toyotaInnova">';
+    openTripview += ' <div class="trip_order_select" id="trip_order_select">';
+    openTripview += '<div>';
+    for (key in cartData) {
+        if (cartData.hasOwnProperty(key)) {
+
+            openTripview += '<p class="time_trip">'+ cartData[key].hours + 'h </p>'
+        }
+    }
+    openTripview += '  <div class="wrapper_from_to">';
+    openTripview += '<div class="wrapper_from_to">';
+    openTripview += '<div class="block_from_to">';
+    openTripview += '<p>Toyota <span>Innova</span> </p>';
+    openTripview += '</div>';
+    openTripview += ' <div class="line_from_to">';
+    openTripview += ' <div class="ellips"><img src="img/Ellipse1.svg" alt=""></div>';
+    openTripview += '<div class="ellips"><img src="img/Ellipse2.svg" alt=""></div>';
+    openTripview += '<div class="ellips"><img src="img/Ellipse3.svg" alt=""></div>';
+    openTripview += ' <div class="line1"><img src="img/line1.svg" alt=""></div>';
+    openTripview += ' </div>';
+    openTripview += ' <div class="cost_from_to">';
+for (key in cartData){
+if (cartData.hasOwnProperty(key)){
+
+    openTripview += ' <p >RP <span id="costViewInnova"> '+ cartData[key].priceinnova * cartData[key].hours +'</span></p>';
+ }} 
+    openTripview += ' </div>';
+    openTripview += '</div>';
+   
+    openTripview += '</div>';
+    openTripview += ' <div class="trip_order_distance_block">';
+    openTripview += '<div class="trip_order_distance_from">Your Location in '+ cartData[key].from + '</div>';
+    openTripview += '<div class="trip_order_distance_to">Your Desired Location</div>';
+    openTripview += ' </div>';
+    openTripview += '</div>';
+    openTripview += '</div>';
+//openTripview ToyotaInnova end 
            
-            openTripview += ' </div>';
-            openTripview += '<div class="about_time_in_trip">* The stated hours are approximate, as the actual duration will depend on your specific location </div>';
-            openTripview += '</div>';
-            openTripview += '<hr class="horizontalline" id="horizontalline">';
-            openTripview += ' <div class="return_trip_order_select" id="return_trip_order_select">';
-            openTripview += '<div>';
-            openTripview += '<p class="time_trip">9h*</p>';
-            openTripview += '<div class="wrapper_from_to">';
-            openTripview += '<div class="block_from_to">';
-            openTripview += '<p>Travel <span>Regular</span> </p>';
-            openTripview += '</div>';
-            openTripview += '<div class="line_from_to">';
-            openTripview += '<div class="ellips"><img src="img/Ellipse1.svg" alt=""></div>';
-            openTripview += '<div class="ellips"><img src="img/Ellipse2.svg" alt=""></div>';
-            openTripview += ' <div class="ellips"><img src="img/Ellipse3.svg" alt=""></div>';
-            openTripview += '<div class="line1"><img src="img/line1.svg" alt=""></div>';
-            openTripview += '</div>';
-            openTripview += '<div class="cost_from_to">';
-
-            for (key in cartData){
-                if (cartData.hasOwnProperty(key)){
-                    openTripview +='<p id="costViewReternWay"> <span>RP '+ cartData[key].cost +'</span> / Seat</p>' ;
-                    openTripview +='<p id="sumViewReternWay"> <span>RP  '+ cartData[key].cost * cartData[key].pass  +'</span> / <span id="sumViewReternWayspan">  </span> </p>' ;
-                    openTripview += '</div>';
-                    openTripview += '</div>';
-                    
-                    openTripview += '</div>';
-                    openTripview += ' <div class="trip_order_distance_block">';
-                    openTripview += '<div class="trip_order_distance_from">Your Location at '+ cartData[key].to + '</div>';
-                    openTripview += '<div class="trip_order_distance_to">Your Location in '+ cartData[key].from + '</div>';
-                    
-
-                }}
-            openTripview += '</div>';
-            openTripview += ' <div class="about_time_in_trip">* The stated hours are approximate, as the actual duration will depend on your specific location </div>';
-            openTripview += '</div>';
            
 
             var discountSum = actions.calcDiscount(subtotal),
                 savedPromo = sessionStorage.getItem('promocode');
             orderPreview += '<div class="jqcart-discount" style="display:' + (discountSum > 0 ? 'block' : 'none') + ';">Скидка <span>' + opts.discount + '</span>%: <strong>' + discountSum + '</strong> ' + opts.currency + '</div>';
-            orderPreview += '<div class="jqcart-subtotal">Итого: <strong>' + (subtotal - discountSum) + '</strong> ' + opts.currency + '</div>';
+       //     orderPreview += '<div class="jqcart-subtotal">Итого: <strong>' + (subtotal - discountSum) + '</strong> ' + opts.currency + '</div>';
 
             orderBlock = orderform;
             openTrip = openTripview;

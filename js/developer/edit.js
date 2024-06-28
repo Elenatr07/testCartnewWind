@@ -25,13 +25,28 @@ $(document).ready(function() {
        $('#order_distance').toggle();
        location.reload();
     });
-    $('#order_distance').one("click", function(){
+    $('#toyotaCommuter').one("click", function(){
       $('#orderPreview').toggle();
       $('#costViewOneWay').toggle();
       $('#sumViewOneWay').toggle();
       $('#costViewReternWay').toggle();
       $('#sumViewReternWay').toggle();
-      $('#order_distance').css('cursor', 'default')
+      $('#order_list').css('cursor', 'default');
+      $('#toyotaHiAce').css('display', 'none');
+      $('#toyotaInnova').css('display', 'none');
+      
+
+
+    })
+    $('#toyotaHiAce').one("click", function(){
+      $('#orderPreview').toggle();
+      $('#costViewOneWay').toggle();
+      $('#sumViewOneWay').toggle();
+      $('#costViewReternWay').toggle();
+      $('#sumViewReternWay').toggle();
+      $('#order_list').css('cursor', 'default');
+      $('#toyotaCommuter').css('display', 'none');
+      $('#toyotaInnova').css('display', 'none');
       
 
 
