@@ -457,15 +457,13 @@ margin: 0 0 0 90px;
 .service_item p{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 22px;
-	font-weight: 300;
+	font-weight: 600;
 	line-height: 26.82px;
 	letter-spacing: 0.05em;
 	text-align: center;
 	width: 98%;
 	margin: auto;
-	
-	
-
+	color: rgba(255, 255, 255, 1);
 }
 
 .checked_line{
@@ -486,6 +484,7 @@ margin: 0 0 0 90px;
 .select_passangers{
 	display: flex;
 	flex-direction: column;
+	max-width: 520px;
 }
 #one_way{
 	display: flex;
@@ -497,7 +496,8 @@ margin: 0 0 0 90px;
 }
 .label_pass,
 .trip_text,
-.label_hours {
+.label_hours,
+.label_cars {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 15px;
 	font-weight: 300;
@@ -507,9 +507,9 @@ margin: 0 0 0 90px;
 	color: rgba(192, 191, 191, 1);
 	
 }
-.label_pass,
-.trip_text{
-	margin: auto 30px auto 0;
+
+.label_cars{
+	margin: ;
 }
 .label_hours{
 	margin: auto 30px auto 0;
@@ -552,18 +552,22 @@ margin: 0 0 0 90px;
 .one_way_time{
 	display: flex;
 	flex-direction: column;
-	margin: auto 0 0 0;
+	margin: 10px 0 0 0;
 }
 .date_time{
 	display: flex;
 	flex-direction: column;
-	margin: auto 0 0 0;
+	margin: auto 0 0 30px;
 }
 .one_way_block{
 	display: flex;
 	margin: auto 0 0 0;
 	position: relative;
     top: -11px;
+}
+.type_car {
+	display: flex;
+	flex-direction: column;
 }
 #open{
 	width: 228px;
@@ -579,18 +583,19 @@ margin: 0 0 0 90px;
 	color: rgba(17, 23, 84, 1);
 	opacity: 0.7;
 	cursor: pointer;
-	margin-top: 114px;
+	margin-top: 17px;
 }
 
 #from,
 #hours{
-	width: 238px;
+	width: 247px;
 	margin-right: 25px;
 	
 }
 #cars,
 #from,
-#hours{
+#hours,
+#pass{
 	margin-bottom: 50px;
 	background: rgba(26, 34, 68, 1);
 	border-bottom: 1px solid rgba(216, 216, 216, 1);
@@ -598,6 +603,7 @@ margin: 0 0 0 90px;
 #cars{
 	width: 500px;
 	margin-right: 50px;
+	margin-top: 7px;
 }
 .img_arrow{
 	position: absolute;
@@ -612,11 +618,15 @@ select:hover {
 border-image-source: linear-gradient(90deg, #F7D788 0%, #E3BC78 100%);
   border-image-slice: 1;
   border-bottom: 2px solid transparent !important;
-  background-image: url(../img/Arrow3.svg) !important;
-  background-repeat: no-repeat !important;
+ 
+
+
+}
+select{
+	 background-image: url(../img/Arrow3.svg) !important;  
+	 background-repeat: no-repeat !important;
   background-position-x: 98% !important;
   background-position-y: 5px !important;
-
 }
 select, input{
 	-moz-appearance:none !important; /* Firefox */
@@ -628,12 +638,17 @@ select, input{
 .img_pass
 {
 	top: 17px;
-    width: 28px;
+    width: 14px;
     position: relative;
+}
+.img_cars{
+	top: 17px;
+	width: 28px;
+	position: relative;
 }
 
 .img_date{
-	top: 17px;
+	top: 19px;
 	width: 16px;
 	position: relative;
 }
@@ -651,7 +666,7 @@ select, input{
 #time_return
 {
 	width: 170px;
-	margin-right: 50px;
+	margin-right: 25px;
 	margin-bottom: 39px;
 	background: rgba(26, 34, 68, 1);
 	border-bottom: 1px solid rgba(216, 216, 216, 1);
@@ -660,9 +675,9 @@ select, input{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 300;
 
-
-	
-	
+}
+#time_departure{
+	margin-top: 1px;
 }
 input[type='date']::-webkit-calendar-picker-indicator {
     filter: invert(100%);
@@ -673,9 +688,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	opacity: 0;
 
 }
-.one_way_time{
-	margin-top: 80px;
-}
+
 .return_way_date,
 .return_way_time{
 	margin-top: -24px;
