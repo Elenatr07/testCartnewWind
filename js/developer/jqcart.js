@@ -250,7 +250,7 @@
       for (key in cartData){
        if (cartData.hasOwnProperty(key)){
 
-           openTripview += ' <p >RP <span id="costViewHiAce"> '+ cartData[key].pricehiace * cartData[key].hours +'</span></p>';
+           openTripview += ' <p >RP <span id="costViewHiAce"> '+ cartData[key].pricepremio * cartData[key].hours +'</span></p>';
         }} 
            openTripview += ' </div>';
            openTripview += '</div>';
@@ -290,7 +290,7 @@
 for (key in cartData){
 if (cartData.hasOwnProperty(key)){
 
-    openTripview += ' <p >RP <span id="costViewInnova"> '+ cartData[key].priceinnova * cartData[key].hours +'</span></p>';
+    openTripview += ' <p >RP <span id="costViewInnova"> '+ cartData[key].pricereborn * cartData[key].hours +'</span></p>';
  }} 
     openTripview += ' </div>';
     openTripview += '</div>';

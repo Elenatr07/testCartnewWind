@@ -20,6 +20,7 @@ $(".sum").on("change", function (event) {
   $(event.target).closest(".sum").find("input").change(sum);
   $(event.target).closest(".sum").find("select").change(changeDetected);
   $(event.target).closest(".sum").find("input").change(changeDetected);
+  $(event.target).closest(".sum").find("#pass").click(changeCars);
 
   function sum() {
 
@@ -30,7 +31,7 @@ $(".sum").on("change", function (event) {
     let price = $(event.target).closest(".sum").find("#cars").find(":selected").data("price");
     let from = $(event.target).closest(".sum").find("#from").find(":selected").data("from");
     let hours = $(event.target).closest(".sum").find("#hours").find(":selected").data("hours");
-    let infocar= $(event.target).closest(".sum").find("#cars").find(":selected").data("info");
+    let infocar= $(event.target).closest(".sum").find("#cars").find(":selected").data("value");
     let type = $(event.target).closest(".sum").find('#cars').find(":selected").data('type');
     let date = fullDateOneTtip;
    
@@ -46,9 +47,9 @@ $(".sum").on("change", function (event) {
        //атрибуты
 
     $(event.target).closest(".sum").find(".add_item").attr("data-price", price); //setter
-    $(event.target).closest(".sum").find(".add_item").attr("data-info", infocar);
+    $(event.target).closest(".sum").find(".add_item").attr("data-infoValue", infocar);
     $(event.target).closest(".sum").find(".add_item").attr("data-from", from);
-    $(event.target).closest(".sum").find(".add_item").attr("data-cost", result);
+    //$(event.target).closest(".sum").find(".add_item").attr("data-cost", result);
     $(event.target).closest(".sum").find(".add_item").attr("data-date", date);
     $(event.target).closest(".sum").find(".add_item").attr("data-hours", hours);
     $(event.target).closest(".sum").find(".add_item").attr("data-timeDeparture", time_from);
@@ -74,6 +75,31 @@ $(".sum").on("change", function (event) {
    localStorage.setItem('jqcart', JSON.stringify(getItem));
   }}
   }*/
+  }
+    //----select car------
+    let all_cars=[];
+    all_cars[0]=["Innova Reborn", "HiAce Premio", "HiAce Commuter"];
+    all_cars[1]=['HiAce Premio', 'HiAce Commuter'];
+  
+  
+    let cars_status = document.getElementById('cars');
+
+ 
+    function changeCars(){
+   
+    cars_status.disabled = false;
+    cars_status.innerHTML="<option class='option_for_select'  value='0' data-value='0' data-price='1' selected  data-car='Any' >Any Vehicle</option>"
+    mycar=this.value-1;
+    console.log(mycar)
+   
+    if(mycar!=-1){
+      for(let i=0; i<all_cars[mycar].length; i++){
+        cars_status.innerHTML+='<option class="option_for_select" value="'+(i+1)+'" data-value="'+(i+1)+'" data-price="1" data-car="'+all_cars[mycar][i]+'">'+all_cars[mycar][i]+'</option>'
+      }
+      }  else {
+      cars_status.disabled=true;
+    }
+  
   }
 
   //--------select---------//
@@ -110,7 +136,11 @@ var time_from
         }
         
 
+
 });
+
+  
+ 
 /*
 $(".sum").on("click", function (event){
 
