@@ -1,5 +1,5 @@
 $(document).ready(function() {
-   
+})
 
 	
 
@@ -27,66 +27,33 @@ if (hide !== '1') {
 }
 
 */
-var num = $('#costViewCommuter').text();;
-var cnt = 0; // temp counter. 
-var s = String(num).split('').
-                    reverse().
-                    map(function(v) { 
-                        if (cnt < 2) {
-                            cnt += 1; 
-                            return v;
-                        } else {
-                            cnt = 0; 
-                            return ',' + v;
-                        }
-                    }).
-                    reverse().
-                    join('');
-$('#costViewCommuter').text(s);
-                  
-});
-$(document).ready(function(){
-    var num = $('#costViewHiAce').text();;
-    var cnt = 0; // temp counter. 
-    var s = String(num).split('').
-                        reverse().
-                        map(function(v) { 
-                            if (cnt < 2) {
-                                cnt += 1; 
-                                return v;
-                            } else {
-                                cnt = 0; 
-                                return ',' + v;
-                            }
-                        }).
-                        reverse().
-                        join('');
-    $('#costViewHiAce').text(s);
-})
-$(document).ready(function(){
-    var num = $('#costViewInnova').text();;
-    var cnt = 0; // temp counter. 
-    var s = String(num).split('').
-                        reverse().
-                        map(function(v) { 
-                            if (cnt < 2) {
-                                cnt += 1; 
-                                return v;
-                            } else {
-                                cnt = 0; 
-                                return ',' + v;
-                            }
-                        }).
-                        reverse().
-                        join('');
-    $('#costViewInnova').text(s);
-})
+
+   //---- разивка на разряды в числе ---
+  $(document).ready(function(){
+    let str = $('#costViewInnova').text();
+    let str1 = $('#costViewCommuter').text();
+    let str2 =$('#costViewHiAce').text();
+    let num = +str;
+    let num1 = +str1;
+    let num2 = +str2;
+    let result = num.toLocaleString("en");
+    let result1 = num1.toLocaleString("en");
+    let result2 = num2.toLocaleString("en");
+    $('#costViewInnova').text(result);
+    $('#costViewCommuter').text(result1);
+    $('#costViewHiAce').text(result2);
+ 
+
+  })
     
     
     
    
 
+
+
 /*
+//---- окончания----
 const total = 1;
 const totalWord = 'seat';
 
