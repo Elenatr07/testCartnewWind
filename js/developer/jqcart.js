@@ -171,9 +171,10 @@
                     orderPreview += '<div class="trip_order_info">';
                     orderPreview += '<div class="one_way_part">'
                     orderPreview += '<div class="way"> '+ cartData[key].from + '</div>';
-                    orderPreview += '<div class="way_info"> '+ cartData[key].date + ' </div>';
-                    orderPreview += '<div class="way_info" data-value="'+ cartData[key].hours +'" id="trip_hours">'+ cartData[key].hours +'h</div>';
-                    orderPreview += ' <div class="way_info"> at '+ cartData[key].timedeparture +'</div>';
+                    orderPreview += '<div class="way_pass">Passengers: '+ cartData[key].pass + ' </div>';
+                    orderPreview += '<div class="way_info">Date and Time: '+ cartData[key].date +' from ' + cartData[key].timedeparture +' </div>';
+                    orderPreview += '<div class="way_info" data-value="'+ cartData[key].hours +'" id="trip_hours">Duration: '+ cartData[key].hours +'h</div>';
+                   
                     orderPreview += '<div class="typecar" data-value="'+ cartData[key].type +'"></div>';
                     
                     
@@ -183,7 +184,7 @@
                 orderPreview += '</div>';
                  orderPreview += '</div>';
                  orderPreview += '</div>';
-                 orderPreview += '<div id="hide_type_car" data-typecar = "'+cartData[key].infovalue+'"></div>'
+                 orderPreview += '<div id="hide_type_car" data-select="'+cartData[key].select+'" data-typecar = "'+cartData[key].infovalue+'">hide</div>'
                  
                  
         //openTripview ToyotaCommuter start
@@ -199,7 +200,7 @@
                 openTripview += '  <div class="wrapper_from_to">';
                 openTripview += '<div class="wrapper_from_to">';
                 openTripview += '<div class="block_from_to">';
-                openTripview += '<p>Toyota <span>Commuter</span> </p>';
+                openTripview += '<p>HiAce<span> Commuter </span> </p>';
                 openTripview += '</div>';
                 openTripview += ' <div class="line_from_to">';
                 openTripview += ' <div class="ellips"><img src="img/Ellipse1.svg" alt=""></div>';
@@ -211,19 +212,20 @@
            for (key in cartData){
             if (cartData.hasOwnProperty(key)){
 
-                openTripview += ' <p >RP <span id="costViewCommuter"> '+ cartData[key].pricecommuter * cartData[key].hours +'</span> </p>';
+                openTripview += ' <p >IDR <span id="costViewCommuter"> '+ cartData[key].pricecommuter * cartData[key].hours +' </span>*</p>';
              }} 
                 openTripview += ' </div>';
                 openTripview += '</div>';
-               
                 openTripview += '</div>';
                 openTripview += ' <div class="trip_order_distance_block">';
                 openTripview += '<div class="trip_order_distance_from">Your Location in '+ cartData[key].from + '</div>';
                 openTripview += '<div class="trip_order_distance_to">Your Desired Location</div>';
                 openTripview += ' </div>';
                 openTripview += '</div>';
+                 openTripview += '<p class="note">* The stated price is approximate, as the actual price will be shared upon contacting you </p>'
                 openTripview += '</div>';
                 openTripview += '</div>';
+                
          //openTripview ToyotaCommuter end  
 
            //openTripview ToyotaHiAce start
@@ -239,7 +241,7 @@
            openTripview += '  <div class="wrapper_from_to">';
            openTripview += '<div class="wrapper_from_to">';
            openTripview += '<div class="block_from_to">';
-           openTripview += '<p>Toyota <span>HiAce</span> </p>';
+           openTripview += '<p>HiAce <span>Premio</span> </p>';
            openTripview += '</div>';
            openTripview += ' <div class="line_from_to">';
            openTripview += ' <div class="ellips"><img src="img/Ellipse1.svg" alt=""></div>';
@@ -251,7 +253,7 @@
       for (key in cartData){
        if (cartData.hasOwnProperty(key)){
 
-           openTripview += ' <p >RP <span id="costViewHiAce"> '+ cartData[key].pricepremio * cartData[key].hours +'</span></p>';
+           openTripview += ' <p >IDR <span id="costViewHiAce"> '+ cartData[key].pricepremio * cartData[key].hours +'</span>*</p>';
         }} 
            openTripview += ' </div>';
            openTripview += '</div>';
@@ -262,6 +264,7 @@
            openTripview += '<div class="trip_order_distance_to">Your Desired Location</div>';
            openTripview += ' </div>';
            openTripview += '</div>';
+            openTripview += '<p class="note">* The stated price is approximate, as the actual price will be shared upon contacting you </p>'
            openTripview += '</div>';
            openTripview += '</div>';
     //openTripview ToyotaHiAce end 
@@ -279,7 +282,7 @@
     openTripview += '  <div class="wrapper_from_to">';
     openTripview += '<div class="wrapper_from_to">';
     openTripview += '<div class="block_from_to">';
-    openTripview += '<p>Toyota <span>Innova</span> </p>';
+    openTripview += '<p>Innova <span>Reborn</span> </p>';
     openTripview += '</div>';
     openTripview += ' <div class="line_from_to">';
     openTripview += ' <div class="ellips"><img src="img/Ellipse1.svg" alt=""></div>';
@@ -291,7 +294,7 @@
 for (key in cartData){
 if (cartData.hasOwnProperty(key)){
 
-    openTripview += ' <p >RP <span id="costViewInnova"> '+ cartData[key].pricereborn * cartData[key].hours +'</span></p>';
+    openTripview += ' <p >IDR <span id="costViewInnova"> '+ cartData[key].pricereborn * cartData[key].hours +'</span>*</p>';
  }} 
     openTripview += ' </div>';
     openTripview += '</div>';
@@ -301,6 +304,7 @@ if (cartData.hasOwnProperty(key)){
     openTripview += '<div class="trip_order_distance_from">Your Location in '+ cartData[key].from + '</div>';
     openTripview += '<div class="trip_order_distance_to">Your Desired Location</div>';
     openTripview += ' </div>';
+     openTripview += '<p class="note">* The stated price is approximate, as the actual price will be shared upon contacting you </p>'
     openTripview += '</div>';
     openTripview += '</div>';
 //openTripview ToyotaInnova end 

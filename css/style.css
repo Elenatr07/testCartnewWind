@@ -227,6 +227,17 @@ form{
 	text-align: left;
 
 }
+.way_pass{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 21.94px;
+	letter-spacing: 0.05em;
+	text-align: left;
+	color: rgba(255, 255, 255, 1);
+
+
+}
 .verticalLine{
 	width: 2px; /* Use only border style */
 	height: 100px;
@@ -372,6 +383,7 @@ margin: 0 0 0 90px;
 .trip_order_distance_from,
 .trip_order_distance_to{
 	text-align: center;
+	margin-bottom: 30px;
 }
 .location_details_wrapper label,
 .passenger_details_wrapper label{
@@ -402,7 +414,7 @@ margin: 0 0 0 90px;
 	
 }
 .order_list{
-	height: 167px;
+	height: 218px;
 	background: rgba(17, 24, 86, 1);
 	margin: 30px auto 30px auto;;
 
@@ -819,6 +831,17 @@ input[type='date']::-webkit-calendar-picker-indicator {
 
 #hide_type_car{
 	display: none;
+}
+.note{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 18.29px;
+	letter-spacing: 0.05em;
+	text-align: left;
+	color: rgba(192, 191, 191, 1);
+
+
 }
 
 	

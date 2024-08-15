@@ -33,6 +33,7 @@ $(".sum").on("change", function (event) {
     let hours = $(event.target).closest(".sum").find("#hours").find(":selected").data("hours");
     let infocar= $(event.target).closest(".sum").find("#cars").find(":selected").data("value");
     let type = $(event.target).closest(".sum").find('#cars').find(":selected").data('type');
+    let pass = $(event.target).closest(".sum").find('#pass').find(":selected").data('pass');
     let date = fullDateOneTtip;
    
     let time_from = $(event.target).closest(".sum").find('#time_departure').find(":selected").data("timefrom");
@@ -54,6 +55,7 @@ $(".sum").on("change", function (event) {
     $(event.target).closest(".sum").find(".add_item").attr("data-hours", hours);
     $(event.target).closest(".sum").find(".add_item").attr("data-timeDeparture", time_from);
     $(event.target).closest(".sum").find(".add_item").attr("data-type", type);
+    $(event.target).closest(".sum").find(".add_item").attr("data-pass", pass);
 
   
 
@@ -100,6 +102,7 @@ $(".sum").on("change", function (event) {
       cars_status.disabled=true;
     }
 if(all_cars[mycar].length <3){
+  $(event.target).closest(".sum").find(".add_item").attr("data-select", '1');
   console.log('меньше 3')
 }
   
