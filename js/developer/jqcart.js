@@ -183,6 +183,7 @@
                 orderPreview += '</div>';
                  orderPreview += '</div>';
                  orderPreview += '</div>';
+                 orderPreview += '<div id="hide_type_car" data-typecar = "'+cartData[key].infovalue+'"></div>'
                  
                  
         //openTripview ToyotaCommuter start

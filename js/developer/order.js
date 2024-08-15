@@ -90,7 +90,7 @@ $(".sum").on("change", function (event) {
     cars_status.disabled = false;
     cars_status.innerHTML="<option class='option_for_select'  value='0' data-value='0' data-price='1' selected  data-car='Any' >Any Vehicle</option>"
     mycar=this.value-1;
-    console.log(mycar)
+   // console.log(mycar)
    
     if(mycar!=-1){
       for(let i=0; i<all_cars[mycar].length; i++){
@@ -99,6 +99,9 @@ $(".sum").on("change", function (event) {
       }  else {
       cars_status.disabled=true;
     }
+if(all_cars[mycar].length <3){
+  console.log('меньше 3')
+}
   
   }
 
