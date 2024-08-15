@@ -51,4 +51,17 @@ $(document).ready(function() {
 
 
     })
+    $('#toyotaInnova').one("click", function(){
+      $('#orderPreview').toggle();
+      $('#costViewOneWay').toggle();
+      $('#sumViewOneWay').toggle();
+      $('#costViewReternWay').toggle();
+      $('#sumViewReternWay').toggle();
+      $('#order_list').css('cursor', 'default');
+      $('#toyotaCommuter').css('display', 'none');
+      $('#toyotaHiAce').css('display', 'none');
+      
+
+
+    })
     });
