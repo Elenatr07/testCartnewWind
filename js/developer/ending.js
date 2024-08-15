@@ -1,5 +1,4 @@
-$(document).ready(function() {
-})
+
 
 	
 
@@ -21,15 +20,16 @@ if (hide !== '1') {
     return_trip.style.display = 'none'
     return_trip_view.style.display = 'none'
     line_vert.style.display = 'none'
-    line_horizont.style.display = 'none';
+    line_horizont.style.display = 'none'; 
     order_distance.style.height = '191px';
     trip_order.style.width = '608px'
 }
 
 */
 
-   //---- разивка на разряды в числе ---
-  $(document).ready(function(){
+  
+  $(document).ready(function(){ 
+    //---- разивка на разряды в числе ---
     let str = $('#costViewInnova').text();
     let str1 = $('#costViewCommuter').text();
     let str2 =$('#costViewHiAce').text();
@@ -42,6 +42,8 @@ if (hide !== '1') {
     $('#costViewInnova').text(result);
     $('#costViewCommuter').text(result1);
     $('#costViewHiAce').text(result2);
+
+  
  
 
   })

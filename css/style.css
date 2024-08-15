@@ -405,7 +405,7 @@ margin: 0 0 0 90px;
 	height: 167px;
 	background: rgba(17, 24, 86, 1);
 	margin: 30px auto 30px auto;;
-	display: flex;
+
 	flex-direction: column;
 	border-radius: 30px;
 	border: 1px solid rgba(255, 255, 255, 1);
@@ -642,7 +642,7 @@ select, input{
     position: relative;
 }
 .img_cars{
-	top: 17px;
+	top: 24px;
 	width: 28px;
 	position: relative;
 }
@@ -817,6 +817,8 @@ input[type='date']::-webkit-calendar-picker-indicator {
 
 /*кнопка закрытия конец*/
 
-
+#hide_type_car{
+	display: none;
+}
 
 	
