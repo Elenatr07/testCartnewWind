@@ -71,4 +71,40 @@ $(document).ready(function() {
 
 
     })
+
+    
     });
+
+/*
+    $("input[type='text'],input[type='email'],input[type='tel'], textarea").on("keyup", function(){
+        var empty = false;
+      $('input, textarea').each(function() {
+            if ($(this).val() == '') {
+                empty = true;
+            }
+        });
+        if (empty) {
+              $("input[type='submit']").attr('disabled', 'disabled');
+              $("input[type='submit']").css('opacity', '0.5');
+          } else {
+              $("input[type='submit']").removeAttr('disabled');
+              $("input[type='submit']").css('opacity', '1');
+              $("input[type='submit']").css('cursor', 'pointer');
+          }
+
+     
+  });
+  */
+  $(function () {
+    $("input[type='tel']").on("input propertychange", function () {
+      if ($(this).val().indexOf("+") === -1) {
+        $(this).val("+" + $(this).val());
+      }
+    });
+  });
+
+  
+        
+        
+  
+  

@@ -717,11 +717,12 @@ input[type='date']::-webkit-calendar-picker-indicator {
 
 }
 .orderPreview{
-	margin: 100px auto;
+	margin: 0 auto;
 	max-width: 1698px;
 	width: 100%;
 	background: rgba(17, 24, 86, 1);
-	padding: 50px;
+	padding: 25px 50px 50px 50px;
+	border-radius: 0 0 30px 30px;
 }
 
 
@@ -737,14 +738,14 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	width: 100%;
 }
 .location_details_wrapper input,
-.passenger_details_wrapper input{
+.passenger_details_wrapper input:not(.button_order){
 	width: 690px;
 	height: 62px;
 	border-radius: 15px;
 	background: rgba(56, 62, 94, 1);
 	padding: 23px 20px;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 22px;
+	font-size: 18px;
 	font-weight: 300;
 	line-height: 33px;
 	letter-spacing: 0.05em;
@@ -780,6 +781,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	color: rgba(128, 128, 128, 1);
 }
 
+
 .location_details_wrapper label,
 .passenger_details_wrapper label{
 	margin-bottom: 18px;
@@ -796,8 +798,12 @@ input[type='date']::-webkit-calendar-picker-indicator {
 
 
 .jqcart-error{
-	color: cyan;
-	font-size: 24px;
+	font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.94px;
+    letter-spacing: 0.05em;
+
 }
 .button_order{
 	width: 311px;
@@ -812,18 +818,21 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	text-align: center;
 	color: rgba(16, 23, 84, 1);
 	margin: auto;
+	
 }
 .button_order_wrapper{
 	display: flex;
-	margin-top: 75px;
+	margin-top: 20px;
+
 }
 
 /*кнопка закрытия начало*/
 .close{
-	position: absolute;
-    top: 68px;
-    right: 267px;
 	cursor: pointer;
+	display: flex;
+	justify-content: right;
+	position: relative;
+    top: -25px;
 }
 
 
@@ -842,6 +851,26 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	color: rgba(192, 191, 191, 1);
 
 
+}
+#message_ditails{
+	height: 242px;
+	width: 690px;
+    border-radius: 15px;
+    background: rgba(56, 62, 94, 1);
+    padding: 23px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 33px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+	resize: none;
+}
+#error_block{
+	width: 690px;
+    height: 20px;
+	margin: 20px 0;
 }
 
 	

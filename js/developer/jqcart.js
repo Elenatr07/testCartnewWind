@@ -20,7 +20,7 @@
         label = $('<div class="jqcart-cart-label"><span class="jqcart-title">Оформить заказ</span><span class="jqcart-total-cnt">0</span></div>'),
         modal = '<div class="jqcart-layout"><div class="jqcart-checkout">123</div></div>',
         blockTrip = ' <div class="blockTrip" id="blockTrip"></div>',
-        orderform = '<p class="jqcart-cart-title">Контактная информация:</p><form class="jqcart-orderform"><p><label>ФИО:</label><input type="text" name="user_name"></p><p><label>Телефон:</label><input type="text" name="user_phone"></p><p><label>Email:</label><input type="text" name="user_mail"></p><p><label>Адрес:</label><input type="text" name="user_address"></p><p><label>Промо-код:</label><input type="text" name="promo_code"></p><p><label>Коментарий:</label><textarea name="user_comment"></textarea></p><p><input type="submit" value="Отправить заказ"></p></form>';
+        orderform = ' <div class="orderPreview"><form class="jqcart-orderform"><div class="form_order_wrapper"><div class="location_details_wrapper" id="location_details_wrapper"><h2>Location <span>Details</span> </h2><label for="pick_up_location_one_way">Your pick-up location </label><input type="text" name="pick_up_location_one_way" id="pick_up_location_one_way" placeholder="Enter your address"><label for="drop_off_location_one_way">Your drop-off location </label><input type="text" name="drop_off_location_one_way" id="drop_off_location_one_way" placeholder="Enter your address"><label for="message_ditails">Your message </label><textarea name="message_ditails" id="message_ditails" placeholder="Please share any information that you think we should know...   "></textarea></div><hr class="verticalLine_in_form" id="verticalLine_in_form"  /><div class="passenger_details_wrapper" id="passenger_details_wrapper"><h2>Passenger <span>Details</span> </h2><label for="full_name_client">Your full name  </label><input type="text" name="full_name_client" id="full_name_client" placeholder="Enter your name"><label for="phone_client">Your phone number </label><input type="tel" name="phone_client" id="phone_client" placeholder="Enter your phone number" pattern="^[\+][0-9]+$" minlength="9" maxlength="18"><label for="email_client">Your email address </label><input type="email" name="email_client" id="email_client" placeholder="Enter your email address"> <div id="error_block"></div><div class="button_order_wrapper"><input class="button_order" type="submit" value="Send Request" id="button_order" ></div></div></div><div hidden id="total_sum"></div><div hidden name="order_form"></div></form></div>';
     var opts = {
         buttons: '.add_item',
         cartLabel: 'body',
@@ -337,25 +337,30 @@ if (cartData.hasOwnProperty(key)){
             var $that = $(this);
             if ($.trim($('[name=pick_up_location_one_way]', $that).val()) === '') {
                // $('<p class="jqcart-error">Пожалуйста, укажите свое имя и контактный телефон!</p>').insertBefore($that).delay(3000).fadeOut();
-               $('<p class="jqcart-error">Please, enter your pick-up location!</p>').appendTo('#location_details_wrapper').delay(3000).fadeOut();
+               $('<p class="jqcart-error">Please, enter your pick-up location!</p>').appendTo('#error_block').delay(1000).fadeOut();
                 return false;
             }
             if ($.trim($('[name=drop_off_location_one_way]', $that).val()) === '') {
-                $('<p class="jqcart-error">Please, enter your drop-off location!</p>').appendTo('#location_details_wrapper').delay(3000).fadeOut();
+                $('<p class="jqcart-error">Please, enter your drop-off location!</p>').appendTo('#error_block').delay(1000).fadeOut();
+                 return false;
+             }
+             if ($.trim($('[name=message_ditails]', $that).val()) === '') {
+                $('<p class="jqcart-error">Please, enter your message!</p>').appendTo('#error_block').delay(1000).fadeOut();
                  return false;
              }
              if ($.trim($('[name=full_name_client]', $that).val()) === '') {
-                $('<p class="jqcart-error">Please, enter your full name!</p>').appendTo('#passenger_details_wrapper').delay(3000).fadeOut();
+                $('<p class="jqcart-error">Please, enter your full name!</p>').appendTo('#error_block').delay(1000).fadeOut();
                  return false;
              }  
              if ($.trim($('[name=phone_client]', $that).val()) === '') {
-                $('<p class="jqcart-error">Please, enter your phone number!</p>').appendTo('#passenger_details_wrapper').delay(3000).fadeOut();
+                $('<p class="jqcart-error">Please, enter your phone number!</p>').appendTo('#error_block').delay(1000).fadeOut();
                  return false;
              }
              if ($.trim($('[name=email_client]', $that).val()) === '') {
-                $('<p class="jqcart-error">Please, enter your email address!</p>').appendTo('#passenger_details_wrapper').delay(3000).fadeOut();
+                $('<p class="jqcart-error">Please, enter your email address!</p>').appendTo('#error_block').delay(1000).fadeOut();
                  return false;
              }
+           
 
             $.ajax({
                 url: opts.handler,

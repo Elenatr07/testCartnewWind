@@ -103,8 +103,7 @@ $(".sum").on("change", function (event) {
     }
 if(all_cars[mycar].length <3){
   $(event.target).closest(".sum").find(".add_item").attr("data-select", '1');
-  console.log('меньше 3')
-}
+  }
   
   }
 
