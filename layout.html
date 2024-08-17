@@ -124,8 +124,8 @@
                     <input type="text" name="pick_up_location_one_way" id="pick_up_location_one_way" placeholder="Enter your address">
                     <label for="drop_off_location_one_way">Your drop-off location </label>
                     <input type="text" name="drop_off_location_one_way" id="drop_off_location_one_way" placeholder="Enter your address">
-                    <label for="seats_preference">Your seat(s) preference </label>
-                    <input type="text" name="seats_preference" id="seats_preference" placeholder="Your seat(s) preference ">
+                    <label for="message_ditails">Your message </label>
+                    <textarea name="message_ditails" id="message_ditails" placeholder="Please share any information that you think we should know...   "></textarea>
                 </div>
                 <hr class="verticalLine_in_form" id="verticalLine_in_form"  />
                 <div class="passenger_details_wrapper" id="passenger_details_wrapper">
@@ -133,20 +133,24 @@
                      <label for="full_name_client">Your full name  </label>
                     <input type="text" name="full_name_client" id="full_name_client" placeholder="Enter your name">
                     <label for="phone_client">Your phone number </label>
-                    <input type="text" name="phone_client" id="phone_client" placeholder="Enter your phone number">
+                    <input type="tel" name="phone_client" id="phone_client" placeholder="Enter your phone number in the format +XXXXXXXXXX" pattern='+^[0-9]+$' minlength="11" maxlength="18">
                     <label for="email_client">Your email address </label>
-                    <input type="text" name="email_client" id="email_client" placeholder="Enter your email address">
-                </div>
+                    <input type="email" name="email_client" id="email_client" placeholder="Enter your email address">
+                   <div id="error_block"></div>
+                   
+                    <div class="button_order_wrapper">
+                        <input class="button_order" type="submit" value="Send Request" id="button_order" disabled="disabled">
+                   </div>
+                </div> 
+                
             </div>
             <div hidden id="total_sum"></div>
             <div hidden name="order_form"></div>
            
-           <div class="button_order_wrapper">
-                <input class="button_order" type="submit" value="Send Request">
-           </div>
+          
         </form>
 
-    </div>
+    </div>ьфыыфпу
 
 
 
@@ -158,6 +162,7 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/developer/ending.js"></script>
+   <script src="js/developer/edit.js"></script>
     
 <script src="js/developer/jqcart.js"></script>
 <script>
