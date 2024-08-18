@@ -1170,7 +1170,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 }
 .main_block_text_header span{
 	background: linear-gradient(92.53deg, #F9E3AC 50.35%, #795e2f 97.01%);
-   	transform: translate(-50%,-50%);
+   	transform: translate(-30%,-70%);
 	background-position: 0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
