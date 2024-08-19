@@ -4,6 +4,7 @@
 	border: none;
 }
 
+
 *,
 *::before,
 *::after {
@@ -1262,7 +1263,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
  .blocks_1{
 	display: flex;
 	justify-content: space-around;
-	transition: all 5s ease;
+	transition: all 3s ease;
  }
  .item_of_blocks_1{
 	width: 500px;
@@ -1395,6 +1396,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	letter-spacing: 0.05em;
 	text-align: center;
 	color: rgba(255, 255, 255, 1);
+	margin-bottom: 80px;
 
 }
 .our_vehicles_block h3 span{
@@ -1407,10 +1409,26 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	justify-content: space-between;
 
 }
+.vehicle1_img p{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 37.8px;
+	letter-spacing: 0.05em;
+	text-align: center;
+	margin-top: 65px;
+	color: rgba(246, 215, 136, 1);
+	
+	
+
+
+}
 /*---vehicle fade-in---*/
-.vehicle1_img{
+.vehicle1_img,
+.vehicle2_img,
+.vehicle3_img{
 	width: 500px;
-	height: 300px;
+	height: 380px;
 }
 .vehicle1,
 .vehicle2,
@@ -1427,11 +1445,8 @@ input[type='date']::-webkit-calendar-picker-indicator {
 
 
   .vehicle1:before,
-  .vehicle1:after,
   .vehicle2:before,
-  .vehicle2:after,
-  .vehicle3:before,
-  .vehicle3:after {
+  .vehicle3:before {
 	content: "";
 	display: block;
 	position: absolute;
@@ -1441,19 +1456,16 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	background-repeat: no-repeat;
 	background-position: center center;
   }
-  .vehicle1:before,
-  .vehicle1:after{
+  .vehicle1:before{
 	background-image: url(../img/premio.png);
 
 	
   }
-  .vehicle2:before,
-  .vehicle2:after{
+  .vehicle2:before{
 	background-image: url(../img/commuter.png);
 	
   }
-  .vehicle3:before,
-  .vehicle3:after{
+  .vehicle3:before{
 	background-image: url(../img/reborn.png);
   }
 
@@ -1472,6 +1484,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
   .vehicle3:before {
 	-webkit-animation: f 2s both;
 			animation: f 2s both;
+	
 			
 			
   }
@@ -1498,63 +1511,28 @@ input[type='date']::-webkit-calendar-picker-indicator {
 			  clip-path: inset(0 0% 0 0);
 	}
   }
-  .vehicle1:after {
-	filter: brightness(0.2);
-	transform: rotateY(-180deg);
-	-webkit-animation: g 2s both;
-			animation: g 2s both;
-	
-  }
-  .vehicle2:after{
-	filter: brightness(0.2);
-	transform: rotateY(-180deg);
-	-webkit-animation: g 2s both;
-			animation: g 2s both;
-			
-			
-	
-  }
-  .vehicle3:after {
-	filter: brightness(0.2);
-	transform: rotateY(-180deg);
-	-webkit-animation: g 2s both;
-			animation: g 2s both;
-			
-			
-	
-  }
-  
-  @-webkit-keyframes g {
-	from {
-	  -webkit-clip-path: inset(0 0 0 20%);
-			  clip-path: inset(0 0 0 20%);
-	  transform-origin: 20% 0;
-	}
-	50%,
-	to {
-	  -webkit-clip-path: inset(0 0 0 100%);
-			  clip-path: inset(0 0 0 100%);
-	  transform-origin: 100% 0;
-	}
-  }
-  @keyframes g {
-	from {
-	  -webkit-clip-path: inset(0 0 0 20%);
-			  clip-path: inset(0 0 0 20%);
-	  transform-origin: 20% 0;
-	}
-	50%,
-	to {
-	  -webkit-clip-path: inset(0 0 0 100%);
-			  clip-path: inset(0 0 0 100%);
-	  transform-origin: 100% 0;
-	}
-  }
 
-  
+	  
   /*---vechicle fade-in end----*/
   
+ /*---vehicle title ---*/
  
+.cssanimation, .cssanimation span {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+.cssanimation span { display: inline-block }
+
+.leRotateYZoomIn span { animation-name: leRotateYZoomIn }
+@keyframes leRotateYZoomIn {
+    from {
+        transform: perspective(600px) translate3d(0, -60px, -2000px) rotateY(75deg);
+        opacity: 0
+    }
+    5% { transform: perspective(600px) translate3d(0, -60px, -1500px) rotateY(75deg) }
+}
+/*---vehicle title end ---*/
   
 
 @media screen and (min-width: 801px) and (max-width: 3000px) {
