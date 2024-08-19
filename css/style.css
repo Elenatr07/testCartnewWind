@@ -1409,7 +1409,9 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	justify-content: space-between;
 
 }
-.vehicle1_img p{
+.vehicle1_img p,
+.vehicle2_img p,
+.vehicle3_img p{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 28px;
 	font-weight: 700;
