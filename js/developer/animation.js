@@ -5,5 +5,17 @@ $(window).scroll(function(){
     } else{
         $('#blocks_1').addClass('hidden_block_1')
     }
+    setTimeout(function() {
+       $('.vehicle3').css('display', 'block')
+     }, 500);
+     setTimeout(function() {
+        $('.vehicle2').css('display', 'block')
+      }, 1000);
+      setTimeout(function() {
+        $('.vehicle1').css('display', 'block')
+      }, 1500);
+      
+
+     
     
 })
