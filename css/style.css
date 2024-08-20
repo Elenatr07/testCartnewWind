@@ -1263,7 +1263,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
  .blocks_1{
 	display: flex;
 	justify-content: space-around;
-	transition: all 3s ease;
+	transition: all 2.5s ease;
  }
  .item_of_blocks_1{
 	width: 500px;
@@ -1522,6 +1522,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 .cssanimation, .cssanimation span {
     animation-duration: 2s;
     animation-fill-mode: both;
+	display: none;
 }
 
 .cssanimation span { display: inline-block }
