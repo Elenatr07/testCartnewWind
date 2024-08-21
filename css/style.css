@@ -1263,7 +1263,8 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	margin: 0 auto;
 	padding: 108px 151px 210px 151px;
   }
-  .why_choose_us_block h2{
+  .why_choose_us_block h2,
+  .services_central_block h2{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 40px;
 	font-weight: 500;
@@ -1273,7 +1274,9 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	color: rgba(255, 255, 255, 1);
 	margin-bottom: 87px;
  }
- .why_choose_us_block h2 span {
+ .why_choose_us_block h2 span,
+ .services_central_block h2 span
+  {
 	background: linear-gradient(91.11deg, #F7D788 79.03%, #E3BC78 99.05%);
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
@@ -1710,6 +1713,152 @@ text-align: left;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+.services_central_block{
+	max-width: 1920px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 3.64% 5% 8.8% 5%;
+
+}
+.services_central_wrapper{
+	background-image: url(../img/backimg2.png);
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1128px;
+}
+.service_central_items{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.service_central_item{
+	width: 500px;
+	height: 333px;
+	border-radius: 30px;
+	background: rgba(16, 23, 84, 1);
+	box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.15);
+	padding: 82px 50px;
+	margin: 0px auto 50px auto;
+
+	
+}
+.service_central_item:first-child,
+.service_central_item:nth-child(2),
+.service_central_item:nth-child(3){
+	transform: translateY(-30%);
+	opacity: 0;
+	animation: ani1 2s forwards;
+}
+.service_central_item:last-child,
+.service_central_item:nth-child(4),
+.service_central_item:nth-child(5){
+		transform: translateY(30%);
+	opacity: 0;
+	animation: ani2 2s forwards;
+}
+.service_central_item:nth-child(2),
+.service_central_item:nth-child(5){
+	animation-delay: 0.5s;
+}
+.service_central_item:nth-child(3),
+.service_central_item:last-child{
+	animation-delay: 1s;
+}
+
+.service_central_item div{
+	width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+}
+.service_central_item div img{
+	margin: auto 40px auto 0;
+}
+.service_central_item div p{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 35px;
+	font-weight: 600;
+	line-height: 52.5px;
+	letter-spacing: 0.05em;
+	text-align: left;
+	background: linear-gradient(180deg, #FEEDC4 0%, #F7D788 100%);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+
+
+}
+
+@keyframes ani1 {
+	0% {transform: translateY(-30%);
+	opacity: 0.3;}
+	100% {transform: translateY(0);
+	opacity: 1;}
+  }
+  @keyframes ani2 {
+	0% {transform: translateY(30%);
+	opacity: 0.3;}
+	100% {transform: translateY(0);
+	opacity: 1;}
+  }
+  .service_slider_container{
+	background-image: url(../img/backimg3.png);
+	background-repeat: repeat;
+	background-size: cover;
+	background-position: center;
+	height: 785px;
+  }
+  .service_slider_wrapper{
+	max-width: 1920px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 168px 152px;
+	display: flex;
+	justify-content: space-between;
+	
+  }
+  .slider_info_block h3{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 36px;
+	font-weight: 500;
+	line-height: 48.6px;
+	letter-spacing: 0.05em;
+	text-align: center;
+	color: rgba(255, 255, 255, 1);
+
+  }
+  .slider_info_block h3 span{
+	background: linear-gradient(90.92deg, #F7D788 36.81%, #E3BC78 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  }
+  .slider_info_block p{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 33px;
+	letter-spacing: 0.05em;
+	text-align: left;
+	color: rgba(255, 255, 255, 1);
+ }
+ .slider_info_block p span a{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 33px;
+	letter-spacing: 0.05em;
+	text-align: left;
+	background: linear-gradient(90.97deg, #F7D788 24.89%, #E3BC78 70.4%);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+
+ }
+ .slider_info_block{
+	display: block;
+	max-width: 500px;
+	width: 100%;
+ }
 
 
 @media screen and (min-width: 801px) and (max-width: 3000px) {

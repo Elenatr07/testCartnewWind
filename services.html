@@ -6,6 +6,7 @@
     <title>Amanah Trans Services</title>
  
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/simple-adaptive-slider.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -104,6 +105,90 @@
 
 
         <hr class="breakup_line">
+        <div class="services_central_wrapper">
+            <div class="services_central_block">
+                <h2><span>Facility</span>  on Trip</h2>
+                <div class="service_central_items">
+                    <div class="service_central_item hidden">
+                        <div>
+                            <img src="img/driver.svg" alt="">
+                            <p>Professional Driver & Trip Attendant</p>
+                        </div>
+                       
+                    </div>
+                    <div class="service_central_item hidden">
+                        <div>
+                            <img src="img/air.svg" alt="">
+                            <p>Air Conditioning</p> 
+                        </div>
+                    
+                    </div>
+                    <div class="service_central_item hidden">
+                        <div>
+                            <img src="img/pillow.svg" alt="">
+                            <p>Blanket & Pillow</p> 
+                        </div>
+
+                    </div>
+                    <div class="service_central_item hidden">
+                        <div>
+                            <img src="img/usb.svg" alt="">
+                            <p>USB Port Charger</p> 
+                        </div>
+                    </div>
+                    <div class="service_central_item hidden">
+                        <div>
+                            <img src="img/tv.svg" alt="">
+                            <p>TV & Audio Service</p> 
+                        </div>
+
+                    </div>
+                    <div class="service_central_item hidden">
+                        <div>
+                            <img src="img/seat.svg" alt="">
+                            <p>Recline Seats</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <hr class="breakup_line">
+        <div class="service_slider_container">
+            <div class="service_slider_wrapper">
+                <div class="itcss">
+                    <div class="itcss__wrapper">
+                        <div class="itcss__items">
+                            <div class="itcss__item">
+                                <div><img src="img/slider_img1.png" alt=""></div>
+                            </div>
+                            <div class="itcss__item">
+                                <div><img src="img/slider_img1.png" alt=""></div>
+                            </div>
+                            <div class="itcss__item">
+                                <div><img src="img/slider_img1.png" alt=""></div>
+                            </div>
+                            <div class="itcss__item">
+                                <div><img src="img/slider_img1.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="itcss__btn itcss__btn_prev" role="button" data-slide="prev"></button>
+                    <button class="itcss__btn itcss__btn_next" role="button" data-slide="next"></button>
+                </div>
+                <div class="slider_info_block">
+                <h3>Our <span>Vehicles</span> </h3>
+                <p>Our service utilizes three distinct vehicle types: the <span><a href="#">Toyota Commuter</a> </span> , the <span><a href="#">Toyota Hiace</a></span>  and the <span><a href="#">Toyota Innova Reborn</a></span> , to ensure a comfortable travel experience.</p>
+
+            </div>
+            </div>
+            
+
+         </div>
+
+
+
+
         <footer>
             <div class="footer_wrapper">
                 <div class="footer_logo"><img src="img/footer_logo.png" alt=""></div>
@@ -154,5 +239,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/developer/style_menu.js"></script>
     <script src="js/developer/animation.js"></script>   
+    <script defer src="js/developer/simple-adaptive-slider.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // активация слайдера 
+        var slider = new ItcSimpleSlider('.itcss', {
+          loop: true,
+          autoplay: false,
+          swipe: true,
+          onInit(slider) {
+            console.log(slider);
+          }
+        });
+  
+      });
+    </script>
 </body>
 </html>

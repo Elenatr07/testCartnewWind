@@ -5,9 +5,11 @@ let clickOnButton = true;
  function scroling (){
     let height = $(window).scrollTop();
     if(height>500 && height<1500){
-        $('#blocks_1').removeClass('hidden_block_1')
+        $('#blocks_1').removeClass('hidden_block_1');
+        $('.service_central_item').removeClass('hidden')
     } else {
          $('#blocks_1').addClass('hidden_block_1');
+         
     }
     if (height >= 1700 && clickOnButton == true){
     
