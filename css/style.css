@@ -996,17 +996,22 @@ input[type='date']::-webkit-calendar-picker-indicator {
   }
   
   .main_block,
-  .main_service_block {
+  .main_service_block,
+  .main_filter_block {
   	max-width: 1920px;
 	width: 100%;
-	
 	margin: 0 auto;
 	position: absolute;
 	left: 0;
 	right: 0;
 	top: 220px;
+  }
+  .main_block,
+  .main_service_block{
 	padding: 0 170px;
-
+  }
+  .main_filter_block {
+	padding: 0 255px;
   }
   .main_block {
 	display: flex;
@@ -1807,23 +1812,33 @@ footer{
 	background-position: center;
 	height: 785px;
   }
-  .service_slider_wrapper{
+  .service_slider_wrapper,
+  .service_slider_wrapper_filter{
 	max-width: 1920px;
 	width: 100%;
 	margin: 0 auto;
 	padding: 168px 152px;
-	display: flex;
 	justify-content: space-between;
 	
   }
+  .service_slider_wrapper_filter{
+	display: none;
+	
+  }
+  .service_slider_wrapper{
+	display: flex;
+	
+  }
+
   .slider_info_block h3{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 36px;
 	font-weight: 500;
 	line-height: 48.6px;
 	letter-spacing: 0.05em;
-	text-align: center;
+	text-align: left;
 	color: rgba(255, 255, 255, 1);
+	margin-bottom: 49px;
 
   }
   .slider_info_block h3 span{
@@ -1840,7 +1855,9 @@ footer{
 	text-align: left;
 	color: rgba(255, 255, 255, 1);
  }
- .slider_info_block p span a{
+ .slider_info_block p span a,
+ .slider_info_block p span
+ {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 22px;
 	font-weight: 700;
@@ -1856,8 +1873,92 @@ footer{
 	display: block;
 	max-width: 500px;
 	width: 100%;
+	margin: auto 0;
  }
+ .filter{
+	display: flex;
+	justify-content: center;
+	margin-top: 25px;
+ }
+ .button_filter,
+ .button_filter span {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 36px;
+	font-weight: 500;
+	line-height: 48.6px;
+	letter-spacing: 0.05em;
+	text-align: center;
+	color: rgba(217, 217, 217, 1);
 
+ }
+ .button_filter span{
+	margin: 0 10px 0 10px;
+	color: rgba(217, 217, 217, 1);
+	background: none !important;
+	animation: none;
+	-webkit-text-fill-color: white;
+ }
+ .active{
+	background: linear-gradient(92.53deg, #F9E3AC 50.35%, #795e2f 97.01%);
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+    text-decoration: none;
+    white-space: nowrap;
+ }
+ 
+ .vehicle_type{
+	margin: 74px auto;
+ }
+ .filter_main_block_text{
+	display: none;
+    justify-content: space-between;
+ }
+ .filter_block_text{
+	font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 33px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 30px;
+	max-width: 500px;
+	width: 100%;
+ }
+ .filter_block_text span{
+	background: linear-gradient(90.97deg, #F7D788 24.89%, #E3BC78 70.4%);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 33px;
+	letter-spacing: 0.05em;
+	text-align: left;
+
+ }
+ .vehicle_central{
+	background-image: url(../img/backimg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 770px;
+ }
+ .vehicle_central_wrapper{
+	max-width: 1920px;
+	width: 100%;
+	margin: 0 auto;
+    padding: 55px 268px;
+	display: none;
+ }
+.vehicle_central_wrapper img {
+	margin: 0 auto;
+	
+}
 
 @media screen and (min-width: 801px) and (max-width: 3000px) {
     .hamb {
