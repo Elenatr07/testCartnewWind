@@ -1460,6 +1460,12 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	height: 380px;
 	cursor: pointer;
 }
+.vehicle1_img:hover,
+.vehicle2_img:hover,
+.vehicle3_img:hover{
+	transform: scale(0.98);
+	transition: 0.5s;
+}
 .vehicle1,
 .vehicle2,
 .vehicle3
@@ -1889,7 +1895,11 @@ footer{
 	letter-spacing: 0.05em;
 	text-align: center;
 	color: rgba(217, 217, 217, 1);
+	position: relative;
 
+ }
+ .button_filter{
+	cursor: pointer;
  }
  .button_filter span{
 	margin: 0 10px 0 10px;
@@ -1959,6 +1969,21 @@ footer{
 	margin: 0 auto;
 	
 }
+.button_filter:hover:after{
+	box-shadow: 0 0 50px 10px #0311ae;
+	content: "";
+	width: 100%;
+	position: absolute;
+	display: block;
+	margin-top: -20px;
+    margin-left: -19px;
+
+	
+}
+.button_filter.active:hover::after{
+	box-shadow: none;
+}
+
 
 @media screen and (min-width: 801px) and (max-width: 3000px) {
     .hamb {
