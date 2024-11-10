@@ -15,6 +15,12 @@ document.getElementById("one_way_calendar_from").addEventListener("change", func
 
 
 $(".sum").on("change", function (event) {
+   let hasDisabledAttr = $('#open').prop('disabled');
+   if(hasDisabledAttr===false){
+    $('#open').css({"pointer-events": 'auto'});
+
+  } 
+
  // console.log(fullDateOneTtip)
   $(event.target).closest(".sum").find("select").change(sum);
   $(event.target).closest(".sum").find("input").change(sum);
@@ -137,12 +143,22 @@ var time_from
                         { 
         $('#open').removeAttr('disabled');
         $('#open').css({"opacity" : '1'});
-        } 
+        
+        } else {
+          $('#open').attr('disabled','disable');
+
+        }
         }
         
+     
+
+})
 
 
-});
+
+  
+
+
 
   
  
