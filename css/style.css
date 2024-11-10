@@ -255,6 +255,10 @@ form{
 	padding: 30px 50px;
 	margin: auto;
 }
+.order_list:hover{
+	transform: scale(0.98);
+	transition: transform 0.5s ease;
+}
 .block_from_to{
 	margin-right: 62px;
 	width: 355px;
@@ -411,14 +415,22 @@ margin: 0 0 0 90px;
 .order_list{
 	height: 218px;
 	background: rgba(17, 24, 86, 1);
-	margin: 30px auto 30px auto;;
+	margin: 0px auto 57px auto;;
 
 	flex-direction: column;
 	border-radius: 30px;
-	border: 1px solid rgba(255, 255, 255, 1);
+	
 	cursor: pointer;
 	max-width: 1698px;
 	width: 100%;
+}
+.blockTrip{
+	background-image: url(../img/backimg1_order.png);
+	padding-top: 108px;
+	padding-bottom: 100px;
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .horizontalline {
 	width: 150px;
@@ -908,12 +920,15 @@ input[type='date']::-webkit-calendar-picker-indicator {
 }
 .main_top_order{
 	position: relative;
-	background-image: url(../img/backimg1.png);
+	background-image: url(../img/backimg_order.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 	width: 100%;
-	height: 469px;
+	height: 589px;
+}
+.order{
+	padding-top: 200px;
 }
 .side-menu {
     display: none;
@@ -1064,7 +1079,10 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	color:rgba(245, 215, 146, 1);
 	
   }
-  .contacts_item.tel:hover{
+  .contacts_item.tel:hover,
+  .site_map_item:hover,
+  .footer_address:hover,
+  .powered_by:hover{
 	color:rgba(245, 215, 146, 1);
 
   }
@@ -1669,6 +1687,9 @@ footer{
     text-align: left;
     color: rgba(255, 255, 255, 1);
 }
+.site_map_item.tel{
+	pointer-events: none;
+}
 .footer_address{
 	position: relative;
 	left: -19px;
@@ -1689,6 +1710,17 @@ footer{
 .social_item{
 	margin-right: 25px;
 }
+.social_item .social_img:hover,
+.contacts_item img:hover{
+	animation: _img 0.5s 0.1s linear;
+	
+	
+}
+@keyframes _img{
+	0% {
+		transform: scaleX(-1);
+	}
+}
 .social{
 	max-width: 1920px;
 	display: flex;
@@ -1707,6 +1739,8 @@ footer{
 	justify-content: center;
 	position: relative;
 	bottom: 37px;
+	width: 300px;
+	margin: 0 auto;
 
 
 }
