@@ -596,7 +596,14 @@ margin: 0 0 0 90px;
 	opacity: 0.7;
 	cursor: pointer;
 	margin-top: 17px;
+	pointer-events: none;
 }
+#open:hover{
+	border:#E3BC78 2px solid;
+	background: radial-gradient(49.81% 49.81% at 50% 52.6%, #202B55 0%, #0E1025 100%);
+	color: #F7D788;
+}
+
 
 #from,
 #hours{
@@ -899,6 +906,15 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	width: 100%;
 	height: 960px;
 }
+.main_top_order{
+	position: relative;
+	background-image: url(../img/backimg1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 469px;
+}
 .side-menu {
     display: none;
 }
@@ -1045,8 +1061,15 @@ input[type='date']::-webkit-calendar-picker-indicator {
   }
   .menu_item:hover{
 	font-weight: 600;
-	color:rgba(157, 15, 15, 1);
+	color:rgba(245, 215, 146, 1);
 	
+  }
+  .contacts_item.tel:hover{
+	color:rgba(245, 215, 146, 1);
+
+  }
+  .contacts_item.tel{
+	pointer-events: none;
   }
   .contacts_items{
 	display: none;
@@ -1391,15 +1414,26 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	text-align: center;
 	color: rgba(16, 23, 84, 1);
 	display: block;
+	padding: 19px 50px;
 }
 .button_to_book{
 	width: 267px;
 	height: 66px;
 	border-radius: 30px;
 	background: linear-gradient(90deg, #F7D788 0%, #E3BC78 100%);
-	padding: 19px 70px;
 	margin-top: 80px;
+	
 }
+.button_to_book:hover{
+	border:#E3BC78 2px solid;
+	background: radial-gradient(49.81% 49.81% at 50% 52.6%, #202B55 0%, #0E1025 100%);
+
+	
+}
+.button_to_book a:hover{
+	color: #F7D788;
+}
+
   
 .our_vehicles_wrapper{
 	background-image: url(../img/backimg2.png);
