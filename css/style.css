@@ -470,6 +470,7 @@ margin: 0 0 0 90px;
     left: 0;
     right: 0;
     top: 563px;
+	justify-content: center;
 }
 #edit_container{
 	display: flex;
@@ -515,8 +516,8 @@ margin: 0 0 0 90px;
 	top: 21px;
 }
 .service_items_options{
-	max-width: 1240px;
-	width: 100%;
+	max-width: 100%;
+	width: 1240px;
 	border-radius: 0px 30px 30px 0px;
 	background: rgba(26, 34, 68, 1);
 	padding: 50px 29px 24px 25px;
@@ -524,7 +525,8 @@ margin: 0 0 0 90px;
 .select_passangers{
 	display: flex;
 	flex-direction: column;
-	max-width: 520px;
+	max-width: 100%;
+	width: 520px;
 }
 #one_way{
 	display: flex;
@@ -559,6 +561,8 @@ margin: 0 0 0 90px;
 	display: flex;
     flex-direction: column;
 	margin: auto 0 0 0;
+	width: 272px;
+	max-width: 100%;
 }
 
 
@@ -592,25 +596,36 @@ margin: 0 0 0 90px;
 .one_way_time{
 	display: flex;
 	flex-direction: column;
-	margin: 10px 0 0 0;
+	
+}
+.one_way_time{
+	margin-top: 2px;
 }
 .date_time{
 	display: flex;
 	flex-direction: column;
-	margin: auto 0 0 30px;
+	margin: 0 0 0 30px;
+	max-width: 45%;
+    width: 520px;
 }
 .one_way_block{
 	display: flex;
 	margin: auto 0 0 0;
 	position: relative;
-    top: -11px;
+   top: -10px;
+	flex-wrap: nowrap;
+	width: 520px;
+	
 }
 .type_car {
 	display: flex;
 	flex-direction: column;
+	width: 520px;
+    max-width: 100%;
 }
 #open{
 	width: 228px;
+	max-width: 100%;
 	height: 66px;
 	border-radius: 30px;
 	background: linear-gradient(90deg, #F7D788 0%, #E3BC78 100%);
@@ -623,7 +638,6 @@ margin: 0 0 0 90px;
 	color: rgba(17, 23, 84, 1);
 	opacity: 0.7;
 	cursor: pointer;
-	margin-top: 17px;
 	pointer-events: none;
 }
 #open:hover{
@@ -636,8 +650,12 @@ margin: 0 0 0 90px;
 #from,
 #hours{
 	width: 247px;
-	margin-right: 25px;
+	max-width: 100%;
 	
+	
+}
+#from{
+	margin-right: 25px;
 }
 #cars,
 #from,
@@ -648,7 +666,7 @@ margin: 0 0 0 90px;
 	border-bottom: 1px solid rgba(216, 216, 216, 1);
 }
 #cars{
-	width: 500px;
+	width: 100%;
 	margin-right: 50px;
 	margin-top: 7px;
 }
@@ -713,6 +731,7 @@ select, input{
 #time_return
 {
 	width: 170px;
+	max-width: 100%;
 	margin-right: 25px;
 	margin-bottom: 39px;
 	background: rgba(26, 34, 68, 1);
@@ -721,10 +740,10 @@ select, input{
 	font-size: 17px;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 300;
-
+	
 }
 #time_departure{
-	margin-top: 1px;
+	margin-top: 0px;
 }
 input[type='date']::-webkit-calendar-picker-indicator {
     filter: invert(100%);
@@ -924,8 +943,8 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	left: 0;
 	right: 0;
 	top: 0;
-	max-width: 1920px;
-	width: 100%;
+	max-width: 100%;
+	width: 1920px;
 	margin: 0 auto;
 	padding: 25px 30px 25px 120px;
 	
@@ -1313,6 +1332,8 @@ input[type='date']::-webkit-calendar-picker-indicator {
   .main_block_text,
   .service_main_block_text{
 	margin: auto;
+	width: 839px;
+	max-width: 100%;
   }
   .testimonials_main_block_text {
 	max-width: 500px;
@@ -1374,6 +1395,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
  }
  .item_of_blocks_1{
 	width: 500px;
+	max-width: 100%;
 	height: 335px;
 	border-radius: 30px;
 	opacity: 0px;
@@ -1461,6 +1483,13 @@ input[type='date']::-webkit-calendar-picker-indicator {
 }
 .about_us_info_img{
 	margin: auto 0;
+	display: flex;
+	justify-content: center;
+	
+}
+.about_us_info_img img{
+	width: 546px;
+	max-width: 100%;
 }
 .button_to_book a{
 	font-family: 'Montserrat', sans-serif;
@@ -1475,6 +1504,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 }
 .button_to_book{
 	width: 267px;
+	max-width: 100%;
 	height: 66px;
 	border-radius: 30px;
 	background: linear-gradient(90deg, #F7D788 0%, #E3BC78 100%);
@@ -1548,6 +1578,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 .vehicle2_img,
 .vehicle3_img{
 	width: 500px;
+	max-width: 100%;
 	height: 380px;
 	cursor: pointer;
 }
@@ -1577,7 +1608,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	content: "";
 	display: block;
 	position: absolute;
-	width: 100%;
+	/*width: 100%;*/
 	height: 100%;
 		background-size:auto;
 	background-repeat: no-repeat;
@@ -1585,15 +1616,22 @@ input[type='date']::-webkit-calendar-picker-indicator {
   }
   .vehicle1:before{
 	background-image: url(../img/premio.png);
+	width: 482px;
+	max-width: 100%;
+
 
 	
   }
   .vehicle2:before{
 	background-image: url(../img/commuter.png);
+	width: 482px;
+	max-width: 100%;
 	
   }
   .vehicle3:before{
 	background-image: url(../img/reborn.png);
+	width: 482px;
+	max-width: 100%;
   }
 
   .vehicle1:before {
@@ -1739,7 +1777,7 @@ footer{
 	width: 65%;
 }
 .footer_logo{
-	width: 43%;
+	width: 35%;
 	margin: auto;
 
 }
@@ -2095,6 +2133,49 @@ footer{
 	box-shadow: none;
 }
 
+.main_block_img,
+.main_block_img img{
+	width: 639px;
+}
+
+
+.name img,
+.name{
+	width: 211px;
+	
+}
+
+.name img{
+	max-width: 100%;
+}
+.first_svg{
+	width: 56px;
+	max-width: 100%;
+}
+.next_svg
+{
+	width: 45px;
+	max-width: 100%;
+}
+.block1_img{
+	width: 56px;
+}
+.block2_img{
+	width: 45px;
+}
+.footer_logo img{
+	width: 270px;
+	max-width: 100%;
+}
+.button_search{
+	width: 228px;
+	max-width: 100%;
+	position: absolute;
+    top: 172px;
+	right: 30px;
+}
+
+
 
 @media screen and (min-width: 801px) and (max-width: 3000px) {
     .hamb {
@@ -2117,7 +2198,8 @@ footer{
     }
 	.contacts_items{
 		display: flex;
-		margin-top: 40px;
+		margin-top: 45px;
+		justify-content: center;
 	}
 	.in_menu{
 		display: none;
@@ -2125,7 +2207,287 @@ footer{
 
 	
 }
+@media(max-width: 1900px) {
+	.item_of_blocks_1{
+		max-width: 31%;
+		padding: 45px;
+	}
+	.item_of_blocks_1_title {
+		margin-bottom: 32px;
+	}
+	.about_us_block{
+		padding: 108px 250px;
+	}
+}
+@media(max-width: 1800px){
+	.our_vehicles_block{
+		padding: 108px 60px 108px 60px;
+	}
+}
 
+@media(max-width:1700px) {
+	.why_choose_us_block{
+		padding: 108px 100px 210px 100px;
+	}
+	.about_us_info_img img{
+		max-width: 90%;
+	}
+	.about_us_block {
+        padding: 108px 200px;
+    }
+	.vehicle1_img, .vehicle2_img, .vehicle3_img{
+		max-width: 31%;
+	}
+	.vehicle1:before, 
+	.vehicle2:before, 
+	.vehicle3:before{
+		background-size: 434px 259px;
+	}
+	
+	.main_block, .main_service_block {
+		padding: 0 100px;
+	}
+	.main_block_text,
+  	.service_main_block_text{
+		max-width: 95%;
+  	}
+
+}
+@media(max-width:1600px){
+	.why_choose_us_block {
+        padding: 108px 80px 210px 80px;
+    }
+	.vehicle1:before, 
+	.vehicle2:before, 
+	.vehicle3:before{
+		background-size: 400px 239px;
+	}
+	.main_block_text_header, 
+	.service_block_text_header,
+	.about_us_info h3 {
+		font-size: 43px;
+	}
+	.why_choose_us_block h2, 
+	.services_central_block h2 {
+		font-size: 39px;
+	}
+	
+	.item_of_blocks_1_title h3
+	{
+		font-size: 34px;
+	}
+	.item_of_blocks_1 p,
+	.about_us_info p{
+		font-size: 21px;
+	}
+	.about_us_info_img img {
+        max-width: 88%;
+    }
+	.our_vehicles_block h3{
+		font-size: 35px;
+	}
+	.vehicle1_img p, 
+	.vehicle2_img p, 
+	.vehicle3_img p {
+		font-size: 27px;
+	}
+	.service_items{
+		width: 200px;
+	}
+	.service_items_options {
+		max-width: 80%;
+	}
+	.select_passangers {
+		max-width: 44%;
+	}
+	
+	#one_way_calendar_from, 
+	#time_departure, 
+	#two_ways_calendar_from,
+	 #time_return {
+		max-width: 80%;
+		margin-right: 20px;
+	 }
+	 #from, #hours {
+		max-width: 82%;
+		margin-right: 20px;
+	 }
+	 #open {
+		max-width: 87%;
+		height: 63px;
+		font-size: 21px;
+	 }
+	 .button_search {
+		right: 54px;
+		display: flex;
+        justify-content: center;
+	}
+}
+@media(max-width: 1500px) {
+	.header_block{
+		padding: 25px 0px 25px 80px;
+	}
+	.menu_item, 
+	.contacts_item,
+	.dropbtn{
+		font-size: 15px;
+	}
+	.menu_item {
+		margin-right: 30px;
+	}
+	.why_choose_us_block {
+        padding: 108px 50px 210px 50px;
+    }
+	.item_of_blocks_1_title h3 {
+        font-size: 33px;
+    }
+	.item_of_blocks_1 p, .about_us_info p {
+        font-size: 20px;
+    }
+	.about_us_block {
+        padding: 108px 140px;
+    }
+	.button_to_book a,
+	.service_item p{
+		font-size: 21px;
+	}
+	.button_to_book{
+		max-width: 53%;
+	}
+	.footer_address, 
+	.site_map_item,
+	.powered_by {
+		font-size: 16px;
+	}
+	.footer_wrapper{
+		padding: 54px 55px 0 55px;
+	}
+}
+
+@media(max-width: 1439px){
+	.main_block_text_header, 
+	.service_block_text_header, 
+	.about_us_info h3 {
+        font-size: 39px;
+    }
+	.service_items {
+        width: 180px;
+    }
+	.service_items_options {
+        max-width: 79%;
+    }
+	.select_passangers {
+        max-width: 38%;
+    }
+	.item,
+	.option_for_select{
+		font-size: 17px;
+	}
+	#from, #hours {
+        max-width: 78%;
+        margin-right: 18px;
+    }
+	.hours_rent, 
+	.one-way_from{
+		max-width: 56%;
+	}
+	.why_choose_us_block h2, 
+	.services_central_block h2 {
+        font-size: 38px;
+    }
+	.next_svg,
+	.first_svg{
+		max-width: 90%;
+	}
+	.item_of_blocks_1_title h3 {
+        font-size: 31px;
+    }
+	.item_of_blocks_1 p, 
+	.about_us_info p {
+        font-size: 19px;
+    }
+	.item_of_blocks_1 {
+       padding: 42px;
+    }
+	.about_us_block {
+        padding: 108px 120px;
+    }
+	.our_vehicles_block h3 {
+        font-size: 34px;
+    }
+	.vehicle1:before, 
+	.vehicle2:before, 
+	.vehicle3:before {
+        background-size: 360px 215px;
+    }
+	.vehicle1_img p, 
+	.vehicle2_img p, 
+	.vehicle3_img p {
+        font-size: 25px;
+    }
+	.footer_logo img {
+		max-width: 60%;
+	}
+	.footer_address, 
+	.site_map_item, 
+	.powered_by {
+        font-size: 15px;
+    }
+	.footer_logo{
+		width: 30%;
+	}
+	.footer_info{
+		width: 70%;
+	}
+	
+	.button_search {
+       right: 60px;
+	}
+}
+
+@media(max-width: 1300px) {
+	.main_block, .main_service_block {
+        padding: 0 80px;
+    }
+	.main_block_text_header, 
+	.service_block_text_header, 
+	.about_us_info h3 {
+        font-size: 38px;
+    }
+	.main_block_img, .main_block_img img {
+		width: 585px;
+	}
+	.item, .option_for_select,
+	#one_way_calendar_from, 
+	#time_departure, 
+	#two_ways_calendar_from, 
+	#time_return {
+        font-size: 15px;
+    }
+
+	.item{
+		padding-left: 36px;
+	}
+
+	.select_passangers {
+        max-width: 45%;
+    }
+	
+	#one_way_calendar_from, 
+	#time_departure, 
+	#two_ways_calendar_from, 
+	#time_return {
+        max-width: 100%;
+		margin-right: 40px;
+	}
+	.button_search{
+		position: relative;
+		top: 0;
+		margin: 0 auto;
+	}
+
+	
+}
 @media (max-width: 800px) {
     .side-menu:checked~nav {
         /* max-height: 100vh; */
