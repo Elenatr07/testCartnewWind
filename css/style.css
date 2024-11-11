@@ -1074,6 +1074,9 @@ input[type='date']::-webkit-calendar-picker-indicator {
   .main_block {
 	display: flex;
   }
+  .star{
+	margin-left: 5px;
+  }
 
   .header_block {
 	display: flex;
@@ -1923,7 +1926,8 @@ footer{
 	height: 785px;
   }
   .service_slider_wrapper,
-  .service_slider_wrapper_filter{
+  .service_slider_wrapper_filter,
+  .testimonials_slider_wrapper{
 	max-width: 1920px;
 	width: 100%;
 	margin: 0 auto;
@@ -1934,6 +1938,9 @@ footer{
   .service_slider_wrapper_filter{
 	display: none;
 	
+  }
+  .testimonials_slider_wrapper{
+	display: flex;
   }
   .service_slider_wrapper{
 	display: flex;
