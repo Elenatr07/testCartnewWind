@@ -36,6 +36,7 @@ $(document).ready(function() {
       $('#toyotaInnova').css('display', 'none');
       $('#toyotaCommuter').css({'borderRadius': '30px 30px 0 0', 'margin': '30px auto 0 auto', 'border': '0'});
       $('#orderPreview').css({'margin':'0 auto'});
+      $('.blockTrip').css({'background-image': 'none', 'padding-bottom': '0'});
       
 
 
@@ -51,6 +52,7 @@ $(document).ready(function() {
       $('#toyotaInnova').css('display', 'none');
       $('#toyotaHiAce').css({'borderRadius': '30px 30px 0 0', 'margin': '30px auto 0 auto', 'border': '0'});
       $('#orderPreview').css({'margin':'0 auto'});
+      $('.blockTrip').css({'background-image': 'none', 'padding-bottom': '0'});
    
       
 
@@ -67,6 +69,7 @@ $(document).ready(function() {
       $('#toyotaHiAce').css('display', 'none');
       $('#toyotaInnova').css({'borderRadius': '30px 30px 0 0', 'margin': '30px auto 0 auto', 'border': '0'});
       $('#orderPreview').css({'margin':'0 auto'});
+      $('.blockTrip').css({'background-image': 'none', 'padding-bottom': '0'});
   
 
 
