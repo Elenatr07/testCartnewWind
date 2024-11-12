@@ -541,7 +541,8 @@ margin: 0 0 0 90px;
 .label_pass,
 .trip_text,
 .label_hours,
-.label_cars {
+.label_cars,
+.label_from {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 15px;
 	font-weight: 300;
@@ -553,7 +554,8 @@ margin: 0 0 0 90px;
 }
 
 
-.label_hours{
+.label_hours,
+.label_from{
 	margin: auto 30px auto 0;
 }
 .hours_rent,
@@ -653,12 +655,6 @@ margin: 0 0 0 90px;
 	margin-right: 50px;
 	margin-top: 7px;
 }
-.img_arrow{
-	position: absolute;
-	padding-top: 3px;
-}
-
-
 
 select:focus,
 select:active,
@@ -700,7 +696,8 @@ select, input{
 	width: 16px;
 	position: relative;
 }
-.hourglass{
+.hourglass,
+.img_arrow {
 	top: 19px;
 	width: 18px;
 	position: relative;
@@ -961,9 +958,10 @@ input[type='date']::-webkit-calendar-picker-indicator {
 .hamb {
 	cursor: pointer;
 	right: 0;
-	padding: 25px 25px;
+	padding: 25px 50px;
 	position: fixed;
 	z-index: 3;
+	margin-top: 70px;
   }
   /* Style label tag */
   
@@ -972,7 +970,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	height: 5px;
 	position: relative;
 	width: 35px;
-	background: red;
+	background: linear-gradient(0deg, #FFE49D 0%, #E3BC78 100%);
 	transform: matrix(1, 0, 0, -1, 0, 0);
 	border-radius: 10px;
   }
@@ -987,7 +985,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	position: absolute;
 	transition: all 0.2s ease-out;
 	width: 100%;
-	background: linear-gradient(180deg, #F7D788 0%, #E3BC78 100%);
+	background: linear-gradient(0deg, #FFE49D 0%, #E3BC78 100%);;
 	transform: matrix(1, 0, 0, -1, 0, 0);
 	border-radius: 10px;
   }
@@ -1037,7 +1035,9 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	bottom: 0;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	background: rgba(249, 249, 252, 1);
+	background: rgba(56, 62, 94, 1);
+
+
 	
   }
   
@@ -1123,8 +1123,8 @@ input[type='date']::-webkit-calendar-picker-indicator {
   }
   .contacts_items{
 	display: none;
-	max-width: 370px;
-	width: 100%;
+	max-width: 100%;
+	width: 370px;
   }
   .in_menu{
 	display: flex;
@@ -1171,6 +1171,9 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	font-weight: 500;
 	line-height: 20.72px;
 	text-align: left;
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+	
 
 }
 
@@ -1442,6 +1445,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	text-align: left;
 	color: rgba(255, 255, 255, 1);
 	margin-bottom: 45px;
+	order: 1;
 
 
 }
@@ -1458,6 +1462,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	letter-spacing: 0.05em;
 	text-align: left;
 	color: rgba(255, 255, 255, 1);
+	order: 2;
 
 
 }
@@ -1492,6 +1497,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	border-radius: 30px;
 	background: linear-gradient(90deg, #F7D788 0%, #E3BC78 100%);
 	margin-top: 80px;
+	order: 3;
 	
 }
 .button_to_book:hover{
@@ -2122,12 +2128,6 @@ footer{
 }
 
 
-.name img,
-.name{
-	width: 211px;
-	
-}
-
 .name img{
 	max-width: 100%;
 }
@@ -2157,10 +2157,19 @@ footer{
     top: 172px;
 	right: 30px;
 }
+.shadow {
+    background-color: rgba(217, 217, 217, 0.2);
+    opacity: 1;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: block;
+}
 
 
 
-@media screen and (min-width: 801px) and (max-width: 3000px) {
+@media screen and (min-width: 1001px) and (max-width: 3000px) {
     .hamb {
         display: none;
     }
@@ -2313,7 +2322,8 @@ footer{
 	}
 	.menu_item, 
 	.contacts_item,
-	.dropbtn{
+	.dropbtn,
+	.dropdown-content a{
 		font-size: 15px;
 	}
 	.menu_item {
@@ -2334,18 +2344,24 @@ footer{
 	.button_to_book a,
 	.service_item p{
 		font-size: 21px;
+		padding: 19px 25px;
 	}
 	.button_to_book{
 		max-width: 53%;
 	}
 	.footer_address, 
 	.site_map_item,
-	.powered_by {
+	.powered_by,
+	.powered_by span {
 		font-size: 16px;
 	}
 	.footer_wrapper{
 		padding: 54px 55px 0 55px;
 	}
+	.main_top {
+		background-position: right;
+	}
+	
 }
 
 @media(max-width: 1439px){
@@ -2406,7 +2422,8 @@ footer{
 	}
 	.footer_address, 
 	.site_map_item, 
-	.powered_by {
+	.powered_by,
+	.powered_by span {
         font-size: 15px;
     }
 	.footer_logo{
@@ -2542,7 +2559,8 @@ footer{
     }
 	.footer_address, 
 	.site_map_item, 
-	.powered_by {
+	.powered_by,
+	.powered_by span {
         font-size: 14px;
     }
 	.offices:nth-child(2) {
@@ -2557,10 +2575,185 @@ footer{
 		max-width: 290px;
 		width: 33%;
 	}
+	.main_top{
+		height: 1005px;
+	}
+	.button_to_book a, .service_item p {
+        font-size: 20px;
+    }
+	.service_items_options {
+		padding: 50px 29px 30px 25px;
+	}
+	
 
 	
 }
-@media (max-width: 800px) {
+@media(max-width:1200px) {
+	.header_block {
+        padding: 25px 20px 25px 50px;
+    }
+	.menu_item, 
+	.contacts_item, 
+	.dropbtn,
+	.dropdown-content a {
+        font-size: 14px;
+    }
+	.menu_item {
+        margin-right: 21px;
+    }
+	.main_block, 
+	.main_service_block {
+        padding: 0 50px;
+    }
+	.main_block_text_header, 
+	.service_block_text_header, 
+	.about_us_info h3 {
+        font-size: 35px;
+    }
+	.main_block_img, 
+	.main_block_img img {
+        width: 560px;
+    }
+	.why_choose_us_block h2, 
+	.services_central_block h2 {
+        font-size: 37px;
+    }
+	.item_of_blocks_1_title h3 {
+        font-size: 26px;
+    }
+	.item_of_blocks_1 p, 
+	.about_us_info p{
+		line-height: 31px;
+	}
+	.our_vehicles_block h3 {
+        font-size: 32px;
+    }
+	.vehicle1:before, 
+	.vehicle2:before, 
+	.vehicle3:before {
+        background-size: 300px 179px;
+    }
+	.vehicle1_img p, 
+	.vehicle2_img p, 
+	.vehicle3_img p{
+		font-weight: 500;
+		font-size: 22px;
+	}
+	.footer_address, 
+	.site_map_item, 
+	.powered_by,
+	.powered_by span {
+        font-size: 13px;
+    }
+	.social_item img {
+		width: 38px;
+	}
+	.social_item {
+		margin-right: 20px;
+	}
+
+}
+@media(max-width:1100px){
+	.header_block {
+        padding: 0 20px 25px 50px;
+    }
+	.name img {
+		max-width: 90%;
+	}
+	.menu_item, .contacts_item, .dropbtn, .dropdown-content a {
+        font-size: 13px;
+    }
+	.menu_item {
+        margin-right: 18px;
+    }
+	.dropbtn {
+		background-size: 20px 20px;
+		padding-left: 27px;
+	}
+	.dropbtn::before {
+		right: -30px;
+	}
+	.contacts_item {
+		margin-right: 11px;
+	}
+	.main_block_text_header, .service_block_text_header {
+		line-height: 56.5px;
+		font-size: 34px;
+	}
+	.main_block_img, 
+	.main_block_img img {
+        width: 493px;
+    }
+	.service_items {
+        width: 162px;
+    }
+	#open {
+        height: 60px;
+        font-size: 20px;
+    }
+	.why_choose_us_block h2, 
+	.services_central_block h2 {
+        font-size: 36px;
+    }
+	.item_of_blocks_1 {
+        padding: 30px 30px;
+    }
+	.why_choose_us_block {
+        padding: 80px 25px 170px 25px;
+    }
+	.why_choose_us_wrapper {
+        height: 726px;
+    }
+	.item_of_blocks_1_title h3 {
+        font-size: 24px;
+    }
+	.item_of_blocks_1 p, 
+	.about_us_info p {
+        font-size: 17px;
+    }
+	.about_us_block {
+        padding: 80px 90px;
+    }
+	.our_vehicles_block h3 {
+        font-size: 31px;
+    }
+	.our_vehicles_block {
+        padding: 80px 50px 80px 50px;
+    }
+	.vehicle1:before, 
+	.vehicle2:before, 
+	.vehicle3:before {
+        background-size: 280px 167px;
+    }
+	.vehicle1_img p, 
+	.vehicle2_img p, 
+	.vehicle3_img p {
+        margin-top: 20px;
+    }
+	.vehicle1_img p, 
+	.vehicle2_img p, 
+	.vehicle3_img p {
+        font-size: 20px;
+    }
+	.our_vehicles_wrapper{
+		height: 654px;
+	}
+	.offices div, 
+	.offices ul {
+		margin-right: 59px;
+		
+	}
+	.social_item img {
+        width: 35px;
+    }
+
+}
+@media (max-width:1024px) {
+	.contacts_item.tel {
+		pointer-events: auto;
+	}
+}
+@media (max-width: 1000px) {
     .side-menu:checked~nav {
         /* max-height: 100vh; */
      /*   height: 100vh;*/
@@ -2586,7 +2779,7 @@ footer{
 	}
 	.menu_item_name img{
 		width: 80%;
-		margin: 0 auto;
+		margin: 163px auto 70px auto;
         display: flex;
         justify-content: center;
 	}
@@ -2618,6 +2811,7 @@ footer{
 	.adress_points{
 		display: flex;
 		flex-direction: column;
+		margin-top: 50px;
 	}
 	.dropdown-content {
 		position: relative;
@@ -2625,4 +2819,113 @@ footer{
 	.dropdown{
 		margin-top: 20px;
 	}
+	.name {
+		margin: 70px 0;
+	}
+	.adress_points div{
+		margin-bottom: 25px;
+	}
+	.dropbtn::before {
+        right: 132px;
+    }
+	.contacts_item_block {
+       margin-top: 60px;
+    }
+	.main_block_img, 
+	.main_block_img img {
+        width: 428px;
+    }
+	.main_block_text_header, .service_block_text_header {
+        line-height: 46.5px;
+        font-size: 29px;
+    }
+	.header_block {
+        padding: 0 20px 0 50px;
+    }
+	.search_container {
+		top: 506px
+	}
+	.button_to_book a, .service_item p {
+        font-size: 19px;
+        padding: 19px 10px;
+    }
+	.service_items {
+        width: 154px;
+    }
+	.label_pass, 
+	.trip_text, 
+	.label_hours, 
+	.label_cars, 
+	.label_from{
+		font-size: 14px;
+	}
+	.item, .option_for_select, 
+	#one_way_calendar_from, 
+	#time_departure, 
+	#two_ways_calendar_from, 
+	#time_return {
+        font-size: 14px;
+    }
+	.why_choose_us_block h2, 
+	.services_central_block h2 {
+        font-size: 35px;
+    }
+	.item_of_blocks_1 {
+        max-width: 45%;
+	}
+	.blocks_1 {
+		flex-wrap: wrap;
+	}
+	.item_of_blocks_1_title h3 {
+        font-size: 29px;
+    }
+	.item_of_blocks_1 {
+        height: 290px;
+        margin-bottom: 40px;
+    }
+	.item_of_blocks_1 p, .about_us_info p {
+        font-size: 19px;
+    }
+	.why_choose_us_wrapper {
+        height: 945px;
+    }
+	.about_us_block {
+        padding: 80px 50px;
+    }
+	.about_us_wrapper{
+		height: 677px;
+	}
+	.our_vehicles_block h3 {
+        font-size: 30px;
+    }
+	.our_vehicles_block h3 {
+        margin-bottom: 25px;
+    }
+	.vehicle3:before {
+        background-size: 250px 149px;
+    }
+	.vehicle1, 
+	.vehicle2, 
+	.vehicle3{
+		height: 277px;
+	}
+	.vehicle1:before, 
+	.vehicle2:before, 
+	.vehicle3:before {
+        background-size: 250px 149px;
+    }
+	.vehicle1_img p, 
+	.vehicle2_img p, 
+	.vehicle3_img p {
+        font-size: 18px;
+    }
+	.our_vehicles_wrapper {
+        height: 559px;
+    }
+	footer {
+		display: none;
+	}
+	.our_vehicles_block {
+        padding: 80px 50px 0px 50px;
+    }
 }
