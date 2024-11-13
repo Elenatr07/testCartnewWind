@@ -2122,11 +2122,11 @@ footer{
 	box-shadow: none;
 }
 
-.main_block_img,
-.main_block_img img{
+.main_block_img
+{
 	width: 639px;
 }
-
+.main_block_img img {}
 
 .name img{
 	max-width: 100%;
@@ -2927,5 +2927,116 @@ footer{
 	}
 	.our_vehicles_block {
         padding: 80px 50px 0px 50px;
+    }
+	.why_choose_us_block {
+        padding: 80px 25px 0px 25px;
+    }
+}
+@media(max-width:900px){
+	.main_block {
+		flex-wrap: wrap;
+	}
+	.main_block_img, 
+	.main_block_img img{
+		margin: 20px auto;
+	}
+	.main_block_img, 
+	.main_block_img img {
+        width: 615px;
+    }
+	.search_container {
+        top: 696px;
+		flex-direction: column;
+    }
+	.main_block, 
+	.main_service_block {
+        padding: 0 70px;
+    }
+	.service_items{
+		margin: 0 auto;
+		padding: 10px;
+		width: 700px;
+    	border-radius: 30px 30px 0px 0px;
+	}
+	.service_item {
+		border-bottom: 0;
+		padding-bottom: 10px;
+	}
+	.service_item p{
+		text-align: left;
+		padding: 0px 10px;
+	}
+    .checked_line {
+        width: 138px;
+        height: 3px;
+        top: 43px;
+        left: -555px;
+    }
+	.service_item_options_block {
+		flex-direction: column;
+	}
+	.service_items_options{
+		width: 700px;
+		max-width: 100%;
+		margin: 0 auto;
+		border-radius: 0px 0px 30px 30px;
+		padding: 20px 30px 30px 20px;
+	}
+	.select_passangers, 
+	.date_time {
+        max-width: 100%;
+        width: 640px;
+    }
+	.date_time {
+		margin: 0;
+	}
+	#cars, 
+	#from, 
+	#hours, 
+	#pass {
+		margin-bottom: 20px;
+	}
+	.hours_rent, 
+	.one-way_from {
+		margin: 0;
+	}
+	#one_way, .one_way_block {
+		justify-content: space-between;
+	}
+	#from, #hours {
+        max-width: 100%;
+        margin-right: 0; 
+        width: 300px;
+    }
+	.hours_rent, .one-way_from,
+	#one_way_calendar_from, 
+	#time_departure, 
+	#two_ways_calendar_from, 
+	#time_return {
+        max-width: 100%;
+        width: 300px;
+    }
+	.button_search {
+		right: 0;
+	}
+	.main_top {
+        height: 1293px;
+    }
+	.why_choose_us_block {
+        padding: 70px 25px 0px 25px;
+    }
+	.why_choose_us_block h2, 
+	.services_central_block h2{
+		margin-bottom: 60px;
+	}
+	.item_of_blocks_1_title h3 {
+        font-size: 28px;
+    }
+	.item_of_blocks_1 p, .about_us_info p {
+        font-size: 18px;
+    }
+	.item_of_blocks_1 {
+        height: 310px;
+        margin-bottom: 35px;
     }
 }
