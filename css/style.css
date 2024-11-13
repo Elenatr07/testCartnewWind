@@ -2126,7 +2126,9 @@ footer{
 {
 	width: 639px;
 }
-.main_block_img img {}
+.main_block_img img {
+	width: 335px;
+}
 
 .name img{
 	max-width: 100%;
