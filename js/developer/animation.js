@@ -4,10 +4,19 @@ let clickOnButton = true;
 
  function scroling (){
     let height = $(window).scrollTop();
-    if(height>500 && height<1500){
+    console.log(height)
+    if($(window).width() > 1000 && height>500 && height<1500){
         $('#blocks_1').removeClass('hidden_block_1');
         $('.service_central_item').removeClass('hidden')
-    } else {
+        
+    } else if ($(window).width() <= 1000 && height>600 && height<1950){
+        $('#blocks_1').removeClass('hidden_block_1');
+        $('.service_central_item').removeClass('hidden')
+    }
+    else if ($(window).width() <= 769 && height>950 && height<2100){
+        $('#blocks_1').removeClass('hidden_block_1');
+        $('.service_central_item').removeClass('hidden')
+    }else {
          $('#blocks_1').addClass('hidden_block_1');
          
     }

@@ -669,7 +669,7 @@ border-image-source: linear-gradient(90deg, #F7D788 0%, #E3BC78 100%);
 select{
 	 background-image: url(../img/Arrow3.svg) !important;  
 	 background-repeat: no-repeat !important;
-  background-position-x: 98% !important;
+  background-position-x: 100% !important;
   background-position-y: 5px !important;
 }
 select, input{
@@ -3010,13 +3010,10 @@ footer{
         margin-right: 0; 
         width: 300px;
     }
-	.hours_rent, .one-way_from,
-	#one_way_calendar_from, 
-	#time_departure, 
-	#two_ways_calendar_from, 
-	#time_return {
-        max-width: 100%;
-        width: 300px;
+	.one-way_from {
+        max-width: 47%;
+        width: 520px;
+		margin-right: 0;
     }
 	.button_search {
 		right: 0;
@@ -3040,5 +3037,78 @@ footer{
 	.item_of_blocks_1 {
         height: 310px;
         margin-bottom: 35px;
+    }
+	.about_us_block{
+		flex-direction: column;
+		padding: 70px 70px;
+	}
+	.about_us_info {
+		margin: 0 auto;
+		width: 100%;
+		display: flex;
+        flex-direction: column;
+	}
+	.about_us_info h3{
+		text-align: center;
+	}
+	.button_to_book{
+		margin: 60px auto;
+	}
+	.about_us_wrapper {
+        height: 858px;
+    }
+	.our_vehicles_block_img {
+		flex-direction: column;
+	}
+	.vehicle1_img, .vehicle2_img, .vehicle3_img {
+        max-width: 100%;
+		margin: 0 auto;
+    }
+	.vehicle1:before, .vehicle2:before, .vehicle3:before {
+        background-size: 434px 259px;
+    }
+	.our_vehicles_wrapper {
+        height: 1293px;
+    }
+	.vehicle1_img p, .vehicle2_img p, .vehicle3_img p {
+        font-size: 23px;
+		font-weight: 600;
+    }
+	.one_way_date, .one_way_time {
+       max-width: 47%;
+    }
+	#cars {
+		margin-right: 0;
+	}
+	#time_departure{
+		width: 298px;
+		max-width: 100%;
+        margin-right: 0;
+	}
+}
+@media(max-width:768px) {
+	.service_items,
+	.service_items_options {
+      width: 570px;
+	}
+	.checked_line {
+        left: -430px;
+    }
+	#from, #hours,
+	.hours_rent, 
+	.one-way_from, 
+	#one_way_calendar_from, 
+	#time_departure, 
+	#two_ways_calendar_from,
+	#time_return {
+        width: 254px;
+    }
+	
+	#one_way_calendar_from{
+		max-width: 100%;
+		margin-right: 0;
+	}
+	.select_passangers, .date_time {
+      width: 519px;
     }
 }
