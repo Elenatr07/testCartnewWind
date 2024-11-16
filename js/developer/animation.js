@@ -16,6 +16,10 @@ let clickOnButton = true;
     else if ($(window).width() <= 769 && height>950 && height<2100){
         $('#blocks_1').removeClass('hidden_block_1');
         $('.service_central_item').removeClass('hidden')
+    }
+    else if ($(window).width() <= 600 && height>1400 && height<2700){
+        $('#blocks_1').removeClass('hidden_block_1');
+        $('.service_central_item').removeClass('hidden')
     }else {
          $('#blocks_1').addClass('hidden_block_1');
          
