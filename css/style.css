@@ -3199,6 +3199,12 @@ footer{
        padding: 0 20px;
 	   margin-top: 50px;
 	}
+	.option_for_select{
+		font-size: 12px;
+	}
+	#one_way_calendar_from{
+		margin-bottom: 20px;
+	}
 }
 @media(max-width:500px){
 	.main_block_text_header, 
@@ -3261,7 +3267,7 @@ footer{
 		background-image: url(../img/back600.png);
     }
 	.header_block {
-        padding: 0 20px 0 30px;
+        padding: 0 20px 0 20px;
     }
 	.name img {
         max-width: 69%;
@@ -3304,6 +3310,7 @@ footer{
 	.why_choose_us_block h2, .services_central_block h2 {
        font-size: 26px;
     }
+
 }
 @media(max-width:395px){
 	.main_block_text_header, 
