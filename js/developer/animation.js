@@ -18,7 +18,11 @@ let clickOnButton = true;
         $('#blocks_1').removeClass('hidden_block_1');
         $('.service_central_item').removeClass('hidden')
     }
-    else if (((width >=320)&&(width <=768)) && height>1200 && height<2500){
+    else if (((width >=376)&&(width <=768)) && height>1200 && height<2500){
+        $('#blocks_1').removeClass('hidden_block_1');
+        $('.service_central_item').removeClass('hidden')
+    }
+    else if (((width >=320)&&(width <=375)) && height>1000 && height<2300){
         $('#blocks_1').removeClass('hidden_block_1');
         $('.service_central_item').removeClass('hidden')
     }else {
