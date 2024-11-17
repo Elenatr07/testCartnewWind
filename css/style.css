@@ -2768,6 +2768,7 @@ footer{
         max-height: 100vh; 
      	height: 100vh;
 		background: rgba(14, 16, 37, 1);
+		overflow-y: scroll;
 		
 
     }
