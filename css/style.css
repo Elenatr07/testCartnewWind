@@ -2765,8 +2765,8 @@ footer{
 }
 @media (max-width: 1000px) {
     .side-menu:checked~nav {
-        /* max-height: 100vh; */
-     /*   height: 100vh;*/
+        max-height: 100vh; 
+     	height: 100vh;
 		background: rgba(14, 16, 37, 1);
 		
 
@@ -2789,7 +2789,7 @@ footer{
 	}
 	.menu_item_name img{
 		width: 80%;
-		margin: 163px auto 70px auto;
+		margin: 100px auto 20px auto;
         display: flex;
         justify-content: center;
 	}
@@ -2804,7 +2804,7 @@ footer{
 	}
 	.contacts_items{
 		flex-direction: column;
-		margin-top: 25px;
+		
 		
 	}
 	.contacts_item{
@@ -2821,7 +2821,7 @@ footer{
 	.adress_points{
 		display: flex;
 		flex-direction: column;
-		margin-top: 50px;
+		margin-top: 30px;
 	}
 	.dropdown-content {
 		position: relative;
@@ -3188,6 +3188,16 @@ footer{
 	.vehicle3:before {
         background-size: 360px 215px;
     }
+	    .name {
+        margin: 30px 0;
+    }
+	.header_block {
+        padding: 0 20px 20px;
+    }
+	.hamb {
+       padding: 0 20px;
+	   margin-top: 50px;
+	}
 }
 @media(max-width:500px){
 	.main_block_text_header, 
