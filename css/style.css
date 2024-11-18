@@ -930,7 +930,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	
 }
 
-.main_top{
+.main_top, .main_top_services{
 	position: relative;
 	background-image: url(../img/backimg1.png);
 	background-repeat: no-repeat;
@@ -1869,7 +1869,7 @@ footer{
 	background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 1128px;
+   
 }
 .service_central_items{
 	display: flex;
@@ -2123,14 +2123,6 @@ footer{
 	box-shadow: none;
 }
 
-.main_block_img
-{
-	width: 639px;
-}
-.main_block_img img {
-	width: 335px;
-}
-
 .name img{
 	width: 220px;
 	max-width: 100%;
@@ -2169,6 +2161,10 @@ footer{
     height: 100%;
     position: fixed;
     display: block;
+}
+.main_block_img_services img{
+	width: 781px;
+    max-width: 100%;
 }
 
 
@@ -2240,13 +2236,19 @@ footer{
 		background-size: 434px 259px;
 	}
 	
-	.main_block, .main_service_block {
+	.main_block {
 		padding: 0 100px;
 	}
-	.main_block_text,
-  	.service_main_block_text{
+	.main_block_text{
 		max-width: 95%;
   	}
+	  .main_service_block {
+		padding: 0 150px;
+		
+	}
+	.service_main_block_text {
+		margin: auto 75px auto 0;
+	}
 
 }
 @media(max-width:1600px){
@@ -2319,6 +2321,19 @@ footer{
 		display: flex;
         justify-content: center;
 	}
+	.main_block_img_services img,
+	.main_block_img_services{
+		width: 100%;
+	}
+	.main_service_block {
+        padding: 0 100px;
+    }
+	.service_block_text{
+		font-size: 21px;
+	}
+	.main_top_services {
+        height: 940px;
+    }
 }
 @media(max-width: 1500px) {
 	.header_block{
@@ -2362,8 +2377,18 @@ footer{
 	.footer_wrapper{
 		padding: 54px 55px 0 55px;
 	}
-	.main_top {
+	.main_top, .main_top_services {
 		background-position: right;
+	}
+	.main_top_services{
+		height: 900px;
+
+	}
+	.service_block_text {
+        font-size: 20px;
+    }
+	.service_main_block_text {
+		max-width: 460px;
 	}
 	
 }
@@ -2443,6 +2468,12 @@ footer{
 	.button_search {
        right: 60px;
 	}
+	.service_main_block_text {
+        max-width: 396px;
+    }
+	.service_block_text {
+        font-size: 19px;
+    }
 	
 }
 @media(max-width: 1380px) {
