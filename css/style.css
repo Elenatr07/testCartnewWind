@@ -1062,9 +1062,12 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	right: 0;
 	top: 220px;
   }
-  .main_block,
-  .main_service_block{
+  .main_block
+  {
 	padding: 0 170px;
+  }
+  .main_service_block{
+	padding: 0 170px 92px 170px;
   }
   .testimonials_service_block{
 	padding: 70px 170px;
@@ -1916,6 +1919,7 @@ footer{
     display: flex;
     align-items: center;
    justify-content: center;
+   margin: auto;
 }
 .service_central_item div img{
 	margin: auto 40px auto 0;
@@ -2177,7 +2181,6 @@ footer{
         max-height: 200px;
         width: 80%;
         right: 0;
-        height: 200px;
         position: relative;
         z-index: 999;
         display: flex;
@@ -2215,6 +2218,12 @@ footer{
 	.our_vehicles_block{
 		padding: 108px 60px 108px 60px;
 	}
+	.service_central_item {
+		width: 470px;
+		height: 313px;
+		padding: 60px 50px;
+		
+	}
 }
 
 @media(max-width:1700px) {
@@ -2243,11 +2252,23 @@ footer{
 		max-width: 95%;
   	}
 	  .main_service_block {
-		padding: 0 150px;
+		padding: 0 150px 92px 150px;
 		
 	}
 	.service_main_block_text {
 		margin: auto 75px auto 0;
+	}
+	.main_top_services{
+		height: 960px;
+	}
+	.service_central_item {
+		width: 450px;
+		height: 300px;
+		padding: 50px 45px;
+		
+	}
+	.service_central_item div p {
+		font-size: 34px;
 	}
 
 }
@@ -2324,15 +2345,24 @@ footer{
 	.main_block_img_services img,
 	.main_block_img_services{
 		width: 100%;
+		margin: auto;
 	}
 	.main_service_block {
-        padding: 0 100px;
+        padding: 0 100px 92px 100px;
     }
 	.service_block_text{
 		font-size: 21px;
 	}
 	.main_top_services {
-        height: 940px;
+        height: 958px;
+    }
+	.service_central_item {
+        width: 410px;
+        height: 273px;
+        padding: 30px 30px;
+    }
+	.service_central_item div p {
+        font-size: 31px;
     }
 }
 @media(max-width: 1500px) {
@@ -2381,7 +2411,7 @@ footer{
 		background-position: right;
 	}
 	.main_top_services{
-		height: 900px;
+		height: 950px;
 
 	}
 	.service_block_text {
@@ -2390,6 +2420,14 @@ footer{
 	.service_main_block_text {
 		max-width: 460px;
 	}
+	.service_central_item {
+        width: 400px;
+        height: 266px;
+        padding: 25px 25px;
+    }
+	.service_central_item div p {
+        font-size: 30px;
+    }
 	
 }
 
@@ -2468,11 +2506,28 @@ footer{
 	.button_search {
        right: 60px;
 	}
-	.service_main_block_text {
-        max-width: 396px;
-    }
+	
 	.service_block_text {
         font-size: 19px;
+    }
+	.main_top_services {
+        height: 939px;
+    }
+	.service_main_block_text {
+        max-width: 419px;
+    }
+	.service_central_item div p {
+        font-size: 29px;
+    }
+
+	.service_central_item div img {
+		margin: auto 20px auto 0;
+		width: 23%;
+	}
+	.service_central_item {
+        width: 356px;
+        height: 237px;
+        padding: 20px 20px;
     }
 	
 }
@@ -2494,12 +2549,20 @@ footer{
 		width: 520px;
 		max-width: 54%;
 	}
+	.main_top_services {
+        height: 904px;
+    }
 	
+}
+@media(max-width:1344px){
+	.main_top_services {
+        height: 874px;
+    }
 }
 
 @media(max-width: 1300px) {
 	.main_block, .main_service_block {
-        padding: 0 80px;
+        padding: 0 80px 92px 80px;
     }
 	.main_block_text_header, 
 	.service_block_text_header, 
@@ -2626,9 +2689,22 @@ footer{
 	.service_items_options {
 		padding: 50px 29px 30px 25px;
 	}
+	.service_central_item div p {
+        font-size: 28px;
+		line-height: 47.5px;
+    }
+	.service_central_item {
+        width: 330px;
+        height: 220px;
+	}
 	
 
 	
+}
+@media(max-width:1250px){
+	.main_top_services {
+        height: 840px;
+    }
 }
 @media(max-width:1200px) {
 	.header_block {
@@ -2643,10 +2719,13 @@ footer{
 	.menu_item {
         margin-right: 21px;
     }
-	.main_block, 
-	.main_service_block {
+	.main_block
+	 {
         padding: 0 50px;
     }
+	.main_service_block{
+		padding: 0 50px 80px 50px;
+	}
 	.main_block_text_header, 
 	.service_block_text_header, 
 	.about_us_info h3 {
@@ -2693,6 +2772,20 @@ footer{
 	.social_item {
 		margin-right: 20px;
 	}
+	.service_block_some_info {
+		font-size: 33px;
+		line-height: 42.5px;
+	}
+	.main_top_services {
+        height: 797px;
+    }
+	.service_central_item div p {
+        font-size: 26px;
+	}
+	.service_central_item {
+        width: 310px;
+        height: 206px;
+    }
 
 }
 @media(max-width:1100px){
@@ -2787,12 +2880,33 @@ footer{
 	.social_item img {
         width: 35px;
     }
+	.service_block_text {
+        font-size: 18px;
+    }
+	.main_top_services {
+        height: 773px;
+    }
+	.service_central_item {
+        width: 410px;
+        height: 273px;
+    }
+	.service_central_item div p {
+        font-size: 28px;
+    }
 
 }
 @media (max-width:1024px) {
 	.contacts_item.tel {
 		pointer-events: auto;
 	}
+	.service_block_text {
+        font-size: 17px;
+    }
+	.service_block_some_info {
+        font-size: 32px;
+        line-height: 42.5px;
+    }
+	
 }
 @media (max-width: 1000px) {
     .side-menu:checked~nav {
@@ -2967,6 +3081,14 @@ footer{
 	.why_choose_us_block {
         padding: 80px 25px 40px 25px;
     }
+	.main_top_services {
+        height: 743px;
+    }
+	.service_central_item {
+        width: 356px;
+        height: 237px;
+    }
+	
 }
 @media(max-width:900px){
 	.main_block {
@@ -3122,6 +3244,9 @@ footer{
         line-height: 46.5px;
         font-size: 35px;
     }
+	.service_main_block_wrapper {
+		flex-direction: column;
+	}
 }
 @media(max-width:768px) {
 	.service_items,
