@@ -1963,7 +1963,7 @@ footer{
 	max-width: 1920px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 168px 152px;
+	padding: 8.75% 7.9%;
 	justify-content: space-between;
 	
   }
@@ -3082,7 +3082,7 @@ footer{
         padding: 80px 25px 40px 25px;
     }
 	.main_top_services {
-        height: 743px;
+        height: 778px;
     }
 	.service_central_item {
         width: 356px;
