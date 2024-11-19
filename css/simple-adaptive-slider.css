@@ -10,6 +10,7 @@
   max-width: 775px;
   width: 100%;
   height: 100%;
+  margin: auto 0;
 }
 
 /* стили для wrapper */
@@ -156,5 +157,29 @@
   }
   .itcss__btn {
     top: 44%;
+  }
+}
+@media(max-width:900px){
+  .itcss {
+    width: 95%;
+    margin: auto;
+}
+}
+@media(max-width:500px){
+  .itcss__indicator_active {
+    width: 13px;
+    height: 13px;
+  }
+  .itcss__indicator {
+    width: 9px;
+    height: 9px;
+  }
+  .itcss__btn {
+    width: 2rem;
+    height: 3rem;
+  }
+  .itcss__btn::before {
+   width: 1.5rem;
+    height: 1.5rem
   }
 }
