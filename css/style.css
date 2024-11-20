@@ -187,7 +187,7 @@ form{
 	width: 604px;
 	height: 219px;
 	border-radius: 30px;
-	padding: 46px 52px;
+	padding: 38px 50px 40px 50px;
 	margin: auto;
 	
 }
@@ -232,6 +232,11 @@ form{
 
 
 }
+.way,
+.way_pass,
+.way_info{
+	margin-bottom: 15px;
+}
 .verticalLine{
 	width: 2px; /* Use only border style */
 	height: 100px;
@@ -254,17 +259,18 @@ form{
 	border-radius: 30px;
 	padding: 30px 50px;
 	margin: auto;
+	width: 100%;
 }
 .order_list:hover{
 	transform: scale(0.98);
 	transition: transform 0.5s ease;
 }
 .block_from_to{
-	margin-right: 62px;
-	width: 355px;
-   
+	margin: 0 auto;
+	width: 100%;
+	max-width: 340px;
+	order: 1;
 }
-
 
 .time_trip{
 	font-family: 'Montserrat', sans-serif;
@@ -274,7 +280,7 @@ line-height: 21.94px;
 letter-spacing: 0.05em;
 text-align: center;
 color: rgba(255, 255, 255, 1);
-margin: 0 0 0 90px;
+
 
 
 }
@@ -287,7 +293,7 @@ margin: 0 0 0 90px;
 	font-weight: 600;
 	line-height: 42.67px;
 	letter-spacing: 0.05em;
-	text-align: left;
+	text-align: center;
 	color: rgba(255, 255, 255, 1);
 	
 }
@@ -309,12 +315,15 @@ margin: 0 0 0 90px;
 .wrapper_from_to{
 	display: flex;
 	justify-content: space-between;
+	width: 100%;
+    max-width: 1600px;
 }
 .line_from_to{
 	display: flex;
-	max-width: 825px;
+	max-width: 800px;
     width: 100%;
 	position: relative;
+	order: 2;
 }
 .cost_from_to span {
 	font-family: 'Montserrat', sans-serif;
@@ -333,8 +342,10 @@ margin: 0 0 0 90px;
 	line-height: 26.82px;
 	letter-spacing: 0.05em;
 	text-align: left;
-	margin-left: 62px;
-	width: 310px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 339px;
+	order: 3;
     
 }
 .ellips{
@@ -360,7 +371,7 @@ margin: 0 0 0 90px;
 	position: absolute;
     top: 8px;
     left: 20px;
-    max-width: 786px;
+    max-width: 766px;
     width: 100%;
 }
 .line1 img{
@@ -415,7 +426,8 @@ margin: 0 0 0 90px;
     background-position: center;
 }
 .order_distance{
-	padding-bottom: 95px;
+	padding-bottom: 38px;
+	padding-top: 95px;
 }
 
 .order_list{
@@ -430,14 +442,14 @@ margin: 0 0 0 90px;
 	max-width: 1698px;
 	width: 100%;
 }
-.blockTrip{
+/*.blockTrip{
 	background-image: url(../img/backimg1_order.png);
 	padding-top: 108px;
 	padding-bottom: 100px;
 	background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
+}*/
 .horizontalline {
 	width: 150px;
 	height: 2px;
@@ -2244,6 +2256,34 @@ footer{
 		padding: 60px 50px;
 		
 	}
+	.order_list{
+		width: 90%;
+	}
+	.block_from_to p, 
+	.cost_from_to p, 
+	.location_details_wrapper h2, 
+	.passenger_details_wrapper h2,
+	.cost_from_to span{
+		font-size: 33px;
+	}
+	.block_from_to {
+		width: 29%;
+	}
+	.cost_from_to{
+		width: 29%;
+	}
+	.line_from_to {
+		width: 42%;
+	}
+	.line1 {
+		width: 96%;
+	}
+	.trip_order_distance_from, 
+	.trip_order_distance_to, 
+	.location_details_wrapper label, 
+	.passenger_details_wrapper label {
+	font-size: 17px;
+	}
 }
 
 @media(max-width:1700px) {
@@ -2298,6 +2338,13 @@ footer{
 	.testimonials_service_block {
 		padding: 70px 150px;
 	}
+	.block_from_to p, 
+	.cost_from_to p, 
+	.location_details_wrapper h2, 
+	.passenger_details_wrapper h2,
+	.cost_from_to span {
+        font-size: 32px;
+    }
 
 }
 @media(max-width:1600px){
@@ -2416,6 +2463,19 @@ footer{
 	.star {
 		max-width: 35px;
 	}
+	.block_from_to p, 
+	.cost_from_to p, 
+	.location_details_wrapper h2, 
+	.passenger_details_wrapper h2,
+	.cost_from_to span {
+        font-size: 31px;
+    }
+	.trip_order_distance_from, 
+	.trip_order_distance_to, 
+	.location_details_wrapper label, 
+	.passenger_details_wrapper label {
+        font-size: 16px;
+    }
 }
 @media(max-width: 1500px) {
 	.header_block{
@@ -2505,6 +2565,13 @@ footer{
 	.filter_block_text{
 		max-width: 419px;
 	}
+	.block_from_to p, 
+	.cost_from_to p, 
+	.location_details_wrapper h2, 
+	.passenger_details_wrapper h2,
+	.cost_from_to span {
+        font-size: 29px;
+    }
 	
 }
 
@@ -2614,6 +2681,22 @@ footer{
 		max-width: 419px;
         
     }
+	.trip_order_select {
+		padding: 30px 30px;
+	}
+	.block_from_to p, 
+	.cost_from_to p, 
+	.location_details_wrapper h2, 
+	.passenger_details_wrapper h2, 
+	.cost_from_to span {
+        font-size: 27px;
+    }
+	.trip_order_distance_from, 
+	.trip_order_distance_to, 
+	.location_details_wrapper label, 
+	.passenger_details_wrapper label {
+        font-size: 15px;
+    }
 }
 @media(max-width: 1380px) {
 	.select_passangers,
@@ -2693,7 +2776,6 @@ footer{
 	.date_time {
         max-width: 45%;
     }
-	
 	
 	#time_departure, 
 	#two_ways_calendar_from, 
@@ -2827,6 +2909,13 @@ footer{
 	.star {
 		max-width: 30px;
 	}
+	.block_from_to p, 
+	.cost_from_to p, 
+	.location_details_wrapper h2, 
+	.passenger_details_wrapper h2, 
+	.cost_from_to span {
+        font-size: 25px;
+    }
 
 	
 }
@@ -2943,6 +3032,19 @@ footer{
 	.testimonials_main_block_wrapper {
 		justify-content: space-between;
 	}
+	.block_from_to p, 
+	.cost_from_to p, 
+	.location_details_wrapper h2, 
+	.passenger_details_wrapper h2, 
+	.cost_from_to span {
+        font-size: 23px;
+    }
+	.trip_order_distance_from, 
+	.trip_order_distance_to, 
+	.location_details_wrapper label, 
+	.passenger_details_wrapper label {
+        font-size: 14px;
+    }
 
 }
 @media(max-width:1150px){
@@ -3290,6 +3392,19 @@ footer{
 	.main_filter_block {
         padding: 0 50px;
     }
+	.block_from_to p, 
+	.cost_from_to p, 
+	.location_details_wrapper h2, 
+	.passenger_details_wrapper h2, 
+	.cost_from_to span {
+        font-size: 21px;
+    }
+	.trip_order_select {
+        padding: 20px 20px;
+    }
+	.note {
+		font-size: 13px;
+	}
 }
 @media(max-width:900px){
 	.main_block {
@@ -3550,6 +3665,54 @@ footer{
 	.testimonials_slider_wrapper {
 		flex-direction: column-reverse;
 	}
+	.wrapper_from_to {
+		flex-wrap: wrap;
+		position: relative;
+        top: -10px;
+	}
+	.block_from_to,
+	.cost_from_to {
+        width: 33%;
+    }
+	.block_from_to{
+		order: 1;
+		margin: 0;
+	}
+	.cost_from_to{
+		order: 2;
+		margin: 0;
+	}
+	.line_from_to{
+		order: 3;
+		width: 90%;
+		margin: 0 auto;
+		position: relative;
+        top: 15px;
+	}
+	.line_from_to div:nth-child(1),
+	.line_from_to div:nth-child(2),
+	.line_from_to div:nth-child(3) {
+		position: relative;
+		top: 13px;
+	}
+	.trip_order_distance_block {
+		padding: 0;
+		top: 16px;
+	}
+	.time_trip{
+		position: relative;
+		top: 48px;
+	}
+	.block_from_to p{
+		text-align: left;
+	}
+	.cost_from_to p{
+		text-align: right;
+	}
+	.trip_order_select {
+        padding: 20px 40px;
+    }
+	
 }
 @media(max-width:850px){
 	.main_top_services {
