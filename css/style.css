@@ -930,7 +930,8 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	
 }
 
-.main_top, .main_top_services{
+.main_top, .main_top_services,
+.main_top_vehicles{
 	position: relative;
 	background-image: url(../img/backimg1.png);
 	background-repeat: no-repeat;
@@ -2078,7 +2079,7 @@ footer{
     letter-spacing: 0.05em;
     text-align: left;
     color: rgba(255, 255, 255, 1);
-    margin-top: 30px;
+    margin: auto  0;
 	max-width: 500px;
 	width: 100%;
  }
@@ -2099,17 +2100,19 @@ footer{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 770px;
+ 
  }
  .vehicle_central_wrapper{
 	max-width: 1920px;
 	width: 100%;
 	margin: 0 auto;
-    padding: 55px 268px;
+    padding: 2.9% 13.96%;
 	display: none;
  }
 .vehicle_central_wrapper img {
 	margin: 0 auto;
+	width: 100%;
+	max-width: 1383px;
 	
 }
 .button_filter:hover:after{
@@ -2169,6 +2172,13 @@ footer{
 .main_block_img_services img{
 	width: 781px;
     max-width: 100%;
+}
+.filter_block_img,
+.filter_block_img img{
+	width: 100%;
+	max-width: 630px;
+	margin: auto;
+
 }
 
 
@@ -2269,6 +2279,9 @@ footer{
 	}
 	.service_central_item div p {
 		font-size: 34px;
+	}
+	.main_filter_block {
+		padding: 0 150px;
 	}
 
 }
@@ -2371,6 +2384,16 @@ footer{
 	.slider_info_block h3 {
 		font-size: 35px;
 	}
+	.main_filter_block {
+        padding: 0 100px;
+    }
+	.filter_block_text,
+	.filter_block_text span{
+		font-size: 21px;
+	}
+	.main_top_vehicles{
+		height: 900px;
+	}
 }
 @media(max-width: 1500px) {
 	.header_block{
@@ -2414,7 +2437,8 @@ footer{
 	.footer_wrapper{
 		padding: 54px 55px 0 55px;
 	}
-	.main_top, .main_top_services {
+	.main_top, .main_top_services,
+	.main_top_vehicles {
 		background-position: right;
 	}
 	.main_top_services{
@@ -2442,6 +2466,21 @@ footer{
 	.slider_info_block h3 {
         font-size: 34px;
     }
+	.button_filter, .button_filter span {
+	font-size: 35px;
+	}
+	.filter_block_text,
+	.filter_block_text span{
+		font-size: 20px;
+	}
+	.filter_block_text, .filter_block_text span {
+        font-size: 19px;
+		
+       
+    }
+	.filter_block_text{
+		max-width: 419px;
+	}
 	
 }
 
@@ -2545,7 +2584,11 @@ footer{
         padding: 20px 20px;
     }
 	
-	
+	.filter_block_text, .filter_block_text span {
+        font-size: 19px;
+		max-width: 419px;
+        
+    }
 }
 @media(max-width: 1380px) {
 	.select_passangers,
@@ -2585,6 +2628,11 @@ footer{
 	.main_top_services {
         height: 874px;
     }
+}
+@media(max-width:1330px){
+	.slider_info_block h3{
+		line-height: 33px;
+	}
 }
 
 @media(max-width: 1300px) {
@@ -2724,7 +2772,21 @@ footer{
         width: 330px;
         height: 220px;
 	}
-	
+	.main_filter_block {
+        padding: 0 80px;
+    }
+	.button_filter, .button_filter span {
+        font-size: 34px;
+    }
+	.filter_block_text, .filter_block_text span {
+        font-size: 18px;
+    }
+	.filter_block_text{
+		margin: auto 30px auto 0;
+	}
+	.main_top_vehicles {
+        height: 854px;
+    }
 
 	
 }
@@ -2751,7 +2813,7 @@ footer{
         padding: 0 50px;
     }
 	.main_service_block{
-		padding: 0 50px 80px 50px;
+		padding: 0 70px 80px 70px;
 	}
 	.main_block_text_header, 
 	.service_block_text_header, 
@@ -2823,6 +2885,15 @@ footer{
     }
 	.service_main_block_text {
         margin: auto 25px auto 0;
+    }
+	.button_filter, .button_filter span {
+        font-size: 33px;
+    }
+	.main_top_vehicles {
+        height: 813px;
+    }
+	.main_filter_block {
+        padding: 0 70px;
     }
 
 }
@@ -2945,6 +3016,10 @@ footer{
 	.slider_info_block p span {
         font-size: 17px;
     }
+	
+	.button_filter, .button_filter span {
+        font-size: 31px;
+    }
 
 }
 @media (max-width:1024px) {
@@ -2958,6 +3033,9 @@ footer{
 	.service_block_some_info {
         font-size: 32px;
         line-height: 42.5px;
+    }
+	.filter_block_text, .filter_block_text span {
+        font-size: 17px;
     }
 	
 }
@@ -3144,7 +3222,18 @@ footer{
 	.service_block_some_info {
         font-size: 31px;
 	}
-	
+	.button_filter, .button_filter span {
+        font-size: 27px;
+    }
+	.main_filter_block {
+        padding: 0 50px;
+    }
+	.main_service_block{
+		padding: 0 50px 80px 50px;
+	}
+	.main_filter_block {
+        padding: 0 50px;
+    }
 }
 @media(max-width:900px){
 	.main_block {
@@ -3364,6 +3453,29 @@ footer{
 	.service_block_some_info {
         font-size: 30px;
     }
+	.filter_main_block_text {
+		flex-direction: column;
+	}
+	.filter_block_text {
+        margin: 0 auto 70px auto;
+		max-width: 717px;
+    }
+	.filter_block_text, .filter_block_text span {
+        font-size: 18px;
+		text-align: center;
+    }
+	.filter {
+		flex-wrap: wrap;
+	}
+	.button_filter, .button_filter span {
+        font-size: 30px;
+    }
+	.main_top_vehicles {
+        height: 1131px;
+    }
+	.service_slider_wrapper_filter {
+		flex-direction: column-reverse;
+	}
 }
 @media(max-width:850px){
 	.main_top_services {
@@ -3530,9 +3642,36 @@ footer{
 	.slider_info_block h3 {
         font-size: 28px;
     }
-	.main_top_services {
+	.main_top_services,
+	.main_top_vehicles {
         background-position: left;
     }
+	.filter_block_text, .filter_block_text span {
+        font-size: 17px;
+	}
+	.button_filter, .button_filter span {
+        font-size: 29px;
+		line-height: 37.5px;
+    }
+	.main_filter_block {
+        padding: 0 40px;
+        top: 180px;
+    }
+	.main_top_vehicles {
+        height: 1066px;
+    }
+	
+	.vehicle_central_wrapper img {
+		margin: 0 auto;
+		
+	}
+	.vehicle_central_wrapper{
+		padding: 60px ;
+	}
+	.vehicle_type {
+		margin: 50px auto;
+	}
+
 }
 @media(max-width:500px){
 	.main_block_text_header, 
@@ -3668,6 +3807,12 @@ footer{
         flex-direction: column-reverse;
         padding: 70px 30px;
     }
+	.button_filter, .button_filter span {
+        font-size: 28px;
+	}
+	.main_filter_block {
+        padding: 0 25px;
+	}
 
 }
 @media(max-width:395px){
@@ -3734,7 +3879,7 @@ footer{
         padding: 70px 25px;
     }
 	.main_top_services {
-        height: 942px;
+        height: 885px;
     }
 	.service_central_item div p {
         font-size: 19px;
@@ -3742,6 +3887,20 @@ footer{
     }
 	.main_service_block {
         top: 159px;
+    }
+	.service_block_text {
+        font-size: 16px;
+		line-height: 26px;
+    }
+	.filter_block_text, .filter_block_text span {
+        font-size: 16px;
+		line-height: 26px;
+    }
+	.button_filter, .button_filter span {
+        font-size: 27px;
+	}
+	.main_top_vehicles {
+        height: 962px;
     }
 	
 }
@@ -3783,12 +3942,14 @@ footer{
         flex-direction: column-reverse;
         padding: 70px 23px;
     }
-	.service_block_text {
-        font-size: 16px;
-    }
+	
 	.slider_info_block h3 {
         font-size: 25px;
     }
+	.button_filter, .button_filter span {
+        font-size: 26px;
+	}
+	
 }
 @media(max-width:359px){
 	.name img {
@@ -3894,5 +4055,8 @@ footer{
         font-size: 16px;
         
     }
+	.button_filter, .button_filter span {
+        font-size: 25px;
+	}
 }
     
