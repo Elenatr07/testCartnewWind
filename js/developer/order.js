@@ -27,7 +27,7 @@ $(".sum").on("change", function (event) {
   $(event.target).closest(".sum").find("input").change(sum);
   $(event.target).closest(".sum").find("select").change(changeDetected);
   $(event.target).closest(".sum").find("input").change(changeDetected);
-  $(event.target).closest(".sum").find("#pass").click(changeCars);
+  //$(event.target).closest(".sum").find("#pass").click(changeCars);
   
 
   function sum() {
@@ -87,33 +87,7 @@ $(".sum").on("change", function (event) {
   }*/
   }
     //----select car------
-    let all_cars=[];
-    all_cars[0]=["Innova Reborn", "HiAce Premio", "HiAce Commuter"];
-    all_cars[1]=['HiAce Premio', 'HiAce Commuter'];
-  
-  
-    let cars_status = document.getElementById('cars');
-
- 
-    function changeCars(){
-   
-    cars_status.disabled = false;
-    cars_status.innerHTML="<option class='option_for_select'  value='0' data-value='0' data-price='1' selected  data-car='Any' >Any Vehicle</option>"
-    mycar=this.value-1;
-    console.log(mycar)
-   
-    if(mycar!=-1){
-      for(let i=0; i<all_cars[mycar].length; i++){
-        cars_status.innerHTML+='<option class="option_for_select" value="'+(i+1)+'" data-value="'+(i+1)+'" data-price="1" data-car="'+all_cars[mycar][i]+'">'+all_cars[mycar][i]+'</option>'
-      }
-      }  else {
-      cars_status.disabled=true;
-    }
-if(all_cars[mycar].length <3){
-  $(event.target).closest(".sum").find(".add_item").attr("data-select", '1');
-  }
-  
-  }
+    
 
   //--------select---------//
    
@@ -155,9 +129,35 @@ var time_from
      
 
 })
+let all_cars=[];
+    all_cars[0]=["Innova Reborn", "HiAce Premio", "HiAce Commuter"];
+    all_cars[1]=['HiAce Premio', 'HiAce Commuter'];
+  
+  
+    let cars_status = document.getElementById('cars');
 
+ 
+    function changeCars(){
+   
+    cars_status.disabled = false;
+    cars_status.innerHTML="<option class='option_for_select'  value='0' data-value='0' data-price='1' selected  data-car='Any' >Any Vehicle</option>"
+    mycar=this.value-1;
+    console.log(mycar)
+   
+    if(mycar!=-1){
+      for(let i=0; i<all_cars[mycar].length; i++){
+        cars_status.innerHTML+='<option class="option_for_select" value="'+(i+1)+'" data-value="'+(i+1)+'" data-price="1" data-car="'+all_cars[mycar][i]+'">'+all_cars[mycar][i]+'</option>'
+      }
+      }  else {
+      cars_status.disabled=true;
+    }
+if(all_cars[mycar].length <3){
+  $(event.target).closest(".sum").find(".add_item").attr("data-select", '1');
+  }
+  
+  }
 
-
+$('#pass').on("change", changeCars)
   
 
 
