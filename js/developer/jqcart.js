@@ -172,7 +172,7 @@
                     orderPreview += '<div class="one_way_part">'
                     orderPreview += '<div class="way"> '+ cartData[key].from + '</div>';
                     orderPreview += '<div class="way_pass">Passengers: '+ cartData[key].pass + ' </div>';
-                    orderPreview += '<div class="way_info">Date and Time: '+ cartData[key].date +' from ' + cartData[key].timedeparture +' </div>';
+                    orderPreview += '<div class="way_info"> '+ cartData[key].date +' from ' + cartData[key].timedeparture +' </div>';
                     orderPreview += '<div class="way_info" data-value="'+ cartData[key].hours +'" id="trip_hours">Duration: '+ cartData[key].hours +'h</div>';
                    
                     orderPreview += '<div class="typecar" data-value="'+ cartData[key].type +'"></div>';
