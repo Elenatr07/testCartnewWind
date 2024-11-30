@@ -8,6 +8,7 @@ document.getElementById("one_way_calendar_from").addEventListener("change", func
   let year = new Date(input).getFullYear();
   let month1 = months[month]
   fullDateOneTtip = `${date} ${month1} ${year}`
+  //console.log(fullDateOneTtip)
 
 });
 
@@ -27,6 +28,7 @@ $(".sum").on("change", function (event) {
   $(event.target).closest(".sum").find("select").change(changeDetected);
   $(event.target).closest(".sum").find("input").change(changeDetected);
   $(event.target).closest(".sum").find("#pass").click(changeCars);
+  
 
   function sum() {
 
@@ -98,7 +100,7 @@ $(".sum").on("change", function (event) {
     cars_status.disabled = false;
     cars_status.innerHTML="<option class='option_for_select'  value='0' data-value='0' data-price='1' selected  data-car='Any' >Any Vehicle</option>"
     mycar=this.value-1;
-   // console.log(mycar)
+    console.log(mycar)
    
     if(mycar!=-1){
       for(let i=0; i<all_cars[mycar].length; i++){
