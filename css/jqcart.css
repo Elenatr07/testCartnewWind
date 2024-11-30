@@ -43,7 +43,7 @@
 /* Модальное окно */
 .jqcart-layout {
     text-align: center;
-    margin: 50px;
+    margin: 50px 0;
  
 }
 .jqcart-layout:before {

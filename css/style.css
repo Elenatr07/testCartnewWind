@@ -184,7 +184,7 @@ form{
 	background: rgba(56, 62, 94, 1);
 	box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.15);
 	width: 100%;
-	width: 604px;
+	max-width: 604px;
 	height: 219px;
 	border-radius: 30px;
 	padding: 38px 50px 40px 50px;
@@ -394,6 +394,16 @@ color: rgba(255, 255, 255, 1);
 .trip_order_distance_to{
 	text-align: center;
 	margin-bottom: 30px;
+	max-width: 220px;
+    width: 100%;
+	display: flex;
+	
+}
+.trip_order_distance_from{
+	justify-content: left;
+}
+.trip_order_distance_to{
+	justify-content: right;
 }
 .location_details_wrapper label,
 .passenger_details_wrapper label{
@@ -403,7 +413,7 @@ color: rgba(255, 255, 255, 1);
 .trip_order_distance_block{
 	display: flex;
 	justify-content: space-between;
-	padding: 0 16% 13px 19%;
+	padding: 0 19% 13px 19%;
     top: 10px;
     position: relative;
 }
@@ -2521,7 +2531,8 @@ footer{
 	}
 	.main_top, .main_top_services,
 	.main_top_vehicles,
-	.main_top_testim {
+	.main_top_testim,
+	.main_top_order {
 		background-position: right;
 	}
 	.main_top_services,
@@ -3702,6 +3713,7 @@ footer{
 	.time_trip{
 		position: relative;
 		top: 48px;
+		font-size: 17px;
 	}
 	.block_from_to p{
 		text-align: left;
@@ -3786,6 +3798,34 @@ footer{
     }
 	.testimonials_service_block {
         padding: 0px 45px;
+    }
+	.block_from_to p, 
+	.cost_from_to p, 
+	.location_details_wrapper h2, 
+	.passenger_details_wrapper h2, 
+	.cost_from_to span {
+        font-size: 18px;
+    }
+	.way_pass,
+	.way_info{
+		font-size: 17px;
+	}
+	.block_from_to, .cost_from_to {
+        width: 50%;
+    }
+	.trip_order{
+		padding: 34px;
+	}
+	.note {
+        font-size: 12px;
+		line-height: 15px;
+    }
+	.trip_order_distance_from, 
+	.trip_order_distance_to, 
+	.location_details_wrapper label, 
+	.passenger_details_wrapper label {
+        font-size: 13px;
+		line-height: 15px;
     }
 	
 }
@@ -3919,6 +3959,19 @@ footer{
 	.search_container {
         top: 614px;
 	}
+	.trip_order_select {
+        padding: 20px 20px;
+    }
+	.time_trip{
+		font-size: 16px;
+	}
+	.order {
+		padding-top: 141px;
+	}
+	.main_top_order{
+		height: 520px;
+	}
+
 
 }
 @media(max-width:500px){
@@ -3977,7 +4030,8 @@ footer{
 	.main_top {
         height: 1353px;
     }
-	.main_top {
+	.main_top,
+	.main_top_order {
         background-position: center;
 		background-image: url(../img/back600.png);
     }
@@ -4062,7 +4116,46 @@ footer{
 	.testimonials_service_block {
         padding: 0px 25px;
     }
+	.trip_order_distance_from, .trip_order_distance_to{
+		width: 33%;
+	}
+	.block_from_to p, 
+	.cost_from_to p, 
+	.location_details_wrapper h2, 
+	.passenger_details_wrapper h2, 
+	.cost_from_to span {
+        font-size: 17px;
+    }
+	.time_trip{
+		font-size: 15px;
+	}
+	.line1 {
+        width: 89%;
+    }
+	.trip_order {
+        padding: 26px;
+    }
+	.way_pass, .way_info {
+        font-size: 15px;
+    }
+	.order {
+        padding-top: 110px;
+    }
+	.main_top_order {
+        height: 464px;
+    }
 
+}
+@media(max-width:410px){
+	.block_from_to p, 
+	.cost_from_to p, 
+	.location_details_wrapper h2, 
+	.passenger_details_wrapper h2, 
+	.cost_from_to span {
+        font-size: 16px;
+    }
+	
+	
 }
 @media(max-width:395px){
 	.main_block_text_header, 
@@ -4157,10 +4250,39 @@ footer{
         height: 921px;
     }
 	
+	.time_trip{
+		font-size: 14px;
+	}
+	.trip_order_select {
+        padding: 15px;
+    }
+	.trip_order_distance_from, 
+	.trip_order_distance_to, 
+	.location_details_wrapper label, 
+	.passenger_details_wrapper label {
+        font-size: 12px;
+    }
+	.jqcart-checkout {
+		display: flex;
+		width: 90%;
+		margin: 0 auto;
+	}
+	
 }
 @media(max-width:390px){
 	.search_container {
         top: 573px;
+    }
+	.block_from_to p, 
+	.cost_from_to p, 
+	.location_details_wrapper h2, 
+	.passenger_details_wrapper h2, 
+	.cost_from_to span {
+        font-size: 14px;
+    }
+	.note {
+        font-size: 11px;
+      
     }
 }
 @media(max-width:376px){
@@ -4211,6 +4333,13 @@ footer{
 	.search_container {
         top: 545px;
     }
+	.trip_order_distance_from, 
+	.trip_order_distance_to, 
+	.location_details_wrapper label, 
+	.passenger_details_wrapper label {
+        font-size: 11px;
+    }
+
 	
 }
 @media(max-width:359px){
@@ -4325,6 +4454,15 @@ footer{
     }
 	.why_choose_us_block h2, .services_central_block h2 {
         font-size: 22px;
+    }
+	.block_from_to p, .cost_from_to p, .location_details_wrapper h2, .passenger_details_wrapper h2, .cost_from_to span {
+        font-size: 13px;
+    }
+	.jqcart-checkout {
+		width: 95%;
+	}
+	.trip_order {
+        padding: 30px 24px;
     }
 }
     
