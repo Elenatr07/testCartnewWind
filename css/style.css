@@ -16,10 +16,13 @@
 a, a:link, a:visited  {
     text-decoration: none;
 }
-
-a:hover  {
+@media(hover:hover){
+	a:hover  {
     text-decoration: none;
 }
+}
+
+
 
 /* Common */
 
@@ -261,10 +264,13 @@ form{
 	margin: auto;
 	width: 100%;
 }
-.order_list:hover{
+@media(hover:hover){
+	.order_list:hover{
 	transform: scale(0.98);
 	transition: transform 0.5s ease;
 }
+}
+
 .block_from_to{
 	margin: 0 auto;
 	width: 100%;
@@ -646,11 +652,14 @@ color: rgba(255, 255, 255, 1);
 	cursor: pointer;
 	pointer-events: none;
 }
-#open:hover{
+@media(hover:hover){
+	#open:hover{
 	border:#E3BC78 2px solid;
 	background: radial-gradient(49.81% 49.81% at 50% 52.6%, #202B55 0%, #0E1025 100%);
 	color: #F7D788;
 }
+}
+
 
 
 #from,
@@ -877,11 +886,14 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	margin: auto;
 	
 }
-.button_order:hover{
+@media(hover:hover){
+	.button_order:hover{
 	border: #E3BC78 2px solid;
     background: rgba(17, 24, 86, 1);
 	color: #E3BC78;
 }
+}
+
 
 .button_order_wrapper{
 	display: flex;
@@ -1138,18 +1150,22 @@ input[type='date']::-webkit-calendar-picker-indicator {
   .contacts_item{
 	margin-right: 18px;
   }
-  .menu_item:hover{
-	font-weight: 600;
-	color:rgba(245, 215, 146, 1);
-	
-  }
-  .contacts_item.tel:hover,
+  
+  @media(hover:hover){
+	.contacts_item.tel:hover,
   .site_map_item:hover,
   .footer_address:hover,
   .powered_by:hover{
 	color:rgba(245, 215, 146, 1);
 
   }
+  .menu_item:hover{
+	font-weight: 600;
+	color:rgba(245, 215, 146, 1);
+	
+  }
+  }
+  
   .contacts_item.tel{
 	pointer-events: none;
   }
@@ -1262,12 +1278,12 @@ input[type='date']::-webkit-calendar-picker-indicator {
 }
 
 /* Change color of dropdown links on hover */
+@media(hover:hover){
 .dropdown-content a:hover {
 	color: rgba(246, 215, 136, 1)
-
-
-
 }
+}
+
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -1534,7 +1550,8 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	order: 3;
 	
 }
-.button_to_book:hover{
+@media(hover:hover){
+	.button_to_book:hover{
 	border:#E3BC78 2px solid;
 	background: radial-gradient(49.81% 49.81% at 50% 52.6%, #202B55 0%, #0E1025 100%);
 
@@ -1543,6 +1560,8 @@ input[type='date']::-webkit-calendar-picker-indicator {
 .button_to_book a:hover{
 	color: #F7D788;
 }
+}
+
 
   
 .our_vehicles_wrapper{
@@ -1605,12 +1624,15 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	height: 100%;
 	cursor: pointer;
 }
-.vehicle1_img:hover,
+@Media(hover:hover){
+	.vehicle1_img:hover,
 .vehicle2_img:hover,
 .vehicle3_img:hover{
 	transform: scale(0.98);
 	transition: 0.5s;
 }
+}
+
 .vehicle1,
 .vehicle2,
 .vehicle3
@@ -1810,12 +1832,15 @@ footer{
 .social_item{
 	margin-right: 25px;
 }
-.social_item .social_img:hover,
+@media(hover:hover){
+	.social_item .social_img:hover,
 .contacts_item img:hover{
 	animation: _img 0.5s 0.1s linear;
 	
 	
 }
+}
+
 @keyframes _img{
 	0% {
 		transform: scaleX(-1);
@@ -2215,6 +2240,7 @@ footer{
 	max-width: 355px;
 	margin: auto 0;
 }
+
 .no-hover {
 	pointer-events: none; 
   }
