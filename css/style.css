@@ -91,7 +91,7 @@ display: flex;
 }
 
 
-form{
+.form{
 	margin: auto;
 	height: 260px;
 	position: relative;
@@ -2999,7 +2999,7 @@ footer{
 	.cost_from_to span {
         font-size: 25px;
     }
-	form{
+	.form{
 		height: auto;
 	}
 
