@@ -16,7 +16,7 @@ let clickOnButton = true;
     } else if(((width > 1000) &&(width <=1400)) && height>200){
         $('.service_central_item').removeClass('hidden')
         
-    }  else if(((width > 700) &&(width <=1000)) && height>650 ){
+    }  else if(((width > 700) &&(width <=1000)) && height>400 ){
         $('.service_central_item').removeClass('hidden')
     }
     else if(((width >= 320) &&(width <=700)) && height>300){
