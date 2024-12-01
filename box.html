@@ -43,10 +43,7 @@
                             
                         </div>
                         <div class="adress_points">
-                            <div>
-                                <img src="img/pointdist.svg" alt="">
-                                <a class="adress_point" href="https://maps.app.goo.gl/cyfkyxq94mxHf9jz9" target="_blank" alt="">Pondok Blimbing Indah Blok J3/24 Kecamatan Blimbing, Purwodadi Kota Malang</a>
-                            </div>
+                         
                             <div>
                                 <img src="img/pointdist.svg" alt="">
                                 <a class="adress_point" href="https://maps.app.goo.gl/87hgrpeukCjodpYW9" target="_blank">Perumahan Purigading, Jl. Bandung Blok. E6/11 Jimbaran, Bali</a>
@@ -103,155 +100,158 @@
                         <div class="service_items_options">
                             <div class="close" id="close"><img src="img/close.svg" alt=""></div>
                             <div id="sum" class="sum">
-                                <form class="form" autocomplete="off">
-                                <div class="service_item_options_block">
-                                    <div  class="select_passangers">    
-                                        <label class="label_pass" for="pass">Number of Passengers</label>
-                                        <img class="img_pass" src="img/pass.svg" alt="">
-                                        <select class="item"  name="trip_select" id="pass"  >
-                                            <option class="option_for_select"  value="0"  data-type="0" data-pass ="0" selected  data-info="Any" >Select Number of Passengers</option>
-                                            <option class="option_for_select" value="1"  data-type="1" data-pass ="1"  >1 passenger</option>
-                                            <option class="option_for_select" value="1"  data-type="1" data-pass ="2" >2 passengers</option>
-                                            <option class="option_for_select" value="1" data-type="1" data-pass ="3">3 passengers</option>
-                                            <option class="option_for_select" value="1"  data-type="1" data-pass ="4">4 passengers</option>
-                                            <option class="option_for_select" value="1"  data-type="1" data-pass ="5">5 passengers</option>
-                                            <option class="option_for_select" value="1"  data-type="1" data-pass ="6" >6 passengers</option>
-                                            <option class="option_for_select" value="2"  data-type="2" data-pass ="7" >7 passengers</option>
-                                            <option class="option_for_select" value="2"  data-type="2" data-pass ="8" >8 passengers</option>
-                                            <option class="option_for_select" value="2"  data-type="2" data-pass ="9" >9 passengers</option>
-                                            <option class="option_for_select" value="2"  data-type="2" data-pass ="10" >10 passengers</option>
-                                            <option class="option_for_select" value="2"  data-type="2"  data-pass ="11">11 passengers</option>
-                                            <option class="option_for_select" value="2"  data-type="2" data-pass ="12"  >12 passengers</option>
-                                            <option class="option_for_select" value="2"  data-type="2" data-pass ="13" >13 passengers</option>
-                                            <option class="option_for_select" value="2"  data-type="2" data-pass ="14" >14 passengers</option>
-                                        </select>
-                                        
-                                        <div class="one_way" id="one_way"> 
-                                            
-                                            <div class="one-way_from">
-                                                <img class="img_arrow" src="img/Arrow2.svg" alt="">
-                                                <label for="from"></label>
-                                                
-                                                <select class="item"  name="trip_select" id="from"  >
-                                                    <option class="option_for_select" value="" disabled selected >From</option>
-                                                    <option class="option_for_select" value="1" data-from="Bali" data-id="201" data-cost="1">Bali</option>
-                                                    
-                                                </select>
-                                            </div>
-                                            
-                                            <div class="hours_rent">
-                                                <label class="label_hours" for="hours">Number of Hours</label>
-                                                <img class="hourglass" src="img/hourglass.svg" alt="">
-                                                <select class="item" name="trip_select" id="hours"  >
-                                                    <option class="option_for_select" value="" disabled selected  >Select</option>
-                                                    <option class="option_for_select" value="1" data-hours="1" >1 hour</option>
-                                                    <option class="option_for_select" value="2" data-hours="2" >2 hours</option>
-                                                    <option class="option_for_select" value="3" data-hours="3" >3 hours</option>
-                                                    <option class="option_for_select" value="4" data-hours="4" >4 hours</option>
-                                                    <option class="option_for_select" value="5" data-hours="5" >5 hours</option>
-                                                    <option class="option_for_select" value="6" data-hours="6" >6 hours</option>
-                                                    <option class="option_for_select" value="7" data-hours="7" >7 hours</option>
-                                                    <option class="option_for_select" value="8" data-hours="8" >8 hours</option>
-                                                    <option class="option_for_select" value="9" data-hours="9" >9 hours</option>
-                                                    <option class="option_for_select" value="10" data-hours="10" >10 hours</option>
-                                                    <option class="option_for_select" value="11" data-hours="11" >11 hours</option>
-                                                    <option class="option_for_select" value="12" data-hours="12" >12 hours</option>
-                                                </select>
-                                            </div>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="date_time">
-                                        <div class="type_car">
-                                            <label class="label_cars" for="cars">Vehicles</label>
-                                            <img class="img_cars" src="img/car.svg" alt="">
-                                            <select class="item"  name="trip_select" id="cars" disabled >
-                                                <option class="option_for_select"  value="0" data-value="0" data-price="1" selected  data-car="Any" >Any Vehicle</option>
-                                                
-                                                
-                                            </select>
-                                        </div>
-                                        <div class="one_way_block">
-                                            <div class="one_way_date">
-                                                <label class="label_pass" for="one_way_calendar_from">Date</label>
-                                                <img class="img_date" src="img/date.svg" alt="">
-                                                <input class="item" type="date" name="trip_select" id="one_way_calendar_from"   >
-                                            </div>
-                                            <div class="one_way_time">
-                                                    <label class="label_pass" for="time_departure">Time</label>
-                                                    <img class="img_date" src="img/clock.svg" alt="">
-                                                    <select class="item" name="time_departure" id="time_departure"  >
-                                                    <option class="option_for_select" value="" disabled selected  >Anytime</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="00:00" >00 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="00:30" >00 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="01:00" >01 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="01:30" >01 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="02:00" >02 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="02:30" >02 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="03:00" >03 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="03:30" >03 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="04:00" >04 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="04:30" >04 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="05:00" >05 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="05:30" >05 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="06:00" >06 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="06:30" >06 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="07:00" >07 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="07:30" >07 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="08:00" >08 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="08:30" >08 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="09:00" >09 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="09:30" >09 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="10:00" >10 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="10:30" >10 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="11:00" >11 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="11:30" >11 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="12:00" >12 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="12:30" >12 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="13:00" >13 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="13:30" >13 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="14:00" >14 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="14:30" >14 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="15:00" >15 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="15:30" >15 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="16:00" >16 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="16:30" >16 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="17:00" >17 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="17:30" >17 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="18:00" >18 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="18:30" >18 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="19:00" >19 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="19:30" >19 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="20:00" >20 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="20:30" >20 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="21:00" >21 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="21:30" >21 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="22:00" >22 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="22:30" >22 : 30</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="23:00" >23 : 00</option>
-                                                    <option class="option_for_select" value="0" data-timefrom="23:30" >23 : 30</option>
-                                                
-                                                </select>
-                                            </div> 
-                                            <button disabled   type="button" class="add_item" id="open" data-id="trip" data-title="book a car" data-pass="" data-price="" data-date=""   data-from =""  data-cost="" data-hours=""  data-timeDeparture="" data-infoValue="0"  data-type="" data-priceReborn="75000" data-priceCommuter="100000" data-pricePremio="125000" data-select="0"> Search</button>
-                                        </div>
-            
-                                        
-                                            
-                                        
-                                        </div>
-                                        
-                                    </div>
-                                        
-                                        
-                                    
-                                    
-                                    
+                     <form class="form" autocomplete="off">
+                        <div class="service_item_options_block">
+                            <div  class="select_passangers">    
+                                <label class="label_pass" for="pass">Number of Passengers</label>
+                                <img class="img_pass" src="img/pass.svg" alt="">
+                                <select class="item"  name="trip_select" id="pass"  >
+                                    <option class="option_for_select"  value="0"  data-type="0" data-pass ="0" selected  data-info="Any" >Select Number of Passengers</option>
+                                    <option class="option_for_select" value="1"  data-type="1" data-pass ="1"  >1 passenger</option>
+                                    <option class="option_for_select" value="1"  data-type="1" data-pass ="2" >2 passengers</option>
+                                    <option class="option_for_select" value="1" data-type="1" data-pass ="3">3 passengers</option>
+                                    <option class="option_for_select" value="1"  data-type="1" data-pass ="4">4 passengers</option>
+                                    <option class="option_for_select" value="1"  data-type="1" data-pass ="5">5 passengers</option>
+                                    <option class="option_for_select" value="1"  data-type="1" data-pass ="6" >6 passengers</option>
+                                    <option class="option_for_select" value="2"  data-type="2" data-pass ="7" >7 passengers</option>
+                                    <option class="option_for_select" value="2"  data-type="2" data-pass ="8" >8 passengers</option>
+                                    <option class="option_for_select" value="2"  data-type="2" data-pass ="9" >9 passengers</option>
+                                    <option class="option_for_select" value="2"  data-type="2" data-pass ="10" >10 passengers</option>
+                                    <option class="option_for_select" value="2"  data-type="2"  data-pass ="11">11 passengers</option>
+                                    <option class="option_for_select" value="2"  data-type="2" data-pass ="12"  >12 passengers</option>
+                                    <option class="option_for_select" value="2"  data-type="2" data-pass ="13" >13 passengers</option>
+                                    <option class="option_for_select" value="2"  data-type="2" data-pass ="14" >14 passengers</option>
+                                </select>
                                 
-                                                
-                            </form>
+                                <div class="one_way" id="one_way"> 
+                                    
+                                    <div class="one-way_from">
+                                        <label class="label_from" for="from">Location</label>
+                                        <img class="img_arrow" src="img/Arrow2.svg" alt="">
+                                        
+                                       
+                                        <select class="item"  name="trip_select" id="from"  >
+                                            <option class="option_for_select" value="" disabled selected >From</option>
+                                            <option class="option_for_select" value="1" data-from="Bali" data-id="201" data-cost="1">Bali</option>
+                                            
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="hours_rent">
+                                        <label class="label_hours" for="hours">Number of Hours</label>
+                                        <img class="hourglass" src="img/hourglass.svg" alt="">
+                                        <select class="item" name="trip_select" id="hours"  >
+                                            <option class="option_for_select" value="" disabled selected  >Select</option>
+                                            <option class="option_for_select" value="1" data-hours="1" >1 hour</option>
+                                            <option class="option_for_select" value="2" data-hours="2" >2 hours</option>
+                                            <option class="option_for_select" value="3" data-hours="3" >3 hours</option>
+                                            <option class="option_for_select" value="4" data-hours="4" >4 hours</option>
+                                            <option class="option_for_select" value="5" data-hours="5" >5 hours</option>
+                                            <option class="option_for_select" value="6" data-hours="6" >6 hours</option>
+                                            <option class="option_for_select" value="7" data-hours="7" >7 hours</option>
+                                            <option class="option_for_select" value="8" data-hours="8" >8 hours</option>
+                                            <option class="option_for_select" value="9" data-hours="9" >9 hours</option>
+                                            <option class="option_for_select" value="10" data-hours="10" >10 hours</option>
+                                            <option class="option_for_select" value="11" data-hours="11" >11 hours</option>
+                                            <option class="option_for_select" value="12" data-hours="12" >12 hours</option>
+                                        </select>
+                                    </div>
+                                    
+                                </div>
+                                
                             </div>
+                            <div class="date_time"> 
+                                <label class="label_cars" for="cars">Vehicles</label>
+                                    <img class="img_cars" src="img/car.svg" alt="">
+                                    <select class="item"  name="trip_select" id="cars" disabled >
+                                        <option class="option_for_select"  value="0" data-value="0" data-price="1" selected  data-car="Any" >Any Vehicle</option>
+                                      
+                                        
+                                    </select>
+                           
+                                <div class="one_way_block">
+                                    <div class="one_way_date">
+                                        <label class="label_pass" for="one_way_calendar_from">Date</label>
+                                        <img class="img_date" src="img/date.svg" alt="">
+                                        <input class="item" type="date" name="trip_select" id="one_way_calendar_from"   >
+                                    </div>
+                                    <div class="one_way_time">
+                                         <label class="label_pass" for="time_departure">Time</label>
+                                         <img class="img_date" src="img/clock.svg" alt="">
+                                         <select class="item" name="time_departure" id="time_departure"  >
+                                            <option class="option_for_select" value="" disabled selected  >Anytime</option>
+                                            <option class="option_for_select" value="0" data-timefrom="00:00" >00 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="00:30" >00 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="01:00" >01 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="01:30" >01 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="02:00" >02 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="02:30" >02 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="03:00" >03 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="03:30" >03 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="04:00" >04 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="04:30" >04 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="05:00" >05 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="05:30" >05 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="06:00" >06 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="06:30" >06 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="07:00" >07 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="07:30" >07 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="08:00" >08 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="08:30" >08 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="09:00" >09 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="09:30" >09 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="10:00" >10 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="10:30" >10 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="11:00" >11 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="11:30" >11 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="12:00" >12 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="12:30" >12 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="13:00" >13 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="13:30" >13 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="14:00" >14 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="14:30" >14 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="15:00" >15 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="15:30" >15 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="16:00" >16 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="16:30" >16 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="17:00" >17 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="17:30" >17 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="18:00" >18 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="18:30" >18 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="19:00" >19 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="19:30" >19 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="20:00" >20 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="20:30" >20 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="21:00" >21 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="21:30" >21 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="22:00" >22 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="22:30" >22 : 30</option>
+                                            <option class="option_for_select" value="0" data-timefrom="23:00" >23 : 00</option>
+                                            <option class="option_for_select" value="0" data-timefrom="23:30" >23 : 30</option>
+                                        
+                                        </select>
+                                    </div> 
+                                   
+                                </div>
+                             
+    
+                               
+                                   
+                                
+                                </div>
+                                  
+                            </div>
+                            <div class="button_search">
+                                     <button disabled type="button" class="add_item" id="open" data-id="trip" data-title="book a car" data-pass="" data-price="" data-date=""   data-from =""  data-cost="" data-hours=""  data-timeDeparture="" data-infoValue="0"  data-type="" data-priceReborn="75000" data-priceCommuter="100000" data-pricePremio="125000" data-select="0"> Search</button>
+                                </div>    
+                                
+                            
+                           
+                         
+                        
+                                     
+                    </form>
+                 </div>
                         </div>
 
                     </div>
@@ -266,10 +266,7 @@
             <div class="footer_info">
                 <div class="offices">
                     <h3>ATM Offices</h3>
-                    <div>
-                        <img src="img/pointdist.svg" alt="">
-                        <a class="footer_address" href="https://maps.app.goo.gl/cyfkyxq94mxHf9jz9" target="_blank" alt="">Pondok Blimbing Indah Blok J3/24 Kecamatan Blimbing, Purwodadi Kota Malang</a>
-                    </div>
+                 
                     <div>
                         <img src="img/pointdist.svg" alt="">
                             <a class="footer_address" href="https://maps.app.goo.gl/87hgrpeukCjodpYW9" target="_blank">Perumahan Purigading, Jl. Bandung Blok. E6/11 Jimbaran, Bali</a>
