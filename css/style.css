@@ -447,7 +447,6 @@ color: rgba(255, 255, 255, 1);
 
 	flex-direction: column;
 	border-radius: 30px;
-	
 	cursor: pointer;
 	max-width: 1698px;
 	width: 100%;
@@ -790,12 +789,13 @@ input[type='date']::-webkit-calendar-picker-indicator {
 .passenger_details_wrapper{
 	display: flex;
 	flex-direction: column;
-	max-width: 690px;
-	width: 100%;
+	width: 690px;
+	max-width: 100%;
 }
 .location_details_wrapper input,
 .passenger_details_wrapper input:not(.button_order){
 	width: 690px;
+	max-width: 100%;
 	height: 62px;
 	border-radius: 15px;
 	background: rgba(56, 62, 94, 1);
@@ -863,6 +863,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 }
 .button_order{
 	width: 311px;
+	max-width: 100%;
 	height: 66px;
 	border-radius: 30px;
 	background: linear-gradient(92.96deg, #F7D788 8.1%, #E3BC78 95.87%);
@@ -917,6 +918,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 #message_ditails{
 	height: 242px;
 	width: 690px;
+	max-width: 100%;
     border-radius: 15px;
     background: rgba(56, 62, 94, 1);
     padding: 23px 20px;
@@ -931,6 +933,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 }
 #error_block{
 	width: 690px;
+	max-width: 100%;
     height: 20px;
 	margin: 20px 0;
 }
@@ -2212,7 +2215,9 @@ footer{
 	max-width: 355px;
 	margin: auto 0;
 }
-
+.no-hover {
+	pointer-events: none; 
+  }
 
 
 @media screen and (min-width: 1001px) and (max-width: 3000px) {
@@ -2266,7 +2271,9 @@ footer{
 		padding: 60px 50px;
 		
 	}
-	.order_list{
+	.order_list,
+	.orderPreview
+	{
 		width: 90%;
 	}
 	.block_from_to p, 
@@ -2293,6 +2300,14 @@ footer{
 	.location_details_wrapper label, 
 	.passenger_details_wrapper label {
 	font-size: 17px;
+	}
+
+	.location_details_wrapper, 
+	.passenger_details_wrapper{
+		max-width: 45%;
+	}
+	.orderPreview {
+		padding: 25px 0px 50px 0px;
 	}
 }
 
@@ -2485,6 +2500,11 @@ footer{
 	.location_details_wrapper label, 
 	.passenger_details_wrapper label {
         font-size: 16px;
+    }
+	.location_details_wrapper input, 
+	.passenger_details_wrapper input:not(.button_order), 
+	#message_ditails {
+        font-size: 17px;
     }
 }
 @media(max-width: 1500px) {
@@ -2707,6 +2727,11 @@ footer{
 	.location_details_wrapper label, 
 	.passenger_details_wrapper label {
         font-size: 15px;
+    }
+	.location_details_wrapper input, 
+	.passenger_details_wrapper input:not(.button_order), 
+	#message_ditails {
+        font-size: 16px;
     }
 }
 @media(max-width: 1380px) {
@@ -3055,6 +3080,11 @@ footer{
 	.location_details_wrapper label, 
 	.passenger_details_wrapper label {
         font-size: 14px;
+    }
+	.location_details_wrapper input, 
+	.passenger_details_wrapper input:not(.button_order), 
+	#message_ditails {
+        font-size: 15px;
     }
 
 }
@@ -3724,7 +3754,30 @@ footer{
 	.trip_order_select {
         padding: 20px 40px;
     }
+	.form_order_wrapper{
+		flex-direction: column;
+	}
+	.location_details_wrapper, 
+	.passenger_details_wrapper {
+        max-width: 100%;
+		margin: 0 auto;
+    }
+	.verticalLine_in_form{
+		width: 171px;
+		height: 2px;
+		margin: 52px auto 52px auto;
+	}
+	.location_details_wrapper h2,
+	.passenger_details_wrapper h2{
+		text-align: left;
+	}
 	
+	.button_order{
+		max-width: 90%;
+	}
+	.button_order {
+		font-size: 20px;
+	}
 }
 @media(max-width:850px){
 	.main_top_services {
@@ -3827,7 +3880,21 @@ footer{
         font-size: 13px;
 		line-height: 15px;
     }
-	
+	.location_details_wrapper input, 
+	.passenger_details_wrapper input:not(.button_order), 
+	#message_ditails {
+        font-size: 15px;
+    }
+
+	#message_ditails{
+		line-height: 22px;
+	}
+	.orderPreview {
+        padding: 10px 0px 25px 0px;
+    }
+	.button_order {
+        font-size: 18px;
+    }
 }
 @media(max-width:700px){
 	.main_top_services {
@@ -4144,6 +4211,12 @@ footer{
 	.main_top_order {
         height: 464px;
     }
+	.order_distance {
+		padding-top: 50px;
+	}
+	.button_order {
+        font-size: 17px;
+    }
 
 }
 @media(max-width:410px){
@@ -4267,6 +4340,14 @@ footer{
 		width: 90%;
 		margin: 0 auto;
 	}
+	.location_details_wrapper input, 
+	.passenger_details_wrapper input:not(.button_order), 
+	#message_ditails {
+        font-size: 13px;
+    }
+	.orderPreview {
+        padding: 0px 0px 25px 0px;
+    }
 	
 }
 @media(max-width:390px){
