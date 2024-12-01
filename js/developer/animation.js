@@ -5,7 +5,8 @@ let clickOnButton = true;
  function scroling (){
     let height = $(window).scrollTop();
     let width = $(window).width()
-    console.log(height)
+    console.log("height", height)
+    console.log("width", width)
     if((width <600)) {
         $('.vehicle_central_wrapper.commuter.premio img').attr("src", 'img/seat_map14_1.png' )
         $('.vehicle_central_wrapper.reborn img').attr("src", 'img/seat_map6_1.png' )
@@ -13,10 +14,10 @@ let clickOnButton = true;
    if(((width > 1400)) && height>300 && height<700){
         $('.service_central_item').removeClass('hidden')
        
-    } else if(((width > 1000) &&(width <=1400)) && height>200){
+    } else if(((width > 1025) &&(width <=1400)) && height>200){
         $('.service_central_item').removeClass('hidden')
         
-    }  else if(((width > 700) &&(width <=1000)) ){
+    }  else if(((width > 700) &&(width <=1024)) ){
         $('.service_central_item').removeClass('hidden')
     }
     else if(((width >= 320) &&(width <=700)) && height>300){
@@ -27,7 +28,7 @@ let clickOnButton = true;
             $('#blocks_1').removeClass('hidden_block_1');
     }
    
-   else if (((width >=769 ) &&(width <1000)) && height>600 && height<1950){
+   else if (((width >=769 ) &&(width <=1024))){
         $('#blocks_1').removeClass('hidden_block_1');
        
     }
@@ -47,7 +48,7 @@ let clickOnButton = true;
         // $('.service_central_item').addClass('hidden')
          
     }
-    if ((width <=1000) && height >= 1000 && clickOnButton == true){
+    if ((width <=1024) && clickOnButton == true){
     
     
         $('.vehicle3').css('display', 'block');
@@ -55,7 +56,7 @@ let clickOnButton = true;
         $('.vehicle1').css('display', 'block');
         $('.cssanimation').css('display', 'block')
     } 
-    if ((width >1000) && height >= 1700 && clickOnButton == true){
+    if ((width >1025) && height >= 1700 && clickOnButton == true){
     
     
         setTimeout(function() {
