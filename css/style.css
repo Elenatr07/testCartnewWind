@@ -864,7 +864,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 
 .jqcart-error{
 	font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 21.94px;
     letter-spacing: 0.05em;
@@ -1625,14 +1625,14 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	cursor: pointer;
 }
 @Media(hover:hover){
-
-}
 	.vehicle1_img:hover,
 .vehicle2_img:hover,
 .vehicle3_img:hover{
 	transform: scale(0.98);
 	transition: 0.5s;
 }
+}
+
 .vehicle1,
 .vehicle2,
 .vehicle3
