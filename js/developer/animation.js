@@ -47,24 +47,32 @@ let clickOnButton = true;
         // $('.service_central_item').addClass('hidden')
          
     }
-    if (height >= 1700 && clickOnButton == true){
+    if ((width <=1000) && height >= 1000 && clickOnButton == true){
     
     
-    setTimeout(function() {
         $('.vehicle3').css('display', 'block');
-        clickOnButton = false; 
-     
-      }, 1200);
-       setTimeout(function() {
-         $('.vehicle2').css('display', 'block')
-       }, 600);
-       setTimeout(function() {
-         $('.vehicle1').css('display', 'block');
-       
-       }, 200);
-        animateSequence()
-        
+        $('.vehicle2').css('display', 'block')
+        $('.vehicle1').css('display', 'block');
+        $('.cssanimation').css('display', 'block')
     } 
+    if ((width >1000) && height >= 1700 && clickOnButton == true){
+    
+    
+        setTimeout(function() {
+            $('.vehicle3').css('display', 'block');
+            clickOnButton = false;  
+         
+          }, 1200);
+           setTimeout(function() {
+             $('.vehicle2').css('display', 'block')
+           }, 600);
+           setTimeout(function() {
+             $('.vehicle1').css('display', 'block');
+           
+           }, 200);
+            animateSequence()
+            
+        } 
 }
 
 function animateSequence() {
