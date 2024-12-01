@@ -31,13 +31,13 @@ $(document).ready(function() {
       $('#sumViewOneWay').toggle();
       $('#costViewReternWay').toggle();
       $('#sumViewReternWay').toggle();
-      $('#order_list').css('cursor', 'default');
+      $('.order_list').css('cursor', 'default');
       $('#toyotaHiAce').css('display', 'none');
       $('#toyotaInnova').css('display', 'none');
       $('#toyotaCommuter').css({'borderRadius': '30px 30px 0 0', 'margin': '30px auto 0 auto', 'border': '0'});
       $('#orderPreview').css({'margin':'0 auto'});
       $('.blockTrip').css({'background-image': 'none', 'padding-bottom': '0'});
-      
+      $('.order_list').addClass("no-hover")
 
 
     })
@@ -47,13 +47,13 @@ $(document).ready(function() {
       $('#sumViewOneWay').toggle();
       $('#costViewReternWay').toggle();
       $('#sumViewReternWay').toggle();
-      $('#order_list').css('cursor', 'default');
+      $('.order_list').css('cursor', 'default');
       $('#toyotaCommuter').css('display', 'none');
       $('#toyotaInnova').css('display', 'none');
       $('#toyotaHiAce').css({'borderRadius': '30px 30px 0 0', 'margin': '30px auto 0 auto', 'border': '0'});
       $('#orderPreview').css({'margin':'0 auto'});
       $('.blockTrip').css({'background-image': 'none', 'padding-bottom': '0'});
-   
+      $('.order_list').addClass("no-hover")
       
 
 
@@ -64,13 +64,13 @@ $(document).ready(function() {
       $('#sumViewOneWay').toggle();
       $('#costViewReternWay').toggle();
       $('#sumViewReternWay').toggle();
-      $('#order_list').css('cursor', 'default');
+      $('.order_list').css('cursor', 'default');
       $('#toyotaCommuter').css('display', 'none');
       $('#toyotaHiAce').css('display', 'none');
       $('#toyotaInnova').css({'borderRadius': '30px 30px 0 0', 'margin': '30px auto 0 auto', 'border': '0'});
       $('#orderPreview').css({'margin':'0 auto'});
       $('.blockTrip').css({'background-image': 'none', 'padding-bottom': '0'});
-  
+      $('.order_list').addClass("no-hover")
 
 
     })
