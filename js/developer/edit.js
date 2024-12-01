@@ -8,13 +8,15 @@ $(document).ready(function() {
             $('#order').toggle(); //включает/выключает элемент id="text"
             $('#order_distance').toggle();
           //  $('.jqcart-layout').remove()
-            $('#edit_container').toggle()
+            $('#edit_container').toggle();
+            $('.main_top_order').addClass('height_top');
          
         });
         $('#close').on("click", function() {
             $('#edit_container').toggle();
             $('#order_distance').toggle();
             $('#order').toggle();
+            $('.main_top_order').removeClass('height_top');
           
         })
 

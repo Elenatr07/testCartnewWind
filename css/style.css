@@ -93,6 +93,8 @@ display: flex;
 
 form{
 	margin: auto;
+	height: 260px;
+	position: relative;
 }
 .two_ways{
 	display: none;
@@ -501,6 +503,7 @@ color: rgba(255, 255, 255, 1);
 }
 #edit_container{
 	display: flex;
+	justify-content: center;
 	
 }
 .hidden{
@@ -2207,12 +2210,19 @@ footer{
 	width: 270px;
 	max-width: 100%;
 }
-.button_search{
+.button_search,
+.button_search_in_edit{
 	width: 228px;
 	max-width: 100%;
+}
+.button_search{
 	position: absolute;
-    top: 172px;
-	right: 30px;
+	top: 127px;
+	right: 0px;
+}
+.button_search_in_edit{
+	position: absolute;
+    right: 10px;
 }
 .shadow {
     background-color: rgba(217, 217, 217, 0.2);
@@ -2244,6 +2254,9 @@ footer{
 .no-hover {
 	pointer-events: none; 
   }
+.height_top{
+	height: 153px;
+}
 
 
 @media screen and (min-width: 1001px) and (max-width: 3000px) {
@@ -2464,7 +2477,12 @@ footer{
 		font-size: 21px;
 	 }
 	 .button_search {
-		right: 54px;
+		display: flex;
+        justify-content: right;
+	}
+	.button_search_in_edit{
+		top: -113px;
+		right: -893px;
 		display: flex;
         justify-content: center;
 	}
@@ -2704,8 +2722,10 @@ footer{
 		width: 70%;
 	}
 	
-	.button_search {
-       right: 60px;
+
+	.button_search_in_edit{
+		top: -113px;
+        right: -885px;
 	}
 	
 	.service_block_text,
@@ -2855,6 +2875,7 @@ footer{
 		position: relative;
 		top: 0;
 		margin: 0 auto;
+		justify-content: center;
 	}
 	.service_item_options_block {
 		justify-content: center;
@@ -2978,6 +2999,9 @@ footer{
 	.cost_from_to span {
         font-size: 25px;
     }
+	form{
+		height: auto;
+	}
 
 	
 }
@@ -3333,7 +3357,10 @@ footer{
 		margin-top: 20px;
 	}
 	.name {
-		margin: 70px 0;
+		margin: 40px 0;
+	}
+	.hamb {
+		margin-top: 40px;
 	}
 	.adress_points div{
 		margin-bottom: 25px;
@@ -3489,6 +3516,12 @@ footer{
         top: 696px;
 		flex-direction: column;
     }
+	.edit_container{
+		flex-direction: column;
+	}
+	.close{
+		top: -72px;
+	}
 	.main_block, 
 	.main_service_block {
         padding: 0 70px;
@@ -3560,7 +3593,7 @@ footer{
 		right: 0;
 	}
 	.main_top {
-        height: 1264px;
+        height: 1331px;
     }
 	.why_choose_us_block {
         padding: 70px 25px 70px 25px;
@@ -3921,6 +3954,7 @@ footer{
 	.button_order {
         font-size: 18px;
     }
+	
 }
 @media(max-width:700px){
 	.main_top_services {
@@ -4064,12 +4098,21 @@ footer{
 	.main_top_order{
 		height: 520px;
 	}
+	.height_top{
+		height: 153px;
+	}
 	.main_block_img_testim, 
 	.main_block_img_testim img {
         width: 80%;
 	}
 	.main_block_img_testim img{
 		display: flex;
+	}
+	.main_top {
+        height: 1273px;
+    }
+	.close img {
+		width: 7%;
 	}
 
 
@@ -4244,6 +4287,9 @@ footer{
 	.main_top_order {
         height: 464px;
     }
+	.height_top{
+		height: 153px;
+	}
 	.order_distance {
 		padding-top: 50px;
 	}
