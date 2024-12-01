@@ -4047,7 +4047,7 @@ footer{
         padding: 0px 40px;
     }
 	.main_top_testim {
-        height: 1030px;
+        height: 934px;
     }
 	.search_container {
         top: 614px;
@@ -4063,6 +4063,13 @@ footer{
 	}
 	.main_top_order{
 		height: 520px;
+	}
+	.main_block_img_testim, 
+	.main_block_img_testim img {
+        width: 80%;
+	}
+	.main_block_img_testim img{
+		display: flex;
 	}
 
 
@@ -4346,7 +4353,7 @@ footer{
         height: 962px;
     }
 	.main_top_testim {
-        height: 921px;
+        height: 822px;
     }
 	
 	.time_trip{
