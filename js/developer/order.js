@@ -8,7 +8,7 @@ document.getElementById("one_way_calendar_from").addEventListener("change", func
   let year = new Date(input).getFullYear();
   let month1 = months[month]
   fullDateOneTtip = `${date} ${month1} ${year}`
-  console.log(month);
+ // console.log(month);
   //console.log(fullDateOneTtip)
   let season1 = 6; //6-july
   let season2 = 7; //7- Aug
@@ -24,12 +24,12 @@ document.getElementById("one_way_calendar_from").addEventListener("change", func
     $('#open').attr("data-priceReborn", priceRebornHigh);
     $('#open').attr("data-priceCommuter", priceCommuterHigh);
     $('#open').attr("data-pricePremio", pricePremioHigh);
-    console.log('season high')
+  //  console.log('season high')
   } else {
     $('#open').attr("data-priceReborn", priceRebornLow);
     $('#open').attr("data-priceCommuter", priceCommuterLow);
     $('#open').attr("data-pricePremio", pricePremioLow);
-    console.log('low season')
+   // console.log('low season')
   }
       
 
