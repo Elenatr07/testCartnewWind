@@ -3,12 +3,35 @@ let fullDateOneTtip;
 let months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
 document.getElementById("one_way_calendar_from").addEventListener("change", function() {
   var input = this.value;
-    let date = new Date(input).getDate();
+  let date = new Date(input).getDate();
   let month = new Date(input).getMonth();
   let year = new Date(input).getFullYear();
   let month1 = months[month]
   fullDateOneTtip = `${date} ${month1} ${year}`
+  console.log(month);
   //console.log(fullDateOneTtip)
+  let season1 = 6; //6-july
+  let season2 = 7; //7- Aug
+  let season3 = 11; //11 -Dec
+  let season4 = 0; //0- Jan
+  let priceRebornLow = 80000;
+  let priceRebornHigh = 96000;
+  let priceCommuterLow = 100000;
+  let priceCommuterHigh = 117000;
+  let pricePremioLow = 125000;
+  let pricePremioHigh = 150000;
+  if(month===season1 || month===season2 || month===season3 || month ===season4){
+    $('#open').attr("data-priceReborn", priceRebornHigh);
+    $('#open').attr("data-priceCommuter", priceCommuterHigh);
+    $('#open').attr("data-pricePremio", pricePremioHigh);
+    console.log('season high')
+  } else {
+    $('#open').attr("data-priceReborn", priceRebornLow);
+    $('#open').attr("data-priceCommuter", priceCommuterLow);
+    $('#open').attr("data-pricePremio", pricePremioLow);
+    console.log('low season')
+  }
+      
 
 });
 
