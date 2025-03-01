@@ -8,7 +8,7 @@ RewriteCond %{REQUEST_fileNAME} !-f
 RewriteRule (.*) /$1.html
 #site.ru замени на домен твоего сайта.
 
-DirectoryIndex hello.html
+DirectoryIndex en.html
 
 SetEnvIfNoCase user-Agent ^FrontPage [NC,OR]
 SetEnvIfNoCase user-Agent ^Java.* [NC,OR]
