@@ -5,8 +5,8 @@ let clickOnButton = true;
  function scroling (){
     let height = $(window).scrollTop();
     let width = $(window).width()
-    console.log("height", height)
-    console.log("width", width)
+  //  console.log("height", height)
+  //  console.log("width", width)
     if((width <600)) {
         $('.vehicle_central_wrapper.commuter.premio img').attr("src", 'img/seat_map14_1.png' )
         $('.vehicle_central_wrapper.reborn img').attr("src", 'img/seat_map6_1.png' )
