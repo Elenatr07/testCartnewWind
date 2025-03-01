@@ -2257,6 +2257,9 @@ footer{
 .height_top{
 	height: 153px;
 }
+.main_block_img{
+	margin: auto;
+}
 
 
 @media screen and (min-width: 1001px) and (max-width: 3000px) {
