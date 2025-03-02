@@ -105,7 +105,7 @@ $(window).scroll(function(){
 function lang(){
     let dropbtnText = $('.dropbtn').text();
     if(dropbtnText ==="IDID"){
-        $('.dropbtn').css('background', 'url(../img/flag_indonesia.png)no-repeat left center');
+        $('.dropbtn').css('background', 'url(img/flag_indonesia.png)no-repeat left center');
         $('.main_block_img img').attr('src', 'img/map_id.png');
         $('.about_us_info h3').css({
             'background': 'linear-gradient(91.15deg, #F7D788 49.6%, #E3BC78 99.02%)',
