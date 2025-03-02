@@ -3526,7 +3526,7 @@ footer{
         width: 559px;
     }
 	.search_container {
-        top: 696px;
+        top: 760px;
 		flex-direction: column;
     }
 	.edit_container{
@@ -4105,7 +4105,7 @@ footer{
         height: 934px;
     }
 	.search_container {
-        top: 614px;
+        top: 670px;
 	}
 	.trip_order_select {
         padding: 20px 20px;
@@ -4138,6 +4138,11 @@ footer{
 
 
 }
+@media(max-width: 523px){
+	.search_container {
+        top: 716px;
+    }
+}
 @media(max-width:500px){
 	.main_block_text_header, 
 	.service_block_text_header {
@@ -4151,7 +4156,7 @@ footer{
         width: 345px;
     }
 	.search_container {
-        top: 551px;
+        top: 620px;
 	}
 	.service_items, 
 	.service_items_options {
@@ -4454,9 +4459,7 @@ footer{
 	
 }
 @media(max-width:390px){
-	.search_container {
-        top: 573px;
-    }
+
 	.block_from_to p, 
 	.cost_from_to p, 
 	.location_details_wrapper h2, 
@@ -4515,7 +4518,7 @@ footer{
         font-size: 26px;
 	}
 	.search_container {
-        top: 545px;
+        top: 600px;
     }
 	.trip_order_distance_from, 
 	.trip_order_distance_to, 
@@ -4548,7 +4551,7 @@ footer{
         width: 300px;
     }
 	.search_container {
-        top: 499px;
+        top: 550px;
     }
 	.checked_line {
         left: -181px;
