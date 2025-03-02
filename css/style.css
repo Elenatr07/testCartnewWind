@@ -1240,7 +1240,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 .dropbtn::before {
    height: 16px;
     position: absolute;
-    right: -40px;
+    right: -35px;
     top: 7px;
     width: 16px;
 	content: "";
@@ -1435,11 +1435,10 @@ input[type='date']::-webkit-calendar-picker-indicator {
  .item_of_blocks_1{
 	width: 500px;
 	max-width: 100%;
-	height: 335px;
 	border-radius: 30px;
 	opacity: 0px;
 	background: rgba(16, 23, 84, 1);
-	padding: 56px 50px;
+	padding: 45px 45px;
 	
 
  }
@@ -1448,7 +1447,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
  }
  .item_of_blocks_1_title{
 	display: flex;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
  }
 .item_of_blocks_1_title h3{
 	font-family: 'Montserrat', sans-serif;
@@ -2194,12 +2193,11 @@ footer{
 }
 .first_svg{
 	width: 56px;
-	max-width: 100%;
+	
 }
 .next_svg
 {
 	width: 45px;
-	max-width: 100%;
 }
 .block1_img{
 	width: 56px;
@@ -2269,7 +2267,7 @@ footer{
     }
 	.nav {
         max-height: 200px;
-        width: 80%;
+        width: 90%;
         right: 0;
         position: relative;
         z-index: 999;
@@ -2295,11 +2293,9 @@ footer{
 @media(max-width: 1900px) {
 	.item_of_blocks_1{
 		max-width: 31%;
-		padding: 45px;
+		padding: 45px 35px;
 	}
-	.item_of_blocks_1_title {
-		margin-bottom: 32px;
-	}
+
 	.about_us_block{
 		padding: 108px 250px;
 	}
@@ -2352,6 +2348,9 @@ footer{
 	.orderPreview {
 		padding: 25px 0px 50px 0px;
 	}
+	.item_of_blocks_1_title h3 {
+		font-size: 33px;
+}
 }
 
 @media(max-width:1700px) {
@@ -2434,10 +2433,6 @@ footer{
 		font-size: 39px;
 	}
 	
-	.item_of_blocks_1_title h3
-	{
-		font-size: 34px;
-	}
 	.item_of_blocks_1 p,
 	.about_us_info p{
 		font-size: 21px;
@@ -2554,6 +2549,9 @@ footer{
 	#message_ditails {
         font-size: 17px;
     }
+	.item_of_blocks_1_title h3 {
+        font-size: 32px;
+    }
 }
 @media(max-width: 1500px) {
 	.header_block{
@@ -2572,7 +2570,7 @@ footer{
         padding: 108px 50px 170px 50px;
     }
 	.item_of_blocks_1_title h3 {
-        font-size: 33px;
+        font-size: 31px;
     }
 	.item_of_blocks_1 p, .about_us_info p {
         font-size: 20px;
@@ -2678,19 +2676,16 @@ footer{
 	.services_central_block h2 {
         font-size: 38px;
     }
-	.next_svg,
-	.first_svg{
-		max-width: 90%;
-	}
+	
 	.item_of_blocks_1_title h3 {
-        font-size: 31px;
+        font-size: 29px;
     }
 	.item_of_blocks_1 p, 
 	.about_us_info p {
-        font-size: 19px;
+        font-size: 18px;
     }
 	.item_of_blocks_1 {
-       padding: 42px;
+       padding: 40px 35px;
     }
 	.about_us_block {
         padding: 108px 120px;
@@ -2819,6 +2814,11 @@ footer{
     }
 	
 }
+@media(max-width: 1360px){
+	.item_of_blocks_1_title h3 {
+        font-size: 27px;
+    }
+}
 @media(max-width:1344px){
 	.main_top_services,
 	.main_top_testim {
@@ -2888,19 +2888,17 @@ footer{
         padding: 90px 40px 160px 40px;
     }
 	.item_of_blocks_1_title h3 {
-        font-size: 27px;
+        font-size: 25px;
     }
-	.next_svg, .first_svg {
-        max-width: 85%;
-    }
+
 	.item_of_blocks_1_title {
         margin-bottom: 26px;
     }
 	.item_of_blocks_1 {
-        padding: 42px 35px;
+        padding: 30px 25px;
     }
 	.item_of_blocks_1 p, .about_us_info p {
-        font-size: 18px;
+        font-size: 17px;
     }
 	
 	.our_vehicles_block h3 {
@@ -3049,7 +3047,7 @@ footer{
         font-size: 37px;
     }
 	.item_of_blocks_1_title h3 {
-        font-size: 26px;
+        font-size: 23px;
     }
 	.item_of_blocks_1 p, 
 	.about_us_info p{
@@ -3147,6 +3145,21 @@ footer{
 	.main_top_testim {
         height: 826px;
     }
+	.item_of_blocks_1_title h3 {
+        font-size: 22px;
+		margin-left: 12px;
+    }
+	.next_svg {
+		width: 38px;
+	}
+	.first_svg {
+		width: 50px;
+	}
+}
+@media(max-width:1117px){
+	.item_of_blocks_1 p{
+		font-size: 16px;
+	}
 }
 @media(max-width:1100px){
 	.header_block {
@@ -3200,10 +3213,6 @@ footer{
         padding: 80px 25px 140px 25px;
     }
 
-	.item_of_blocks_1_title h3 {
-        font-size: 24px;
-    }
-	.item_of_blocks_1 p, 
 	.about_us_info p {
         font-size: 17px;
     }
@@ -3613,9 +3622,12 @@ footer{
 	.item_of_blocks_1_title h3 {
         font-size: 25px;
     }
-	.item_of_blocks_1 p, .about_us_info p {
+	 .about_us_info p {
         font-size: 18px;
     }
+	.item_of_blocks_1 p {
+		font-size: 17px;
+	}
 	.item_of_blocks_1 {
         height: 310px;
         margin-bottom: 35px;
@@ -4305,6 +4317,9 @@ footer{
 	.button_order {
         font-size: 17px;
     }
+	.services_central_block h2 {
+		line-height: 40px;
+	}
 
 }
 @media(max-width:410px){
