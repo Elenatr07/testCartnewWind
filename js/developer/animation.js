@@ -101,10 +101,42 @@ function animateSequence() {
 $(window).scroll(function(){
 	scroling();
 });
+
+function lang(){
+    let dropbtnText = $('.dropbtn').text();
+    if(dropbtnText ==="IDID"){
+        $('.dropbtn').css('background', 'url(../img/flag_indonesia.png)no-repeat left center');
+        $('.main_block_img img').attr('src', 'img/map_id.png');
+        $('.about_us_info h3').css({
+            'background': 'linear-gradient(91.15deg, #F7D788 49.6%, #E3BC78 99.02%)',
+            '-webkit-text-fill-color': 'transparent',
+            '-webkit-background-clip':'text'
+        })
+        $('.about_us_info h3 span').css({
+            'color': 'rgba(255, 255, 255, 1)',
+            'background': 'rgba(255, 255, 255, 1)',
+             '-webkit-text-fill-color': 'transparent',
+            '-webkit-background-clip':'text'
+        })
+        $('.our_vehicles_block h3').css({
+            'background': 'linear-gradient(91.15deg, #F7D788 49.6%, #E3BC78 99.02%)',
+            '-webkit-text-fill-color': 'transparent',
+            '-webkit-background-clip':'text'
+        })
+        $(".our_vehicles_block h3 span").css({
+            'color': 'rgba(255, 255, 255, 1)',
+            'background': 'rgba(255, 255, 255, 1)',
+             '-webkit-text-fill-color': 'transparent',
+            '-webkit-background-clip':'text'
+        })
+    }
+    else {$('.dropbtn').css('background', 'url(../img/flag_en.png)no-repeat left center')
+}}
+
 	
 $(document).ready(function(){ 
 	scroling();
-    
+    lang();
 
 });
 

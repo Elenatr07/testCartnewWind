@@ -1,15 +1,23 @@
  //get full date
 let fullDateOneTtip;
 let months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+let months_id = ["Januari", 'Februari', 'Berbaris', 'April', 'Mungkin', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
 document.getElementById("one_way_calendar_from").addEventListener("change", function() {
   var input = this.value;
   let date = new Date(input).getDate();
   let month = new Date(input).getMonth();
   let year = new Date(input).getFullYear();
   let month1 = months[month]
-  fullDateOneTtip = `${date} ${month1} ${year}`
+  let monthId = months_id[month]
+
+  let lang = $('.dropbtn').text()
+ // console.log(lang)
+  if(lang ==="IDID"){
+    fullDateOneTtip = `${date} ${monthId} ${year}`
+  } else {fullDateOneTtip = `${date} ${month1} ${year}`}
+  
  // console.log(month);
-  //console.log(fullDateOneTtip)
+  console.log(fullDateOneTtip)
   let season1 = 6; //6-july
   let season2 = 7; //7- Aug
   let season3 = 11; //11 -Dec
