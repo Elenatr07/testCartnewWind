@@ -130,7 +130,7 @@ function lang(){
             '-webkit-background-clip':'text'
         })
     }
-    else {$('.dropbtn').css('background', 'url(../img/flag_en.png)no-repeat left center')
+    else {$('.dropbtn').css('background', 'url(img/flag_en.png)no-repeat left center')
 }}
 
 	
