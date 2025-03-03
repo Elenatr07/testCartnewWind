@@ -129,6 +129,28 @@ function lang(){
              '-webkit-text-fill-color': 'transparent',
             '-webkit-background-clip':'text'
         })
+        $(".why_choose_us_block h2").css({
+            'background': 'linear-gradient(91.15deg, #F7D788 49.6%, #E3BC78 99.02%)',
+            '-webkit-text-fill-color': 'transparent',
+            '-webkit-background-clip':'text'
+        })
+        $(".why_choose_us_block h2 span").css({
+            'color': 'rgba(255, 255, 255, 1)',
+            'background': 'rgba(255, 255, 255, 1)',
+             '-webkit-text-fill-color': 'transparent',
+            '-webkit-background-clip':'text'
+        })
+        $("#slider_testimoni h3").css({
+            'background': 'linear-gradient(91.15deg, #F7D788 49.6%, #E3BC78 99.02%)',
+            '-webkit-text-fill-color': 'transparent',
+            '-webkit-background-clip':'text'
+        })
+        $("#slider_testimoni h3 span").css({
+            'color': 'rgba(255, 255, 255, 1)',
+            'background': 'rgba(255, 255, 255, 1)',
+             '-webkit-text-fill-color': 'transparent',
+            '-webkit-background-clip':'text'
+        })
     }
     else {$('.dropbtn').css('background', 'url(img/flag_en.png)no-repeat left center')
 }}
