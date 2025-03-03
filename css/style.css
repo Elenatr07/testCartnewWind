@@ -1438,7 +1438,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 	border-radius: 30px;
 	opacity: 0px;
 	background: rgba(16, 23, 84, 1);
-	padding: 45px 45px;
+	padding: 45px 40px;
 	
 
  }
@@ -1776,7 +1776,6 @@ footer{
 }
 
 .offices div, .offices ul{
-	margin-right: 69px;
 	margin-bottom: 15px;
 }
 .offices div{
@@ -1791,6 +1790,7 @@ footer{
 .offices:first-child{
 	max-width: 504px;
 	width: 100%;
+	margin-right: 50px;
 }
 .offices:nth-child(2){
 	max-width: 190px;
@@ -3241,11 +3241,7 @@ footer{
         font-size: 20px;
     }
 	
-	.offices div, 
-	.offices ul {
-		margin-right: 59px;
-		
-	}
+
 	.social_item img {
         width: 35px;
     }

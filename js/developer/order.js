@@ -17,7 +17,7 @@ document.getElementById("one_way_calendar_from").addEventListener("change", func
   } else {fullDateOneTtip = `${date} ${month1} ${year}`}
   
  // console.log(month);
-  console.log(fullDateOneTtip)
+  //console.log(fullDateOneTtip)
   let season1 = 6; //6-july
   let season2 = 7; //7- Aug
   let season3 = 11; //11 -Dec
