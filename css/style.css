@@ -4421,7 +4421,7 @@ footer{
         font-size: 27px;
 	}
 	.main_top_vehicles {
-        height: 962px;
+        height: 980px;
     }
 	.main_top_testim {
         height: 822px;
@@ -4467,6 +4467,9 @@ footer{
         font-size: 11px;
       
     }
+	.filter_block_text {
+        margin: 0 auto 40px auto;
+	}
 }
 @media(max-width:376px){
 	.main_block_text_header, 
@@ -4521,6 +4524,9 @@ footer{
 	.location_details_wrapper label, 
 	.passenger_details_wrapper label {
         font-size: 11px;
+    }
+	.main_top_vehicles {
+        height: 995px;
     }
 
 	
