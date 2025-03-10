@@ -213,8 +213,12 @@ display: flex;
 	letter-spacing: 0.05em;
 	text-align: left;
 	margin-top: 10px;
+	display: flex;
 
 
+}
+.way_info pre, .way_pass pre, .trip_order_distance_from pre {
+	font-family: 'Montserrat', sans-serif;
 }
 .way{
 	color:rgba(246, 215, 136, 1);
@@ -226,7 +230,7 @@ display: flex;
 	text-align: left;
 
 }
-.way_pass{
+.way_pass {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 18px;
 	font-weight: 300;
@@ -234,6 +238,7 @@ display: flex;
 	letter-spacing: 0.05em;
 	text-align: left;
 	color: rgba(255, 255, 255, 1);
+	display: flex;
 
 
 }
@@ -402,14 +407,17 @@ color: rgba(255, 255, 255, 1);
 .trip_order_distance_to{
 	text-align: center;
 	margin-bottom: 30px;
-	max-width: 220px;
+	max-width: 280px;
     width: 100%;
 	display: flex;
 	
 }
 .trip_order_distance_from{
 	justify-content: left;
+	flex-direction: row;
+    flex-wrap: wrap;
 }
+
 .trip_order_distance_to{
 	justify-content: right;
 }
@@ -4282,7 +4290,7 @@ footer{
         padding: 0px 25px;
     }
 	.trip_order_distance_from, .trip_order_distance_to{
-		width: 33%;
+		width: 40%;
 	}
 	.block_from_to p, 
 	.cost_from_to p, 

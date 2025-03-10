@@ -1,3 +1,4 @@
+ 
  //get full date
 let fullDateOneTtip;
 let months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
@@ -11,7 +12,7 @@ document.getElementById("one_way_calendar_from").addEventListener("change", func
   let monthId = months_id[month]
 
   let lang = $('.dropbtn').text()
- // console.log(lang)
+  console.log(lang)
   if(lang ==="IDID"){
     fullDateOneTtip = `${date} ${monthId} ${year}`
   } else {fullDateOneTtip = `${date} ${month1} ${year}`}
