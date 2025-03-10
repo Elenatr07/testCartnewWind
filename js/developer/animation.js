@@ -104,6 +104,7 @@ $(window).scroll(function(){
 
 function lang(){
     let dropbtnText = $('.dropbtn').text();
+    console.log(dropbtnText)
     if(dropbtnText ==="IDID"){
         $('.dropbtn').css('background', 'url(img/flag_indonesia.png)no-repeat left center');
         $('.main_block_img img').attr('src', 'img/map_id.png');
@@ -151,8 +152,49 @@ function lang(){
              '-webkit-text-fill-color': 'transparent',
             '-webkit-background-clip':'text'
         })
+        $('.way_pass h4').text('Penumpang: ');
+        $('#trip_hours h4').text('Durasi: ');
+        $('.trip_order_distance_from span').text('Lokasi Anda di ');
+        $('.trip_order_distance_to h4').text('Lokasi yang Anda Inginkan ');
+        $('.note').text('* Harga yang disebutkan adalah perkiraan, karena harga sebenarnya akan diinformasikan setelah menghubungi Anda. ');
+        $('#trip_hours .h').text('j')
+        $('.time_trip .h').text('j')
+        $('.way_info .from_time').text('mulai pukul')
+        $('.way_info').text(function(index, text) {
+            return text.replace('January', 'Januari').
+            replace('February', 'Februari').
+            replace('March', 'Berbaris').
+            replace('April', 'April').
+            replace('May', 'Mungkin').
+            replace('June', 'Juni').
+            replace('July', 'Juli').
+            replace('August', 'Agustus').
+            replace('September', 'September').
+            replace('October', 'Oktober').
+            replace('November', 'November').
+            replace('December', 'Desember')
+        })
+        $('#location_details_wrapper span').text('Lokasi');
+   
+        
+      
     }
-    else {$('.dropbtn').css('background', 'url(img/flag_en.png)no-repeat left center')
+    else {
+        $('.dropbtn').css('background', 'url(img/flag_en.png)no-repeat left center')
+        $('.way_info').text(function(index, text) {
+            return text.replace('Januari', 'January').
+            replace('Februari', 'February').
+            replace('Berbaris', 'March').
+            replace('April', 'April').
+            replace('Mungkin', 'May').
+            replace('Juni', 'June').
+            replace('Juli', 'July').
+            replace('Agustus', 'August').
+            replace('September', 'September').
+            replace('Oktober', 'October').
+            replace('November', 'November').
+            replace('Desember', 'December')
+        })
 }}
 
 	

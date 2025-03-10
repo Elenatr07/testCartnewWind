@@ -171,9 +171,9 @@
                     orderPreview += '<div class="trip_order_info">';
                     orderPreview += '<div class="one_way_part">'
                     orderPreview += '<div class="way"> '+ cartData[key].from + '</div>';
-                    orderPreview += '<div class="way_pass">Passengers: '+ cartData[key].pass + ' </div>';
-                    orderPreview += '<div class="way_info"> '+ cartData[key].date +' from ' + cartData[key].timedeparture +' </div>';
-                    orderPreview += '<div class="way_info" data-value="'+ cartData[key].hours +'" id="trip_hours">Duration: '+ cartData[key].hours +'h</div>';
+                    orderPreview += '<div class="way_pass"><h4>Passengers: </h4><pre> ' + cartData[key].pass + ' </div>';
+                    orderPreview += '<div class="way_info"><p> '+ cartData[key].date + ' <span class="from_time"> from </span> ' + cartData[key].timedeparture + '</p> </div>';
+                    orderPreview += '<div class="way_info" data-value="'+ cartData[key].hours +'" id="trip_hours"><h4> Duration: </h4> '+ cartData[key].hours +'<h4 class="h">h</h4></div>';
                    
                     orderPreview += '<div class="typecar" data-value="'+ cartData[key].type +'"></div>';
                     
@@ -194,7 +194,7 @@
                 for (key in cartData) {
                     if (cartData.hasOwnProperty(key)) {
 
-                        openTripview += '<p class="time_trip">'+ cartData[key].hours + 'h </p>'
+                        openTripview += '<p class="time_trip">'+ cartData[key].hours + '<span class="h">h</span> </p>'
                     }
                 }
                 openTripview += '  <div class="wrapper_from_to">';
@@ -218,8 +218,8 @@
                 openTripview += '</div>';
                 openTripview += '</div>';
                 openTripview += ' <div class="trip_order_distance_block">';
-                openTripview += '<div class="trip_order_distance_from">Your Location in '+ cartData[key].from + '</div>';
-                openTripview += '<div class="trip_order_distance_to">Your Desired Location</div>';
+                openTripview += '<div class="trip_order_distance_from"><span>Your Location in </span><pre> '+ cartData[key].from + '</div>';
+                openTripview += '<div class="trip_order_distance_to"><h4> Your Desired Location</h4></div>';
                 openTripview += ' </div>';
                 openTripview += '</div>';
                  openTripview += '<p class="note">* The stated price is approximate, as the actual price will be shared upon contacting you </p>'
@@ -235,7 +235,7 @@
            for (key in cartData) {
                if (cartData.hasOwnProperty(key)) {
 
-                   openTripview += '<p class="time_trip">'+ cartData[key].hours + 'h </p>'
+                   openTripview += '<p class="time_trip">'+ cartData[key].hours + '<span class="h">h</span> </p>'
                }
            }
            openTripview += '  <div class="wrapper_from_to">';
@@ -260,8 +260,8 @@
           
            openTripview += '</div>';
            openTripview += ' <div class="trip_order_distance_block">';
-           openTripview += '<div class="trip_order_distance_from">Your Location in '+ cartData[key].from + '</div>';
-           openTripview += '<div class="trip_order_distance_to">Your Desired Location</div>';
+           openTripview += '<div class="trip_order_distance_from"><span>Your Location in </span> <pre> '+ cartData[key].from + '</div>';
+           openTripview += '<div class="trip_order_distance_to"><h4>Your Desired Location </h4></div>';
            openTripview += ' </div>';
            openTripview += '</div>';
             openTripview += '<p class="note">* The stated price is approximate, as the actual price will be shared upon contacting you </p>'
@@ -276,7 +276,7 @@
     for (key in cartData) {
         if (cartData.hasOwnProperty(key)) {
 
-            openTripview += '<p class="time_trip">'+ cartData[key].hours + 'h </p>'
+            openTripview += '<p class="time_trip">'+ cartData[key].hours + '<span class="h">h</span> </p>'
         }
     }
     openTripview += '  <div class="wrapper_from_to">';
@@ -301,8 +301,8 @@ if (cartData.hasOwnProperty(key)){
    
     openTripview += '</div>';
     openTripview += ' <div class="trip_order_distance_block">';
-    openTripview += '<div class="trip_order_distance_from">Your Location in '+ cartData[key].from + '</div>';
-    openTripview += '<div class="trip_order_distance_to">Your Desired Location</div>';
+    openTripview += '<div class="trip_order_distance_from"><span>Your Location in </span> <pre> '+ cartData[key].from + '</div>';
+    openTripview += '<div class="trip_order_distance_to"><h4>Your Desired Location </h4></div>';
     openTripview += ' </div>';
      openTripview += '<p class="note">* The stated price is approximate, as the actual price will be shared upon contacting you </p>'
     openTripview += '</div>';
@@ -325,6 +325,9 @@ if (cartData.hasOwnProperty(key)){
         },
         openCart1: function(){
             $(location).attr('href','./box.html')
+        },
+        openCart_id: function(){
+            $(location).attr('href','./box_id.html')
         },
         hideCart: function () {
             $('.jqcart-layout').fadeOut('fast', function () {
@@ -454,6 +457,7 @@ if (cartData.hasOwnProperty(key)){
         },
         openCart: actions.openCart,
         openCart1: actions.openCart1,
+        openCart_id: actions.openCart_id,
         printOrder: actions.printOrder,
         test: function () {
             actions.getStorage();
