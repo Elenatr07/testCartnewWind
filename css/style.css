@@ -310,6 +310,20 @@ color: rgba(255, 255, 255, 1);
 	color: rgba(255, 255, 255, 1);
 	
 }
+.location_details_wrapper span,
+.passenger_details_wrapper  span{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 35px;
+	font-weight: 600;
+	line-height: 42.67px;
+	letter-spacing: 0.05em;
+	text-align: center;
+}
+.location_details_wrapper .h2,
+.passenger_details_wrapper .h2 {
+	display: ruby;
+    margin: 0 auto;
+}
 #sumViewOneWayspan,
 #sumViewReternWayspan{
 	color: rgba(255, 255, 255, 1);
@@ -2327,7 +2341,11 @@ footer{
 	.cost_from_to p, 
 	.location_details_wrapper h2, 
 	.passenger_details_wrapper h2,
-	.cost_from_to span{
+	.cost_from_to span,
+	.location_details_wrapper span,
+	.passenger_details_wrapper span
+	
+	{
 		font-size: 33px;
 	}
 	.block_from_to {
@@ -2417,7 +2435,9 @@ footer{
 	.cost_from_to p, 
 	.location_details_wrapper h2, 
 	.passenger_details_wrapper h2,
-	.cost_from_to span {
+	.cost_from_to span,
+	.location_details_wrapper span,
+	.passenger_details_wrapper span {
         font-size: 32px;
     }
 
@@ -2543,7 +2563,9 @@ footer{
 	.cost_from_to p, 
 	.location_details_wrapper h2, 
 	.passenger_details_wrapper h2,
-	.cost_from_to span {
+	.cost_from_to span,
+	.location_details_wrapper span,
+	.passenger_details_wrapper span {
         font-size: 31px;
     }
 	.trip_order_distance_from, 
@@ -2654,7 +2676,9 @@ footer{
 	.cost_from_to p, 
 	.location_details_wrapper h2, 
 	.passenger_details_wrapper h2,
-	.cost_from_to span {
+	.cost_from_to span,
+	.location_details_wrapper span,
+	.passenger_details_wrapper span {
         font-size: 29px;
     }
 	
@@ -2772,7 +2796,9 @@ footer{
 	.cost_from_to p, 
 	.location_details_wrapper h2, 
 	.passenger_details_wrapper h2, 
-	.cost_from_to span {
+	.cost_from_to span,
+	.location_details_wrapper span,
+	.passenger_details_wrapper span {
         font-size: 27px;
     }
 	.trip_order_distance_from, 
@@ -3006,7 +3032,9 @@ footer{
 	.cost_from_to p, 
 	.location_details_wrapper h2, 
 	.passenger_details_wrapper h2, 
-	.cost_from_to span {
+	.cost_from_to span,
+	.location_details_wrapper span,
+	.passenger_details_wrapper span {
         font-size: 25px;
     }
 	.form{
@@ -3132,7 +3160,9 @@ footer{
 	.cost_from_to p, 
 	.location_details_wrapper h2, 
 	.passenger_details_wrapper h2, 
-	.cost_from_to span {
+	.cost_from_to span,
+	.location_details_wrapper span,
+	.passenger_details_wrapper span {
         font-size: 23px;
     }
 	.trip_order_distance_from, 
@@ -3507,7 +3537,9 @@ footer{
 	.cost_from_to p, 
 	.location_details_wrapper h2, 
 	.passenger_details_wrapper h2, 
-	.cost_from_to span {
+	.cost_from_to span,
+	.location_details_wrapper span,
+	.passenger_details_wrapper span {
         font-size: 21px;
     }
 	.trip_order_select {
@@ -3847,8 +3879,13 @@ footer{
 		margin: 52px auto 52px auto;
 	}
 	.location_details_wrapper h2,
-	.passenger_details_wrapper h2{
+	.passenger_details_wrapper h2
+	{
 		text-align: left;
+	}
+	.location_details_wrapper .h2,
+	.passenger_details_wrapper .h2{
+		margin: 0;
 	}
 	
 	.button_order{
@@ -3940,7 +3977,9 @@ footer{
 	.cost_from_to p, 
 	.location_details_wrapper h2, 
 	.passenger_details_wrapper h2, 
-	.cost_from_to span {
+	.cost_from_to span,
+	.location_details_wrapper span,
+	.passenger_details_wrapper span {
         font-size: 18px;
     }
 	.way_pass,
@@ -4296,7 +4335,9 @@ footer{
 	.cost_from_to p, 
 	.location_details_wrapper h2, 
 	.passenger_details_wrapper h2, 
-	.cost_from_to span {
+	.cost_from_to span,
+	.location_details_wrapper span,
+	.passenger_details_wrapper span {
         font-size: 17px;
     }
 	.time_trip{
@@ -4336,7 +4377,9 @@ footer{
 	.cost_from_to p, 
 	.location_details_wrapper h2, 
 	.passenger_details_wrapper h2, 
-	.cost_from_to span {
+	.cost_from_to span,
+	.location_details_wrapper span,
+	.passenger_details_wrapper span {
         font-size: 16px;
     }
 	
@@ -4468,7 +4511,9 @@ footer{
 	.cost_from_to p, 
 	.location_details_wrapper h2, 
 	.passenger_details_wrapper h2, 
-	.cost_from_to span {
+	.cost_from_to span,
+	.location_details_wrapper span,
+	.passenger_details_wrapper span {
         font-size: 14px;
     }
 	.note {
@@ -4652,7 +4697,12 @@ footer{
 	.why_choose_us_block h2, .services_central_block h2 {
         font-size: 22px;
     }
-	.block_from_to p, .cost_from_to p, .location_details_wrapper h2, .passenger_details_wrapper h2, .cost_from_to span {
+	.block_from_to p, .cost_from_to p, 
+	.location_details_wrapper h2, 
+	.passenger_details_wrapper h2, 
+	.cost_from_to span,
+	.location_details_wrapper span,
+	.passenger_details_wrapper span {
         font-size: 13px;
     }
 	.jqcart-checkout {

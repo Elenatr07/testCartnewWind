@@ -104,7 +104,7 @@ $(window).scroll(function(){
 
 function lang(){
     let dropbtnText = $('.dropbtn').text();
-    console.log(dropbtnText)
+   // console.log(dropbtnText)
     if(dropbtnText ==="IDID"){
         $('.dropbtn').css('background', 'url(img/flag_indonesia.png)no-repeat left center');
         $('.main_block_img img').attr('src', 'img/map_id.png');
@@ -174,7 +174,25 @@ function lang(){
             replace('November', 'November').
             replace('December', 'Desember')
         })
-        $('#location_details_wrapper span').text('Lokasi');
+        $('#location_details_wrapper .h2 h2').text('Rincian');
+        $('#location_details_wrapper .h2 span').text(' Lokasi');
+        $('#label1').text('Lokasi penjemputan Anda');
+        $("#pick_up_location_one_way").attr("placeholder", "Masukkan alamat Anda");
+        $('#label2').text('Lokasi penurunan Anda');
+        $("#drop_off_location_one_way").attr("placeholder", "Masukkan alamat Anda");
+        $('#label3').text('Pesan Anda');
+        $("#message_ditails").attr("placeholder", "Silakan bagikan informasi apa pun yang menurut Anda perlu kami ketahui...");
+        $('#passenger_details_wrapper .h2 h2').text('Rincian');
+        $('#passenger_details_wrapper .h2 span').text(' Penumpang');
+        $('#label4').text('Nama Anda');
+        $("#full_name_client").attr("placeholder", "Masukkan nama Anda");
+        $('#label5').text('Nomor telepon Anda');
+        $("#phone_client").attr("placeholder", "Masukkan nomor telepon Anda");
+        $('#label6').text('Alamat email Anda');
+        $("#email_client").attr("placeholder", "Masukkan alamat email Anda");
+        $('#button_order').attr("value", "Kirim Permintaan" );
+       
+        
    
         
       
