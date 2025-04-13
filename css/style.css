@@ -2281,6 +2281,17 @@ footer{
 .main_block_img{
 	margin: auto;
 }
+.company_name{
+	font-family: "Montserrat";
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 150%;
+	color: rgba(255, 255, 255, 1);
+	margin-top: 25px;
+	width: 80%;
+
+
+}
 
 
 @media screen and (min-width: 1001px) and (max-width: 3000px) {
