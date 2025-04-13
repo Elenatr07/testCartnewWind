@@ -14,13 +14,13 @@ $userdata - данные заказчика
 // Заголовок письма
 $subject = 'Заказ от '.date('d.m.Y').'г.';
 // ваш Email
-$admin_mail = 'admin@best-shop.piva.net';
+$admin_mail = 'energotr07@yandex.ru';
 // Email заказчика (как fallback - ваш же Email)
-$to = !empty($userdata['user_mail']) ? $userdata['user_mail'] : $admin_mail;
+$to = !empty($userdata['email_client']) ? $userdata['email_client'] : $admin_mail;
 
 // Формируем таблицу с заказанными товарами
-$tbl = '<table style="width: 100%; border-collapse: collapse;">
-	<tr>
+//$tbl = '<table style="width: 100%; border-collapse: collapse;">
+/*	<tr>
 		<th style="width: 1%; border: 1px solid #333333; padding: 5px;">ID</th>
 		<th style="width: 1%; border: 1px solid #333333; padding: 5px;"></th>
 		<th style="border: 1px solid #333333; padding: 5px;">Наименование</th>
@@ -45,6 +45,9 @@ $tbl .= '<tr>
 		<td style="border: 1px solid #333333;">&nbsp;</td>
 	</tr>
 </table>';
+*/
+
+
 // Тело письма
 $body = '
 <html>
@@ -54,11 +57,13 @@ $body = '
 <body>
   <p>Информация о заказчике:</p>
 	<ul>
-		<li><b>Ф.И.О.:</b> '.$userdata['user_name'].'</li>
-		<li><b>Тел.:</b> '.$userdata['user_phone'].'</li>
-		<li><b>Email:</b> '.$userdata['user_mail'].'</li>
-		<li><b>Адрес:</b> '.$userdata['user_address'].'</li>
-		<li><b>Комментарий:</b> '.$userdata['user_comment'].'</li>
+		<li><b>Client:</b> '.$userdata['full_name_client'].'</li>
+		<li><b>Tel.:</b> '.$userdata['phone_client'].'</li>
+		<li><b>Email:</b> '.$userdata['email_client'].'</li>
+		<li><b>Pick-up location:</b> '.$userdata['pick_up_location_one_way'].'</li>
+		<li><b>Drop-off location:</b> '.$userdata['drop_off_location_one_way'].'</li>
+		<li><b>Message:</b> '.$userdata['message_ditails'].'</li>
+		<li><b>Cost:</b> '.$userdata['total_sum'].' IDR</li>
 	</ul>
 	<p>Информация о заказае:</p>
   '.$tbl.'

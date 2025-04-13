@@ -27,6 +27,7 @@ $(document).ready(function() {
        $('#order_distance').toggle();
        location.reload();
     });
+ 
     $('#toyotaCommuter').one("click", function(){
       $('#orderPreview').toggle();
       $('#costViewOneWay').toggle();
@@ -39,7 +40,10 @@ $(document).ready(function() {
       $('#toyotaCommuter').css({'borderRadius': '30px 30px 0 0', 'margin': '30px auto 0 auto', 'border': '0'});
       $('#orderPreview').css({'margin':'0 auto'});
       $('.blockTrip').css({'background-image': 'none', 'padding-bottom': '0'});
-      $('.order_list').addClass("no-hover")
+      $('.order_list').addClass("no-hover");
+      $('#total_sum').val($('#costViewCommuter').html())
+      console.log($('#total_sum').val())
+
 
 
     })
@@ -56,6 +60,8 @@ $(document).ready(function() {
       $('#orderPreview').css({'margin':'0 auto'});
       $('.blockTrip').css({'background-image': 'none', 'padding-bottom': '0'});
       $('.order_list').addClass("no-hover")
+      $('#total_sum').val($('#costViewHiAce').html())
+      console.log($('#total_sum').val())
       
 
 
@@ -72,7 +78,9 @@ $(document).ready(function() {
       $('#toyotaInnova').css({'borderRadius': '30px 30px 0 0', 'margin': '30px auto 0 auto', 'border': '0'});
       $('#orderPreview').css({'margin':'0 auto'});
       $('.blockTrip').css({'background-image': 'none', 'padding-bottom': '0'});
-      $('.order_list').addClass("no-hover")
+      $('.order_list').addClass("no-hover");
+      $('#total_sum').val($('#costViewInnova').html())
+      console.log($('#total_sum').val())
 
 
     })
