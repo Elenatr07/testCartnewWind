@@ -19,8 +19,9 @@
         contactForm = '<div class="orderPreview" id="orderPreview"></div>',
         label = $('<div class="jqcart-cart-label"><span class="jqcart-title">Оформить заказ</span><span class="jqcart-total-cnt">0</span></div>'),
         modal = '<div class="jqcart-layout"><div class="jqcart-checkout">123</div></div>',
+        modal1 = '<div class="modal_sucsess"><div class="modal_block"></div></div>',
         blockTrip = ' <div class="blockTrip" id="blockTrip"></div>',
-        orderform = ' <div class="orderPreview"><form class="jqcart-orderform"><div class="form_order_wrapper"><div class="location_details_wrapper" id="location_details_wrapper"><div class="h2"><h2>Location </h2><span> Details</span></div> <label for="pick_up_location_one_way" id="label1">Your pick-up location </label><input type="text" name="pick_up_location_one_way" id="pick_up_location_one_way" placeholder="Enter your address"><label for="drop_off_location_one_way" id="label2">Your drop-off location </label><input type="text" name="drop_off_location_one_way" id="drop_off_location_one_way" placeholder="Enter your address"><label for="message_ditails" id="label3">Your message </label><textarea name="message_ditails" id="message_ditails" placeholder="Please share any information that you think we should know...   "></textarea></div><hr class="verticalLine_in_form" id="verticalLine_in_form"  /><div class="passenger_details_wrapper" id="passenger_details_wrapper"><div class="h2"><h2>Passenger </h2><span> Details</span></div> <label for="full_name_client" id="label4">Your full name  </label><input type="text" name="full_name_client" id="full_name_client" placeholder="Enter your name"><label for="phone_client" id="label5">Your phone number </label><input type="tel" name="phone_client" id="phone_client" placeholder="Enter your phone number" pattern="^[\+][0-9]+$" minlength="9" maxlength="18"><label for="email_client" id="label6">Your email address </label><input type="email" name="email_client" id="email_client" placeholder="Enter your email address"> <div id="error_block"></div><div class="button_order_wrapper"><input class="button_order" type="submit" value="Send Request" id="button_order" ></div></div></div><input type="text" hidden id="total_sum" name="total_sum"><div hidden name="order_form"></div></form></div>';
+        orderform = ' <div class="orderPreview"><form class="jqcart-orderform"><div class="form_order_wrapper"><div class="location_details_wrapper" id="location_details_wrapper"><div class="h2"><h2>Location </h2><span> Details</span></div> <label for="pick_up_location_one_way" id="label1">Your pick-up location </label><input type="text" name="pick_up_location_one_way" id="pick_up_location_one_way" placeholder="Enter your address"><label for="drop_off_location_one_way" id="label2">Your drop-off location </label><input type="text" name="drop_off_location_one_way" id="drop_off_location_one_way" placeholder="Enter your address"><label for="message_ditails" id="label3">Your message </label><textarea name="message_ditails" id="message_ditails" placeholder="Please share any information that you think we should know...   "></textarea></div><hr class="verticalLine_in_form" id="verticalLine_in_form"  /><div class="passenger_details_wrapper" id="passenger_details_wrapper"><div class="h2"><h2>Passenger </h2><span> Details</span></div> <label for="full_name_client" id="label4">Your full name  </label><input type="text" name="full_name_client" id="full_name_client" placeholder="Enter your name"><label for="phone_client" id="label5">Your phone number </label><input type="tel" name="phone_client" id="phone_client" placeholder="Enter your phone number" pattern="^[\+][0-9]+$" minlength="9" maxlength="18"><label for="email_client" id="label6">Your email address </label><input type="email" name="email_client" id="email_client" placeholder="Enter your email address"> <div id="error_block"></div><div class="button_order_wrapper"><input class="button_order" type="submit" value="Send Request" id="button_order" ></div></div></div><input type="text" hidden id="total_sum" name="total_sum"><input hidden id="type_auto" name="type_auto" value=""><div hidden name="order_form"></div></form></div>';
     var opts = {
         buttons: '.add_item',
         cartLabel: 'body',
@@ -199,8 +200,9 @@
                 }
                 openTripview += '  <div class="wrapper_from_to">';
                 openTripview += '<div class="wrapper_from_to">';
-                openTripview += '<div class="block_from_to">';
+                openTripview += '<div class="block_from_to" >';
                 openTripview += '<p>HiAce<span> Commuter </span> </p>';
+                openTripview += '<p hidden class="type_commuter">Hice Commuter </p>';
                 openTripview += '</div>';
                 openTripview += ' <div class="line_from_to">';
                 openTripview += ' <div class="ellips"><img src="img/Ellipse1.svg" alt=""></div>';
@@ -242,6 +244,7 @@
            openTripview += '<div class="wrapper_from_to">';
            openTripview += '<div class="block_from_to">';
            openTripview += '<p>HiAce <span>Premio</span> </p>';
+           openTripview += '<p hidden class="type_premio">HiAce Premio</p>';
            openTripview += '</div>';
            openTripview += ' <div class="line_from_to">';
            openTripview += ' <div class="ellips"><img src="img/Ellipse1.svg" alt=""></div>';
@@ -282,7 +285,8 @@
     openTripview += '  <div class="wrapper_from_to">';
     openTripview += '<div class="wrapper_from_to">';
     openTripview += '<div class="block_from_to">';
-    openTripview += '<p>Innova <span>Reborn</span> </p>';
+    openTripview += '<p>Innova <span >Reborn</span> </p>';
+    openTripview += '<p hidden class="type_reborn" >Innova Reborn</p>';
     openTripview += '</div>';
     openTripview += ' <div class="line_from_to">';
     openTripview += ' <div class="ellips"><img src="img/Ellipse1.svg" alt=""></div>';
@@ -319,6 +323,7 @@ if (cartData.hasOwnProperty(key)){
             orderBlock = orderform;
             openTrip = openTripview;
             cartHtml = subtotal ? (orderPreview) : '<h2 class="jqcart-empty-cart">Корзина пуста</h2>';
+          $(modal1).appendTo('body');
             $(modal).appendTo('.order').find('.jqcart-checkout').html(cartHtml).find('[name="promo_code"]').val(savedPromo);
            $(blockTrip).appendTo('#order_distance').html(openTrip);
            $(contactForm).appendTo('#order_distance').html(orderBlock)
@@ -412,16 +417,22 @@ if (cartData.hasOwnProperty(key)){
                     userdata: $that.serialize()
                 },
                 error: function (jqXHR, text, error) {
+                    $('.modal_block').html('<p> Error! '+ error +' </p>');
                     console.log('Error: ' + text + ' | ' + error);
                 },
                 success: function (resp) {
-                    $('.jqcart-checkout').html('<p>' + resp.message + '</p>');
-                    if (!resp.errors) {
-                        opts.discount = 0;
-                        sessionStorage.setItem('promocode', '');
-                        sessionStorage.setItem('discount', 0);
-                        setTimeout(methods.clearCart, 2000);
+                    if(dropbtnText ==="IDID"){
+                       $('.modal_block').html('<p> Terima Kasih Atas Pesanan Anda! Kami akan segera menghubungi Anda untuk mengkonfirmasi pesanan Anda</p>');  
+                       return false;
+                    } else if(dropbtnText !=="IDID") {
+                        $('.modal_block').html('<p> Thank You for Your Order! We will contact you soon to confirm your order</p>');  
+                        return false;
                     }
+                   
+                    if(!resp.errors) {
+						setTimeout(methods.clearCart, 2000);
+                        location.href = 'index.html';
+					}
                 }
             });
         },

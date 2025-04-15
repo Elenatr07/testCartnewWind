@@ -27,6 +27,7 @@ foreach($orderlist as $id => $item_data) {
 			<li><b>Passangers:</b> '.$item_data['pass'].'</li>
 			<li><b>Duration:</b> '.$item_data['hours'].' hours</li>
 			<li><b>Cost:</b> '.$userdata['total_sum'].' IDR</li>
+			<li><b>Type auto:</b> '.$userdata['type_auto'].'</li>
 			<li><b>Pick-up location:</b> '.$userdata['pick_up_location_one_way'].'</li>
 			<li><b>Drop-off location:</b> '.$userdata['drop_off_location_one_way'].'</li>
 			<li><b>Message:</b> '.$userdata['message_ditails'].'</li>
@@ -58,7 +59,7 @@ $body = '
 	</ul>
 	<p>Order information:</p>
 	'.$div.'
-	<p>The email was created automatically. Please do not answer it.</p>
+	
 </body>
 </html>';
 

@@ -42,7 +42,10 @@ $(document).ready(function() {
       $('.blockTrip').css({'background-image': 'none', 'padding-bottom': '0'});
       $('.order_list').addClass("no-hover");
       $('#total_sum').val($('#costViewCommuter').html())
-      console.log($('#total_sum').val())
+    //  console.log($('#total_sum').val())
+      $('#type_auto').val($('.type_commuter').html())
+      console.log($('#type_auto').val())
+      
 
 
 
@@ -61,7 +64,9 @@ $(document).ready(function() {
       $('.blockTrip').css({'background-image': 'none', 'padding-bottom': '0'});
       $('.order_list').addClass("no-hover")
       $('#total_sum').val($('#costViewHiAce').html())
-      console.log($('#total_sum').val())
+    //  console.log($('#total_sum').val())
+      $('#type_auto').val($('.type_premio').html())
+      console.log($('#type_auto').val())
       
 
 
@@ -80,7 +85,9 @@ $(document).ready(function() {
       $('.blockTrip').css({'background-image': 'none', 'padding-bottom': '0'});
       $('.order_list').addClass("no-hover");
       $('#total_sum').val($('#costViewInnova').html())
-      console.log($('#total_sum').val())
+    //  console.log($('#total_sum').val())
+      $('#type_auto').val($('.type_reborn').html())
+      console.log($('#type_auto').val())
 
 
     })
