@@ -2292,6 +2292,15 @@ footer{
 
 
 }
+.modal_sucsess{
+	position: fixed;
+    top: calc(50% - 25px); 
+  	left: calc(50% - 50px); 
+    transform: translate(-50%, -50%);
+    width: 50%;
+	background: #0311ae;
+	display: block;
+}
 
 
 @media screen and (min-width: 1001px) and (max-width: 3000px) {
