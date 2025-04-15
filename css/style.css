@@ -2302,9 +2302,10 @@ footer{
 	width: 522px;
 	height: 522px;
 	border-radius: 30px;
-	border: 2px solid;
-	border-image-source: linear-gradient(90deg, #F7D788 0%, #E3BC78 100%);
+	border: 2px solid #F7D788 0%;
+	/*border-image-source: linear-gradient(90deg, #F7D788 0%, #E3BC78 100%);*/
 	background: rgba(26, 34, 68, 1);
+	z-index: 1;
 
 }
 .modal_block{

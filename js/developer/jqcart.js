@@ -420,16 +420,18 @@ if (cartData.hasOwnProperty(key)){
                 },
                 error: function (jqXHR, text, error) {
                      $('.modal_sucsess').css('display', 'block');
+                     $('#nav_shadow').addClass("shadow")
                     if(dropbtnText ==="IDID"){
-                        $('.modal_block').html('<h3 class="modal_block_header">Kesalahan!</h3><hr class="modal_block_hr"><p class="modal_block_text"> '+ error +'! <br> Data tidak terkirim, silakan hubungi kami melalui telepon atau email. </p> <a class="modal_block_link_button" href="index.html">Halaman Utama</a>');      
+                        $('.modal_block').html('<h3 class="modal_block_header">Kesalahan!</h3><hr class="modal_block_hr"><p class="modal_block_text"> Data tidak terkirim, silakan hubungi kami melalui telepon atau email. </p> <a class="modal_block_link_button" href="index.html">Halaman Utama</a>');      
                     } else {
-                       $('.modal_block').html('<h3 class="modal_block_header"> Error!</h3><hr class="modal_block_hr"><p class="modal_block_text"> '+ error +'! Data not sent, please contact us by phone or email</p> <a class="modal_block_link_button" href="en.html">Home Page</a>');
+                       $('.modal_block').html('<h3 class="modal_block_header"> Error!</h3><hr class="modal_block_hr"><p class="modal_block_text"> Data not sent, please contact us by phone or email</p> <a class="modal_block_link_button" href="en.html">Home Page</a>');
                     console.log('Error: ' + text + ' | ' + error);  
                     }
                    
                 },
                 success: function (resp) { 
                     $('.modal_sucsess').css('display', 'block'); 
+                    $('#nav_shadow').addClass("shadow")
                     if(dropbtnText ==="IDID"){
                        $('.modal_block').html('<h3 class="modal_block_header">Sukses!</h3><hr class="modal_block_hr"><p class="modal_block_text">Kami telah menerima permintaan Anda dan akan segera menghubungi Anda.</p><a class="modal_block_link_button" href="index.html">Halaman Utama</a>');  
                        return false;
