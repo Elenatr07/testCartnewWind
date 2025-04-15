@@ -20,6 +20,7 @@
         label = $('<div class="jqcart-cart-label"><span class="jqcart-title">Оформить заказ</span><span class="jqcart-total-cnt">0</span></div>'),
         modal = '<div class="jqcart-layout"><div class="jqcart-checkout">123</div></div>',
         modal1 = '<div class="modal_sucsess"><div class="modal_block"></div></div>',
+        preloader = ' <div class="preloader"></div>',
         blockTrip = ' <div class="blockTrip" id="blockTrip"></div>',
         orderform = ' <div class="orderPreview"><form class="jqcart-orderform"><div class="form_order_wrapper"><div class="location_details_wrapper" id="location_details_wrapper"><div class="h2"><h2>Location </h2><span> Details</span></div> <label for="pick_up_location_one_way" id="label1">Your pick-up location </label><input type="text" name="pick_up_location_one_way" id="pick_up_location_one_way" placeholder="Enter your address"><label for="drop_off_location_one_way" id="label2">Your drop-off location </label><input type="text" name="drop_off_location_one_way" id="drop_off_location_one_way" placeholder="Enter your address"><label for="message_ditails" id="label3">Your message </label><textarea name="message_ditails" id="message_ditails" placeholder="Please share any information that you think we should know...   "></textarea></div><hr class="verticalLine_in_form" id="verticalLine_in_form"  /><div class="passenger_details_wrapper" id="passenger_details_wrapper"><div class="h2"><h2>Passenger </h2><span> Details</span></div> <label for="full_name_client" id="label4">Your full name  </label><input type="text" name="full_name_client" id="full_name_client" placeholder="Enter your name"><label for="phone_client" id="label5">Your phone number </label><input type="tel" name="phone_client" id="phone_client" placeholder="Enter your phone number" pattern="^[\+][0-9]+$" minlength="9" maxlength="18"><label for="email_client" id="label6">Your email address </label><input type="email" name="email_client" id="email_client" placeholder="Enter your email address"> <div id="error_block"></div><div class="button_order_wrapper"><input class="button_order" type="submit" value="Send Request" id="button_order" ></div></div></div><input type="text" hidden id="total_sum" name="total_sum"><input hidden id="type_auto" name="type_auto" value=""><div hidden name="order_form"></div></form></div>';
     var opts = {
@@ -324,6 +325,7 @@ if (cartData.hasOwnProperty(key)){
             openTrip = openTripview;
             cartHtml = subtotal ? (orderPreview) : '<h2 class="jqcart-empty-cart">Корзина пуста</h2>';
           $(modal1).appendTo('body');
+          $(preloader).appendTo('body');
             $(modal).appendTo('.order').find('.jqcart-checkout').html(cartHtml).find('[name="promo_code"]').val(savedPromo);
            $(blockTrip).appendTo('#order_distance').html(openTrip);
            $(contactForm).appendTo('#order_distance').html(orderBlock)
@@ -417,23 +419,41 @@ if (cartData.hasOwnProperty(key)){
                     userdata: $that.serialize()
                 },
                 error: function (jqXHR, text, error) {
-                    $('.modal_block').html('<p> Error! '+ error +' </p>');
-                    console.log('Error: ' + text + ' | ' + error);
-                },
-                success: function (resp) {
+                     $('.modal_sucsess').css('display', 'block');
                     if(dropbtnText ==="IDID"){
-                       $('.modal_block').html('<p> Terima Kasih Atas Pesanan Anda! Kami akan segera menghubungi Anda untuk mengkonfirmasi pesanan Anda</p>');  
+                        $('.modal_block').html('<h3 class="modal_block_header">Kesalahan!</h3><hr class="modal_block_hr"><p class="modal_block_text"> '+ error +'! <br> Data tidak terkirim, silakan hubungi kami melalui telepon atau email. </p> <a class="modal_block_link_button" href="index.html">Halaman Utama</a>');      
+                    } else {
+                       $('.modal_block').html('<h3 class="modal_block_header"> Error!</h3><hr class="modal_block_hr"><p class="modal_block_text"> '+ error +'! Data not sent, please contact us by phone or email</p> <a class="modal_block_link_button" href="en.html">Home Page</a>');
+                    console.log('Error: ' + text + ' | ' + error);  
+                    }
+                   
+                },
+                success: function (resp) { 
+                    $('.modal_sucsess').css('display', 'block'); 
+                    if(dropbtnText ==="IDID"){
+                       $('.modal_block').html('<h3 class="modal_block_header">Sukses!</h3><hr class="modal_block_hr"><p class="modal_block_text">Kami telah menerima permintaan Anda dan akan segera menghubungi Anda.</p><a class="modal_block_link_button" href="index.html">Halaman Utama</a>');  
                        return false;
-                    } else if(dropbtnText !=="IDID") {
-                        $('.modal_block').html('<p> Thank You for Your Order! We will contact you soon to confirm your order</p>');  
+                    } else{
+                        $('.modal_block').html('<h3 class="modal_block_header">Success!</h3><hr class="modal_block_hr"><p class="modal_block_text">We have received your request and will be in touch with you shortly.</p><a class="modal_block_link_button" href="en.html">Home Page</a>');  
                         return false;
                     }
                    
-                    if(!resp.errors) {
+                   /* if(!resp.errors) {
 						setTimeout(methods.clearCart, 2000);
                         location.href = 'index.html';
-					}
-                }
+					}*/
+                },
+                beforeSend: function () {
+                    // запускаем прелоадер
+                    
+                     $('.preloader').html('<ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>');
+                    console.log('preloader')
+                },
+                complete: function () {
+                     $('.preloader').addClass("preloader-remove");  
+                    // останавливаем прелоадер
+                    console.log("Ok")
+                },
             });
         },
         checkPromo: function () {
