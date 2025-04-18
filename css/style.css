@@ -4094,6 +4094,7 @@ footer{
     }
 	.service_central_item div img {
        max-width: 40px;
+	   max-height: 58px;
     }
 	.service_central_item div{
 		justify-content: left;
