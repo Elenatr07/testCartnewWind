@@ -2597,7 +2597,7 @@ footer{
     z-index: -10;
 }
 
-@media screen and (min-width: 1001px) and (max-width: 3000px) {
+@media (min-width: 1001px) {
     .hamb {
         display: none;
     }
