@@ -196,7 +196,7 @@ function lang(){
         $('#label6').text('Alamat email Anda');
         $("#email_client").attr("placeholder", "Masukkan alamat email Anda");
         $('#button_order').attr("value", "Kirim Permintaan" );
-       
+        $('.dropdown-content a:nth-child(2)').css('display', 'none')
         
    
         
@@ -218,6 +218,8 @@ function lang(){
             replace('November', 'November').
             replace('Desember', 'December')
         })
+        $('.dropdown-content a:nth-child(2)').css('display', 'block');
+        $('.dropdown-content a:first-child').css('display', 'none')
 }}
 var $imgs = $(".vehicle_central_wrapper.commuter.premio").find("img"),
     i = 0;
@@ -236,7 +238,7 @@ setInterval(change_img, 4000)
 $(document).ready(function(){ 
 	scroling();
     lang();
-    
+   
 
 });
 

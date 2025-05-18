@@ -2611,6 +2611,9 @@ footer{
 	display: none;
 	
 }
+.dropbtn.e1::before{
+	right: -41px;
+}
 
 @media (min-width: 1001px) {
     .hamb {
@@ -3554,8 +3557,10 @@ footer{
 		background-size: 20px 20px;
 		padding-left: 27px;
 	}
-	.dropbtn::before {
+	.dropbtn::before,
+	.dropbtn.e1::before {
 		right: -30px;
+		top: 9px;
 	}
 	.contacts_item {
 		margin-right: 11px;
