@@ -3726,7 +3726,7 @@ footer{
 	}
 	.contacts_item_block{
 		text-align: center;
-		margin-top: 20px;
+		
 		
 	}
 	.lang_in_header{
@@ -3755,9 +3755,7 @@ footer{
 	.dropbtn::before {
         right: 132px;
     }
-	.contacts_item_block {
-       margin-top: 25px;
-    }
+	
 	.main_block_img, 
 	.main_block_img img {
         width: 428px;
