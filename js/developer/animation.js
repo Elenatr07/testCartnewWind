@@ -8,9 +8,14 @@ let clickOnButton = true;
   //  console.log("height", height)
   //  console.log("width", width)
     if((width <600)) {
-        $('.vehicle_central_wrapper.commuter.premio img').attr("src", 'img/seat_map14_1.png' )
+        $('.vehicle_central_wrapper.commuter.premio .salon_img1').attr("src", 'img/seat_map14_1.png' )
+        $('.vehicle_central_wrapper.commuter.premio .salon_img2').attr("src", 'img/seat_map14_3.png' )
         $('.vehicle_central_wrapper.reborn img').attr("src", 'img/seat_map6_1.png' )
-    } 
+    } else {
+           $('.vehicle_central_wrapper.commuter.premio .salon_img1').attr("src", 'img/seat_map14.png' )
+        $('.vehicle_central_wrapper.commuter.premio .salon_img2').attr("src", 'img/seat_map14_2.png' )
+        $('.vehicle_central_wrapper.reborn img').attr("src", 'img/seat_map6.png' )
+    }
    if(((width > 1400)) && height>300 && height<700){
         $('.service_central_item').removeClass('hidden')
        
@@ -214,11 +219,24 @@ function lang(){
             replace('Desember', 'December')
         })
 }}
+var $imgs = $(".vehicle_central_wrapper.commuter.premio").find("img"),
+    i = 0;
+    console.log($imgs)
+function change_img(){
+     var next = (++i % $imgs.length);
+       $($imgs.get(next - 1)).fadeOut(500);
+        $($imgs.get(next)).fadeIn(1000);
+ 
+     console.log('change img')
+}
 
-	
+setInterval(change_img, 4000)
+
+
 $(document).ready(function(){ 
 	scroling();
     lang();
+    
 
 });
 
