@@ -25,8 +25,8 @@ document.getElementById("one_way_calendar_from").addEventListener("change", func
   let season4 = 0; //0- Jan
   let priceRebornLow = 80000;
   let priceRebornHigh = 96000;
-  let priceCommuterLow = 100000;
-  let priceCommuterHigh = 117000;
+  let priceCommuterLow = 104000;
+  let priceCommuterHigh = 112500;
   let pricePremioLow = 125000;
   let pricePremioHigh = 150000;
   if(month===season1 || month===season2 || month===season3 || month ===season4){
