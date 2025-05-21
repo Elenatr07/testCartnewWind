@@ -22,7 +22,7 @@ let clickOnButton = true;
     } else if(((width > 1025) &&(width <=1400)) && height>200){
         $('.service_central_item').removeClass('hidden')
         
-    }  else if(((width > 700) &&(width <=1024)) ){
+    }  else if(((width > 700) &&(width <=1024) && height>200 && height<1300) ){
         $('.service_central_item').removeClass('hidden')
     }
     else if(((width >= 320) &&(width <=700)) && height>300){
@@ -223,13 +223,13 @@ function lang(){
 }}
 var $imgs = $(".vehicle_central_wrapper.commuter.premio").find("img"),
     i = 0;
-    console.log($imgs)
+   // console.log($imgs)
 function change_img(){
      var next = (++i % $imgs.length);
        $($imgs.get(next - 1)).fadeOut(500);
         $($imgs.get(next)).fadeIn(1000);
  
-     console.log('change img')
+   //  console.log('change img')
 }
 
 setInterval(change_img, 4000)
