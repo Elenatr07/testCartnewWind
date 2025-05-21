@@ -10,6 +10,9 @@ input.addEventListener('click', function() {
     elem.classList.toggle("shadow");
 })
 
-
+$('#link_about').on('click', function(){
+    $('#nav_shadow').removeClass('shadow');
+    $('#side-menu').prop('checked', false)
+})
 
 
