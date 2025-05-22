@@ -79,7 +79,7 @@
                 itemData.count = 1;
                 cartData[itemData.id] = itemData;
          //   } 
-            console.log(itemData)
+           // console.log(itemData)
             actions.setStorage(cartData);
             actions.changeTotalCnt(1);
             label.show();
