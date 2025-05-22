@@ -55,69 +55,53 @@ $(".sum").on("change", function (event) {
   } 
 
  // console.log(fullDateOneTtip)
-  $(event.target).closest(".sum").find("select").change(sum);
-  $(event.target).closest(".sum").find("input").change(sum);
-  $(event.target).closest(".sum").find("select").change(changeDetected);
-  $(event.target).closest(".sum").find("input").change(changeDetected);
-  //$(event.target).closest(".sum").find("#pass").click(changeCars);
+      $(event.target).closest(".sum").find("select").change(sum);
+      $(event.target).closest(".sum").find("input").change(sum);
+      $(event.target).closest(".sum").find("select").change(changeDetected);
+      $(event.target).closest(".sum").find("input").change(changeDetected);
+      //$(event.target).closest(".sum").find("#pass").click(changeCars);
   
 
-  function sum() {
+    function sum() {
 
-   let result = 0;
-   
-    //data 
-  
-    let price = $(event.target).closest(".sum").find("#cars").find(":selected").data("price");
-    let from = $(event.target).closest(".sum").find("#from").find(":selected").data("from");
-    let hours = $(event.target).closest(".sum").find("#hours").find(":selected").data("hours");
-    let infocar= $(event.target).closest(".sum").find("#cars").find(":selected").data("value");
-    let type = $(event.target).closest(".sum").find('#cars').find(":selected").data('type');
-    let pass = $(event.target).closest(".sum").find('#pass').find(":selected").data('pass');
-    let date = fullDateOneTtip;
-   
-    let time_from = $(event.target).closest(".sum").find('#time_departure').find(":selected").data("timefrom");
-    
-   // console.log(from, to)
-    
-    result = price * hours
-     
-    //$(event.target).closest(".sum").find(".itog").val("£" + result1);
+      let result = 0;
+      
+        //data 
+      
+        let price = $(event.target).closest(".sum").find("#cars").find(":selected").data("price");
+        let from = $(event.target).closest(".sum").find("#from").find(":selected").data("from");
+        let hours = $(event.target).closest(".sum").find("#hours").find(":selected").data("hours");
+        let infocar= $(event.target).closest(".sum").find("#cars").find(":selected").data("value");
+        let type = $(event.target).closest(".sum").find('#cars').find(":selected").data('type');
+        let pass = $(event.target).closest(".sum").find('#pass').find(":selected").data('pass');
+        let date = fullDateOneTtip;
+      
+        let time_from = $(event.target).closest(".sum").find('#time_departure').find(":selected").data("timefrom");
+        
+      // console.log(from, to)
+        
+        result = price * hours
+        
+        //$(event.target).closest(".sum").find(".itog").val("£" + result1);
 
-    
-       //атрибуты
+        
+          //атрибуты
 
-    $(event.target).closest(".sum").find(".add_item").attr("data-price", price); //setter
-    $(event.target).closest(".sum").find(".add_item").attr("data-infoValue", infocar);
-    $(event.target).closest(".sum").find(".add_item").attr("data-from", from);
-    //$(event.target).closest(".sum").find(".add_item").attr("data-cost", result);
-    $(event.target).closest(".sum").find(".add_item").attr("data-date", date);
-    $(event.target).closest(".sum").find(".add_item").attr("data-hours", hours);
-    $(event.target).closest(".sum").find(".add_item").attr("data-timeDeparture", time_from);
-    $(event.target).closest(".sum").find(".add_item").attr("data-type", type);
-    $(event.target).closest(".sum").find(".add_item").attr("data-pass", pass);
+        $(event.target).closest(".sum").find(".add_item").attr("data-price", price); //setter
+        $(event.target).closest(".sum").find(".add_item").attr("data-infoValue", infocar);
+        $(event.target).closest(".sum").find(".add_item").attr("data-from", from);
+        //$(event.target).closest(".sum").find(".add_item").attr("data-cost", result);
+        $(event.target).closest(".sum").find(".add_item").attr("data-date", date);
+        $(event.target).closest(".sum").find(".add_item").attr("data-hours", hours);
+        $(event.target).closest(".sum").find(".add_item").attr("data-timeDeparture", time_from);
+        $(event.target).closest(".sum").find(".add_item").attr("data-type", type);
+        $(event.target).closest(".sum").find(".add_item").attr("data-pass", pass);
 
-  
+      
 
 
-    
-    /* var id = $(event.target).closest(".sum").find(".add_item").data("id");
-      console.log(id)*/
-    // var idoption = $(event.target).closest(".sum").find(':selected').data('id');
-    //console.log(idoption)
-    //  var idtotal = `${result}` + `${idoption}`;
-    //console.log(idtotal)
-    //  $(event.target).closest(".sum").find(".add_item").attr("data-id", (idtotal));
-
-    /*function item() {
-    for (key in getItem) {
-  if (getItem.hasOwnProperty(key)) {
-  
-   //getItem[key].id += 100;
-   localStorage.setItem('jqcart', JSON.stringify(getItem));
-  }}
-  }*/
-  }
+        
+     }
     //----select car------
     
 
@@ -135,28 +119,24 @@ var time_from
         time_from = $('#time_departure').find(":selected").val();
        
         
-    let date1 = document.getElementById("one_way_calendar_from");
+      let date1 = document.getElementById("one_way_calendar_from");
             date1.oninput = () => {
                    new Date(date1.value)
         }
 
-    date_one_way = date1.value
+      date_one_way = date1.value
 
 
-//console.log(passengers)
-        if ( (cars.length > 0) && 
-            (from.length > 0) && 
-           (date_one_way.length > 0) &&
-          (time_from.length > 0)  ) 
-                        { 
-        $('#open').removeAttr('disabled');
-        $('#open').css({"opacity" : '1'});
+      //console.log(passengers)
+        if ( (cars.length > 0) && (from.length > 0) && (date_one_way.length > 0) && (time_from.length > 0)) { 
+          $('#open').removeAttr('disabled');
+          $('#open').css({"opacity" : '1'});
         
         } else {
           $('#open').attr('disabled','disable');
 
         }
-        }
+    }
         
      
 

@@ -44,7 +44,7 @@ $(document).ready(function() {
         });
     });
     var myHash = location.hash; //получаем значение хеша
-    console.log(myHash)
+   // console.log(myHash)
   if(myHash === '#reborn'){
     $('.button_filter.reborn').addClass('active');
     $('.button_filter.commuter').removeClass('active');
